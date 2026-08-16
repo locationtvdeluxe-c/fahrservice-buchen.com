@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taxi & Chauffeurdienst Bad Dürkheim | Fahrgastbeförderung Pfalz</title>
+  <style>
+    :root {
+      --primary-color: #d97706;
+      --secondary-color: #1f2937;
+      --light-bg: #f9fafb;
+      --border-color: #e5e7eb;
+      --font-family: Arial, Helvetica, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-family);
+      line-height: 1.6;
+      color: #333;
+      background-color: #fff;
+    }
+
+    header {
+      background-color: var(--secondary-color);
+      color: #fff;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      color: var(--primary-color);
+    }
+
+    header p {
+      font-size: 1.1rem;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    section {
+      margin-bottom: 2.5rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      color: var(--secondary-color);
+      border-bottom: 2px solid var(--primary-color);
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .service-card {
+      background: var(--light-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 1.2rem;
+    }
+
+    .service-card h3 {
+      color: var(--primary-color);
+      margin-bottom: 0.5rem;
+    }
+
+    ul {
+      list-style-type: square;
+      padding-left: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    li {
+      margin-bottom: 0.4rem;
+    }
+
+    /* Form Styles */
+    .form-container {
+      background-color: var(--light-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 2rem;
+    }
+
+    .form-group {
+      margin-bottom: 1.2rem;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 0.4rem;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group input[type="tel"],
+    .form-group input[type="date"],
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.6rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+
+    .radio-group, .checkbox-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-top: 0.3rem;
+    }
+
+    .radio-group label, .checkbox-group label {
+      font-weight: normal;
+      cursor: pointer;
+    }
+
+    .btn-submit {
+      background-color: var(--primary-color);
+      color: #fff;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      font-size: 1.1rem;
+      font-weight: bold;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+      transition: background-color 0.2s ease;
+    }
+
+    .btn-submit:hover {
+      background-color: #b45309;
+    }
+
+    footer {
+      background-color: var(--secondary-color);
+      color: #ccc;
+      text-align: center;
+      padding: 1.5rem 1rem;
+      margin-top: 3rem;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Fahrgastbeförderung & Chauffeurdienst Bad Dürkheim</h1>
+    <p>Ihr zuverlässiger Partner für Fahrten rund um den Dürkheimer Wurstmarkt, die Pfalz & Kur-Einrichtungen</p>
+  </header>
+
+  <div class="container">
+
+    <!-- Schwerpunkte / Dienstleistungen -->
+    <section id="services">
+      <h2>Unsere Schwerpunkte in Bad Dürkheim & Region</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>🍷 Wurstmarkt & Eventfahrten</h3>
+          <p>Sichere und pünktliche Beförderung von und zu Deutschlands größtem Weinfest sowie allen regionalen Weinfesten in der Pfalz.</p>
+        </div>
+        <div class="service-card">
+          <h3>⛺ Campingplatz-Shuttle</h3>
+          <p>Transfer und Zubringerfahrten für Urlauber und Campinggäste der Campingplätze in der Region Bad Dürkheim und der Umgebung.</p>
+        </div>
+        <div class="service-card">
+          <h3>👵 Senioren- & Kurfahrten</h3>
+          <p>Empathische und hilfsbereite Betreuung bei Fahrten zu Seniorenheimen, Kurkliniken, Terminen und Arztbesuchen.</p>
+        </div>
+        <div class="service-card">
+          <h3>🚗 Chauffeur & Taxidienst</h3>
+          <p>Klassische Personenbeförderung, Flughafen-Transfers und individuelle Chauffeurdienste im Bereich Mietwagen und Taxi.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Rechtliche Voraussetzungen -->
+    <section id="voraussetzungen">
+      <h2>Voraussetzungen für Fahrer & Chauffeur</h2>
+      <ul>
+        <li><strong>Mindestalter:</strong> 19 Jahre (Mietwagen/Chauffeur) bzw. 21 Jahre (Taxi)</li>
+        <li><strong>Führerschein Klasse B:</strong> Mindestens 1 Jahr (Mietwagen) bzw. 2 Jahre (Taxi) durchgehend im Besitz</li>
+        <li><strong>Fahrerschein zur Fahrgastbeförderung (P-Schein):</strong> Vorhanden oder Bereitschaft zur kurzfristigen Beantragung</li>
+        <li><strong>Eignungsnachweise:</strong> Ärztliches/augenärztliches Gutachten & Reaktionstest (TÜV/DEKRA/Arbeitsmediziner)</li>
+        <li><strong>Behördenunterlagen:</strong> Eintragsfreies behördliches Führungszeugnis (Belegart O) sowie unauffälliger Auszug aus dem Fahreignungsregister (Flensburg)</li>
+      </ul>
+    </section>
+
+    <!-- Online Bewerbungsformular -->
+    <section id="apply">
+      <h2>Direkt-Bewerbung für den Standort Bad Dürkheim</h2>
+      <div class="form-container">
+        <form action="#" method="POST" enctype="multipart/form-data">
+          
+          <h3>1. Persönliche Daten</h3>
+          <br>
+          <div class="form-group">
+            <label for="vorname">Vorname *</label>
+            <input type="text" id="vorname" name="vorname" required>
+          </div>
+
+          <div class="form-group">
+            <label for="nachname">Nachname *</label>
+            <input type="text" id="nachname" name="nachname" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">E-Mail-Adresse *</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+
+          <div class="form-group">
+            <label for="telefon">Telefonnummer *</label>
+            <input type="tel" id="telefon" name="telefon" required>
+          </div>
+
+          <div class="form-group">
+            <label for="wohnort">Wohnort / PLZ *</label>
+            <input type="text" id="wohnort" name="wohnort" placeholder="z. B. 67098 Bad Dürkheim" required>
+          </div>
+
+          <hr style="margin: 1.5rem 0; border: 0; border-top: 1px solid var(--border-color);">
+
+          <h3>2. Qualifikationen & Einsatzbereitschaft</h3>
+          <br>
+          <div class="form-group">
+            <label>Gewünschtes Arbeitsverhältnis *</label>
+            <div class="radio-group">
+              <label><input type="radio" name="anstellung" value="Vollzeit" required> Vollzeit</label>
+              <label><input type="radio" name="anstellung" value="Teilzeit"> Teilzeit</label>
+              <label><input type="radio" name="anstellung" value="Minijob"> Minijob / Aushilfe</label>
+              <label><input type="radio" name="anstellung" value="Saisonkraft"> Saisonkraft (z. B. Wurstmarkt)</label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Führerschein Klasse B vorhanden? *</label>
+            <div class="radio-group">
+              <label><input type="radio" name="fs_klasse_b" value="unter_1_jahr" required> Ja, seit unter 1 Jahr</label>
+              <label><input type="radio" name="fs_klasse_b" value="1_2_jahre"> Ja, seit 1–2 Jahren</label>
+              <label><input type="radio" name="fs_klasse_b" value="ueber_2_jahre"> Ja, seit mehr als 2 Jahren</label>
+              <label><input type="radio" name="fs_klasse_b" value="nein"> Nein</label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Personenbeförderungsschein (P-Schein) vorhanden? *</label>
+            <div class="radio-group">
+              <label><input type="radio" name="p_schein" value="ja" required> Ja, vorhanden</label>
+              <label><input type="radio" name="p_schein" value="nein_bereit"> Nein, aber Bereitschaft zur Beantragung vorhanden</label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Bereitschaft zu Schicht- & Wochenendfahrten (z. B. während des Dürkheimer Wurstmarkts)? *</label>
+            <div class="radio-group">
+              <label><input type="radio" name="wurstmarkt_bereitschaft" value="ja" required> Ja, absolut</label>
+              <label><input type="radio" name="wurstmarkt_bereitschaft" value="nach_absprache"> Nach Absprache</label>
+              <label><input type="radio" name="wurstmarkt_bereitschaft" value="nein"> Nein</label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="eintrittsdatum">Frühestmögliches Eintrittsdatum *</label>
+            <input type="date" id="eintrittsdatum" name="eintrittsdatum" required>
+          </div>
+
+          <hr style="margin: 1.5rem 0; border: 0; border-top: 1px solid var(--border-color);">
+
+          <h3>3. Dokumente & Anmerkungen</h3>
+          <br>
+          <div class="form-group">
+            <label for="dokumente">Lebenslauf / Nachweise (optional)</label>
+            <input type="file" id="dokumente" name="dokumente" multiple>
+          </div>
+
+          <div class="form-group">
+            <label for="nachricht">Nachricht / Anmerkungen (optional)</label>
+            <textarea id="nachricht" name="nachricht" rows="4" placeholder="Ihre Anmerkungen oder Fragen..."></textarea>
+          </div>
+
+          <div class="form-group checkbox-group">
+            <label>
+              <input type="checkbox" name="datenschutz" required>
+              Ich habe die Datenschutzbestimmungen gelesen und akzeptiere diese. *
+            </label>
+          </div>
+
+          <button type="submit" class="btn-submit">Bewerbung jetzt absenden</button>
+        </form>
+      </div>
+    </section>
+
+  </div>
+
+  <footer>
+    <p>&copy; Personenbeförderung Bad Dürkheim & Pfalz. Alle Rechte vorbehalten.</p>
+  </footer>
+
+</body>
+</html>
