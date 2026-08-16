@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fahrt-Konditionen sichern | Preisanfrage | fahrservice-buchen.com</title>
-  <meta name="description" content="Sichern Sie sich jetzt Ihre Fahrt-Konditionen zum Festpreis. Einfach Strecke angeben, Preis berechnen und unverbindlich anfragen.">
+  <title>Fahrt anfragen | fahrservice-buchen.com</title>
+  <meta name="description" content="Berechnen Sie Ihre geplante Fahrt, sehen Sie die transparenten Tarif-Konditionen und senden Sie Ihre unverbindliche Anfrage.">
   <link href="https://fonts.bunny.net/css?family=inter:400,500,600,700|dm-mono:400" rel="stylesheet">
   <style>
     :root {
@@ -92,16 +92,35 @@
       cursor: pointer;
     }
 
-    .price-box {
+    /* TARIF BREAKDOWN */
+    .tarif-breakdown {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
       margin-top: 16px;
       padding-top: 16px;
       border-top: 1px dashed var(--gray-300);
+      text-align: center;
+    }
+    .tarif-item {
+      background: var(--white);
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid var(--gray-300);
+    }
+    .tarif-item .label { font-size: 11px; text-transform: uppercase; color: var(--gray-500); font-weight: 600; display: block; }
+    .tarif-item .val { font-size: 14px; font-weight: 700; color: var(--dark); font-family: 'DM Mono', monospace; }
+
+    .price-box {
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid var(--gray-300);
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
     .price-label { font-size: 14px; font-weight: 600; color: var(--gray-700); }
-    .price-amount { font-size: 28px; font-weight: 700; color: var(--accent); font-family: 'DM Mono', monospace; }
+    .price-amount { font-size: 28px; font-weight: 700; color: var(--primary); font-family: 'DM Mono', monospace; }
 
     /* BUTTON */
     .btn-submit {
@@ -123,6 +142,7 @@
 
     @media(max-width: 600px) {
       .form-grid { grid-template-columns: 1fr; }
+      .tarif-breakdown { grid-template-columns: 1fr; }
       .form-card { padding: 20px; }
     }
   </style>
@@ -138,8 +158,8 @@
 
   <main class="container">
     <div class="header-box">
-      <h1>Kondition für Ihre Fahrt sichern</h1>
-      <p>Berechnen Sie die geschätzte Entfernung, ermitteln Sie den Richtpreis und sichern Sie sich Ihr Angebot unverbindlich.</p>
+      <h1>Fahrt anfragen</h1>
+      <p>Berechnen Sie die geschätzte Entfernung, sehen Sie die Tarifparameter ein und senden Sie Ihre unverbindliche Anfrage.</p>
     </div>
 
     <div class="form-card">
@@ -152,14 +172,30 @@
             <span class="km-display" id="kmValue">25 km</span>
           </div>
           
-          <input type="range" id="kmRange" min="5" max="200" value="25" step="1">
+          <input type="range" id="kmRange" min="2" max="200" value="25" step="1">
           <input type="hidden" id="kmInputHidden" name="Geschätzte_Kilometer" value="25 km">
+
+          <!-- PARAMETER AUFSCHLÜSSELUNG -->
+          <div class="tarif-breakdown">
+            <div class="tarif-item">
+              <span class="label">Grundgebühr</span>
+              <span class="val" id="grundgebuehrCalc">3,90 €</span>
+            </div>
+            <div class="tarif-item">
+              <span class="label">Kilometerpreis</span>
+              <span class="val" id="kmPriceCalc">52,50 € (2,10 €/km)</span>
+            </div>
+            <div class="tarif-item">
+              <span class="label">Großraum-Zuschlag</span>
+              <span class="val" id="grossraumCalc">0,00 €</span>
+            </div>
+          </div>
 
           <div class="price-box">
             <span class="price-label">Geschätzter Richtpreis (inkl. MwSt.):</span>
-            <span class="price-amount" id="priceDisplay">ca. 62,50 €</span>
+            <span class="price-amount" id="priceDisplay">ca. 56,40 €</span>
           </div>
-          <input type="hidden" id="priceInputHidden" name="Gesicherte_Kondition_Preis" value="ca. 62,50 €">
+          <input type="hidden" id="priceInputHidden" name="Geschätzter_Richtpreis" value="ca. 56,40 €">
         </div>
 
         <!-- STRECKEN-DETAILS -->
@@ -181,12 +217,12 @@
           </div>
           <div class="form-group">
             <label for="personen">Anzahl der Personen *</label>
-            <select id="personen" name="Anzahl_Personen" required>
+            <select id="personen" name="Anzahl_Personen" required onchange="updateCalculator()">
               <option value="1 Person">1 Person</option>
               <option value="2 Personen">2 Personen</option>
               <option value="3 Personen">3 Personen</option>
               <option value="4 Personen">4 Personen</option>
-              <option value="5-8 Personen (Großraum)">5 - 8 Personen (Großraum)</option>
+              <option value="5-8 Personen (Großraum)">5 - 8 Personen (+ 10 € Großraum-Zuschlag)</option>
             </select>
           </div>
         </div>
@@ -219,11 +255,11 @@
 
           <div class="form-group full">
             <label for="hinweise">Besondere Wünsche / Anmerkungen (optional)</label>
-            <textarea id="hinweise" name="Anmerkungen" rows="3" placeholder="z. B. Kindersitz benötigt, viel Gepäck, Rückfahrt gewünscht..."></textarea>
+            <textarea id="hinweise" name="Anmerkungen" rows="3" placeholder="z. B. Kindersitz benötigt, viel Gepäck..."></textarea>
           </div>
         </div>
 
-        <button type="submit" class="btn-submit">🔒 Jetzt Kondition &amp; Fahrt sichern</button>
+        <button type="submit" class="btn-submit">Anfragen</button>
       </form>
     </div>
   </main>
@@ -237,29 +273,41 @@
     const kmRange = document.getElementById('kmRange');
     const kmValue = document.getElementById('kmValue');
     const priceDisplay = document.getElementById('priceDisplay');
+    const grundgebuehrCalc = document.getElementById('grundgebuehrCalc');
+    const kmPriceCalc = document.getElementById('kmPriceCalc');
+    const grossraumCalc = document.getElementById('grossraumCalc');
+    const personenSelect = document.getElementById('personen');
     const kmInputHidden = document.getElementById('kmInputHidden');
     const priceInputHidden = document.getElementById('priceInputHidden');
 
-    // Preis-Formel (Anpassbar): Grundpreis 10 € + 2.10 € pro KM
-    const GRUNDPREIS = 10.00;
+    // Grundlegende Tarif-Parameter
+    const GRUNDGEBUEHR = 3.90;
     const PREIS_PRO_KM = 2.10;
+    const GROSSRAUM_ZUSCHLAG = 10.00;
 
     function updateCalculator() {
       const km = parseInt(kmRange.value);
-      const calculatedPrice = GRUNDPREIS + (km * PREIS_PRO_KM);
+      const isGrossraum = personenSelect.value.includes('5-8');
+
+      const kmCosts = km * PREIS_PRO_KM;
+      const grossraumZuschlag = isGrossraum ? GROSSRAUM_ZUSCHLAG : 0.00;
       
-      const formattedPrice = "ca. " + calculatedPrice.toFixed(2).replace('.', ',') + " €";
+      const totalCalculated = GRUNDGEBUEHR + kmCosts + grossraumZuschlag;
+      const formattedTotal = "ca. " + totalCalculated.toFixed(2).replace('.', ',') + " €";
       
+      // Werte im Interface aktualisieren
       kmValue.textContent = km + " km";
-      priceDisplay.textContent = formattedPrice;
+      grundgebuehrCalc.textContent = GRUNDGEBUEHR.toFixed(2).replace('.', ',') + " €";
+      kmPriceCalc.textContent = kmCosts.toFixed(2).replace('.', ',') + " € (" + PREIS_PRO_KM.toFixed(2).replace('.', ',') + " €/km)";
+      grossraumCalc.textContent = grossraumZuschlag.toFixed(2).replace('.', ',') + " €";
+      priceDisplay.textContent = formattedTotal;
       
-      // Versteckte Felder aktualisieren, damit die Werte per E-Mail ankommen
+      // Versteckte Formspree-Felder aktualisieren
       kmInputHidden.value = km + " km";
-      priceInputHidden.value = formattedPrice;
+      priceInputHidden.value = formattedTotal;
     }
 
     kmRange.addEventListener('input', updateCalculator);
-    // Initialisierung beim Laden
     updateCalculator();
   </script>
 
