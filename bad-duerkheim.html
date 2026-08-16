@@ -89,7 +89,14 @@
       margin-bottom: 0.4rem;
     }
 
-    /* Form Styles */
+    .email-box {
+      background-color: #fef3c7;
+      border-left: 4px solid var(--primary-color);
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+      border-radius: 4px;
+    }
+
     .form-container {
       background-color: var(--light-bg);
       border: 1px solid var(--border-color);
@@ -157,6 +164,11 @@
       margin-top: 3rem;
       font-size: 0.9rem;
     }
+
+    footer a {
+      color: var(--primary-color);
+      text-decoration: none;
+    }
   </style>
 </head>
 <body>
@@ -203,37 +215,42 @@
       </ul>
     </section>
 
-    <!-- Online Bewerbungsformular -->
+    <!-- Online Bewerbungsformular & E-Mail Kontakt -->
     <section id="apply">
-      <h2>Direkt-Bewerbung für den Standort Bad Dürkheim</h2>
+      <h2>Bewerbung für den Standort Bad Dürkheim</h2>
+      
+      <div class="email-box">
+        <p><strong>Bewerbung per E-Mail:</strong> Du kannst uns deine Unterlagen und Anfragen auch direkt per E-Mail senden an: <a href="mailto:kontakt@fahrdienst-buchen.com"><strong>kontakt@fahrdienst-buchen.com</strong></a></p>
+      </div>
+
       <div class="form-container">
-        <form action="#" method="POST" enctype="multipart/form-data">
+        <form action="mailto:kontakt@fahrdienst-buchen.com" method="POST" enctype="text/plain">
           
           <h3>1. Persönliche Daten</h3>
           <br>
           <div class="form-group">
             <label for="vorname">Vorname *</label>
-            <input type="text" id="vorname" name="vorname" required>
+            <input type="text" id="vorname" name="Vorname" required>
           </div>
 
           <div class="form-group">
             <label for="nachname">Nachname *</label>
-            <input type="text" id="nachname" name="nachname" required>
+            <input type="text" id="nachname" name="Nachname" required>
           </div>
 
           <div class="form-group">
             <label for="email">E-Mail-Adresse *</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="E-Mail" required>
           </div>
 
           <div class="form-group">
             <label for="telefon">Telefonnummer *</label>
-            <input type="tel" id="telefon" name="telefon" required>
+            <input type="tel" id="telefon" name="Telefon" required>
           </div>
 
           <div class="form-group">
             <label for="wohnort">Wohnort / PLZ *</label>
-            <input type="text" id="wohnort" name="wohnort" placeholder="z. B. 67098 Bad Dürkheim" required>
+            <input type="text" id="wohnort" name="Wohnort" placeholder="z. B. 67098 Bad Dürkheim" required>
           </div>
 
           <hr style="margin: 1.5rem 0; border: 0; border-top: 1px solid var(--border-color);">
@@ -243,67 +260,62 @@
           <div class="form-group">
             <label>Gewünschtes Arbeitsverhältnis *</label>
             <div class="radio-group">
-              <label><input type="radio" name="anstellung" value="Vollzeit" required> Vollzeit</label>
-              <label><input type="radio" name="anstellung" value="Teilzeit"> Teilzeit</label>
-              <label><input type="radio" name="anstellung" value="Minijob"> Minijob / Aushilfe</label>
-              <label><input type="radio" name="anstellung" value="Saisonkraft"> Saisonkraft (z. B. Wurstmarkt)</label>
+              <label><input type="radio" name="Anstellung" value="Vollzeit" required> Vollzeit</label>
+              <label><input type="radio" name="Anstellung" value="Teilzeit"> Teilzeit</label>
+              <label><input type="radio" name="Anstellung" value="Minijob"> Minijob / Aushilfe</label>
+              <label><input type="radio" name="Anstellung" value="Saisonkraft"> Saisonkraft (z. B. Wurstmarkt)</label>
             </div>
           </div>
 
           <div class="form-group">
             <label>Führerschein Klasse B vorhanden? *</label>
             <div class="radio-group">
-              <label><input type="radio" name="fs_klasse_b" value="unter_1_jahr" required> Ja, seit unter 1 Jahr</label>
-              <label><input type="radio" name="fs_klasse_b" value="1_2_jahre"> Ja, seit 1–2 Jahren</label>
-              <label><input type="radio" name="fs_klasse_b" value="ueber_2_jahre"> Ja, seit mehr als 2 Jahren</label>
-              <label><input type="radio" name="fs_klasse_b" value="nein"> Nein</label>
+              <label><input type="radio" name="FS_Klasse_B" value="Unter 1 Jahr" required> Ja, seit unter 1 Jahr</label>
+              <label><input type="radio" name="FS_Klasse_B" value="1-2 Jahre"> Ja, seit 1–2 Jahren</label>
+              <label><input type="radio" name="FS_Klasse_B" value="Ueber 2 Jahre"> Ja, seit mehr als 2 Jahren</label>
+              <label><input type="radio" name="FS_Klasse_B" value="Nein"> Nein</label>
             </div>
           </div>
 
           <div class="form-group">
             <label>Personenbeförderungsschein (P-Schein) vorhanden? *</label>
             <div class="radio-group">
-              <label><input type="radio" name="p_schein" value="ja" required> Ja, vorhanden</label>
-              <label><input type="radio" name="p_schein" value="nein_bereit"> Nein, aber Bereitschaft zur Beantragung vorhanden</label>
+              <label><input type="radio" name="P_Schein" value="Ja, vorhanden" required> Ja, vorhanden</label>
+              <label><input type="radio" name="P_Schein" value="Nein, bereit zur Beantragung"> Nein, aber Bereitschaft zur Beantragung vorhanden</label>
             </div>
           </div>
 
           <div class="form-group">
-            <label>Bereitschaft zu Schicht- & Wochenendfahrten (z. B. während des Dürkheimer Wurstmarkts)? *</label>
+            <label>Bereitschaft zu Schicht- & Wochenendfahrten (z. B. Wurstmarkt)? *</label>
             <div class="radio-group">
-              <label><input type="radio" name="wurstmarkt_bereitschaft" value="ja" required> Ja, absolut</label>
-              <label><input type="radio" name="wurstmarkt_bereitschaft" value="nach_absprache"> Nach Absprache</label>
-              <label><input type="radio" name="wurstmarkt_bereitschaft" value="nein"> Nein</label>
+              <label><input type="radio" name="Wurstmarkt_Bereitschaft" value="Ja, absolut" required> Ja, absolut</label>
+              <label><input type="radio" name="Wurstmarkt_Bereitschaft" value="Nach Absprache"> Nach Absprache</label>
+              <label><input type="radio" name="Wurstmarkt_Bereitschaft" value="Nein"> Nein</label>
             </div>
           </div>
 
           <div class="form-group">
             <label for="eintrittsdatum">Frühestmögliches Eintrittsdatum *</label>
-            <input type="date" id="eintrittsdatum" name="eintrittsdatum" required>
+            <input type="date" id="eintrittsdatum" name="Eintrittsdatum" required>
           </div>
 
           <hr style="margin: 1.5rem 0; border: 0; border-top: 1px solid var(--border-color);">
 
-          <h3>3. Dokumente & Anmerkungen</h3>
+          <h3>3. Anmerkungen</h3>
           <br>
           <div class="form-group">
-            <label for="dokumente">Lebenslauf / Nachweise (optional)</label>
-            <input type="file" id="dokumente" name="dokumente" multiple>
-          </div>
-
-          <div class="form-group">
             <label for="nachricht">Nachricht / Anmerkungen (optional)</label>
-            <textarea id="nachricht" name="nachricht" rows="4" placeholder="Ihre Anmerkungen oder Fragen..."></textarea>
+            <textarea id="nachricht" name="Nachricht" rows="4" placeholder="Ihre Anmerkungen oder Fragen..."></textarea>
           </div>
 
           <div class="form-group checkbox-group">
             <label>
-              <input type="checkbox" name="datenschutz" required>
+              <input type="checkbox" name="Datenschutz" value="Akzeptiert" required>
               Ich habe die Datenschutzbestimmungen gelesen und akzeptiere diese. *
             </label>
           </div>
 
-          <button type="submit" class="btn-submit">Bewerbung jetzt absenden</button>
+          <button type="submit" class="btn-submit">Bewerbung per E-Mail absenden</button>
         </form>
       </div>
     </section>
@@ -311,7 +323,7 @@
   </div>
 
   <footer>
-    <p>&copy; Personenbeförderung Bad Dürkheim & Pfalz. Alle Rechte vorbehalten.</p>
+    <p>&copy; Personenbeförderung Bad Dürkheim & Pfalz | Kontakt: <a href="mailto:kontakt@fahrdienst-buchen.com">kontakt@fahrdienst-buchen.com</a></p>
   </footer>
 
 </body>
