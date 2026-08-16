@@ -1,539 +1,90 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fahrservice Worms | Zuverlässig &amp; Günstig buchen | fahrservice-buchen.com</title>
-  <meta name="description" content="Fahrservice in Worms und Umgebung — Flughafentransfer, Krankenfahrten, Besorgungsfahrten und mehr. Jetzt einfach online anfragen. Zuverlässig, pünktlich, fair.">
-  <meta name="keywords" content="Fahrservice Worms, Fahrdienst Worms, Flughafentransfer Worms, Krankenfahrt Worms, Fahrservice Frankenthal, Fahrservice Ludwigshafen, Fahrservice Mannheim, Personenbeförderung">
-  <link rel="canonical" href="https://fahrservice-buchen.com/">
-  <meta property="og:title" content="Fahrservice Worms — Jetzt einfach buchen">
-  <meta property="og:description" content="Ihr zuverlässiger Fahrservice in Worms und der Rhein-Neckar-Region. Pünktlich, fair, unkompliziert.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://fahrservice-buchen.com/">
-  <meta property="og:locale" content="de_DE">
-  <link href="https://fonts.bunny.net/css?family=inter:400,500,600,700|dm-mono:400" rel="stylesheet">
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Fahrservice Buchen",
-    "description": "Ihr zuverlässiger Fahrservice in Worms und der Rhein-Neckar-Region",
-    "url": "https://fahrservice-buchen.com",
-    "areaServed": ["Worms", "Frankenthal", "Ludwigshafen", "Mannheim", "Bobenheim-Roxheim", "Lampertheim"],
-    "serviceType": ["Fahrservice", "Flughafentransfer", "Krankenfahrten", "Personenbeförderung"]
-  }
-  </script>
-  <style>
-    :root {
-      --primary: #2563EB;
-      --primary-dark: #1D4ED8;
-      --primary-light: #DBEAFE;
-      --accent: #10B981;
-      --accent-light: #D1FAE5;
-      --dark: #111827;
-      --gray-900: #1F2937;
-      --gray-700: #374151;
-      --gray-500: #6B7280;
-      --gray-300: #D1D5DB;
-      --gray-100: #F3F4F6;
-      --white: #FFFFFF;
-      --orange: #F59E0B;
-    }
-    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: 'Inter', -apple-system, sans-serif;
-      font-size: 16px;
-      line-height: 1.6;
-      color: var(--gray-900);
-      background: var(--white);
-      -webkit-font-smoothing: antialiased;
-    }
-    h1, h2, h3 { font-weight: 700; line-height: 1.2; }
-    a { color: var(--primary); text-decoration: none; }
+<!--
+  =====================================================
+  ÄNDERUNGEN FÜR DIE HAUPTSEITE (index.html)
+  =====================================================
 
-    .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+  Sebastian, ersetze in deiner bestehenden index.html
+  die folgenden Bereiche. Die Änderungen:
 
-    /* NAV */
-    .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(255,255,255,.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--gray-100); padding: 14px 0; }
-    .nav-inner { display: flex; justify-content: space-between; align-items: center; max-width: 1100px; margin: 0 auto; padding: 0 24px; }
-    .nav-logo { font-weight: 700; font-size: 20px; color: var(--dark); }
-    .nav-logo span { color: var(--primary); }
-    .nav-links { display: flex; gap: 28px; list-style: none; }
-    .nav-links a { font-size: 14px; font-weight: 500; color: var(--gray-700); transition: color .2s; }
-    .nav-links a:hover { color: var(--primary); }
-    .nav-cta { background: var(--primary); color: white !important; padding: 8px 20px; border-radius: 8px; font-weight: 600; font-size: 14px; transition: background .2s; }
-    .nav-cta:hover { background: var(--primary-dark); }
-    .nav-toggle { display: none; background: none; border: none; cursor: pointer; }
-    .nav-toggle span { display: block; width: 22px; height: 2px; background: var(--dark); margin: 5px 0; }
-    @media(max-width:768px) {
-      .nav-toggle { display: block; }
-      .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: white; flex-direction: column; padding: 20px 24px; gap: 16px; border-bottom: 1px solid var(--gray-100); box-shadow: 0 4px 12px rgba(0,0,0,.08); }
-      .nav-links.open { display: flex; }
-    }
+  1. Telefonnummer: 0179 1676205 (statt Platzhalter)
+  2. E-Mail: kontakt@fahrservice-buchen.com (NEU)
+  3. WhatsApp: Link bleibt, aber KEINE sichtbare Nummer
+  4. Footer: Kontaktinfos + Link zu /worms
 
-    /* HERO */
-    .hero {
-      padding: 140px 24px 80px;
-      background: linear-gradient(135deg, var(--primary-light) 0%, var(--white) 50%, var(--accent-light) 100%);
-      text-align: center;
-    }
-    .hero-badge {
-      display: inline-block;
-      background: var(--primary);
-      color: white;
-      font-size: 13px;
-      font-weight: 600;
-      padding: 6px 16px;
-      border-radius: 50px;
-      margin-bottom: 24px;
-      letter-spacing: 0.5px;
-    }
-    .hero h1 {
-      font-size: clamp(2rem, 5vw, 3.2rem);
-      color: var(--dark);
-      margin-bottom: 16px;
-    }
-    .hero h1 span { color: var(--primary); }
-    .hero-sub {
-      font-size: 18px;
-      color: var(--gray-500);
-      max-width: 560px;
-      margin: 0 auto 32px;
-    }
-    .hero-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+  =====================================================
+-->
 
-    /* BUTTONS */
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-family: 'Inter', sans-serif;
-      font-size: 15px;
-      font-weight: 600;
-      padding: 14px 28px;
-      border-radius: 10px;
-      border: none;
-      cursor: pointer;
-      transition: all .2s;
-    }
-    .btn-primary { background: var(--primary); color: white; }
-    .btn-primary:hover { background: var(--primary-dark); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(37,99,235,.3); }
-    .btn-outline { background: white; color: var(--gray-700); border: 1px solid var(--gray-300); }
-    .btn-outline:hover { border-color: var(--primary); color: var(--primary); }
-    .btn-green { background: var(--accent); color: white; }
-    .btn-green:hover { background: #059669; }
 
-    /* TRUST BAR */
-    .trust-bar {
-      padding: 24px 0;
-      border-bottom: 1px solid var(--gray-100);
-      text-align: center;
-    }
-    .trust-items {
-      display: flex;
-      justify-content: center;
-      gap: 40px;
-      flex-wrap: wrap;
-    }
-    .trust-item {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 14px;
-      font-weight: 500;
-      color: var(--gray-700);
-    }
-    .trust-icon { font-size: 20px; }
+<!-- ============================================= -->
+<!-- ERSETZE: Den CTA-Bereich "Fahrt buchen"       -->
+<!-- SUCHE nach: Fahrt buchen — jetzt anfragen     -->
+<!-- ============================================= -->
 
-    /* SERVICES */
-    .section { padding: 80px 0; }
-    .section-label {
-      font-family: 'DM Mono', monospace;
-      font-size: 13px;
-      font-weight: 400;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--primary);
-      text-align: center;
-      margin-bottom: 12px;
-    }
-    .section-title {
-      font-size: clamp(1.6rem, 3.5vw, 2.4rem);
-      text-align: center;
-      margin-bottom: 16px;
-      color: var(--dark);
-    }
-    .section-sub {
-      text-align: center;
-      color: var(--gray-500);
-      max-width: 560px;
-      margin: 0 auto 48px;
-      font-size: 16px;
-    }
+<section class="cta" id="kontakt">
+  <h2>Fahrt buchen — jetzt anfragen</h2>
+  <p>Kostenlos und unverbindlich. Wir melden uns innerhalb von 30 Minuten mit Ihrem Festpreis.</p>
+  <a href="tel:+491791676205" class="btn btn-primary">✆ Jetzt anrufen</a>
+  <div style="margin-top: 1.25rem; display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; font-size: 0.95rem;">
+    <a href="https://wa.me/491791676205?text=Hallo%2C%20ich%20möchte%20eine%20Fahrt%20buchen." style="color: inherit; text-decoration: none;">💬 Per WhatsApp schreiben</a>
+    <a href="mailto:kontakt@fahrservice-buchen.com" style="color: inherit; text-decoration: none;">✉️ kontakt@fahrservice-buchen.com</a>
+  </div>
+</section>
 
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 24px;
-    }
-    .service-card {
-      background: var(--gray-100);
-      border-radius: 12px;
-      padding: 28px;
-      transition: all .2s;
-      border: 1px solid transparent;
-    }
-    .service-card:hover { border-color: var(--primary); background: var(--primary-light); }
-    .service-icon { font-size: 32px; margin-bottom: 16px; }
-    .service-card h3 { font-size: 18px; margin-bottom: 8px; color: var(--dark); }
-    .service-card p { font-size: 14px; color: var(--gray-500); line-height: 1.6; }
 
-    /* REGION */
-    .region-section { background: var(--gray-100); }
-    .region-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      gap: 16px;
-      margin-top: 40px;
-    }
-    .region-card {
-      background: white;
-      border-radius: 10px;
-      padding: 20px;
-      text-align: center;
-      border: 1px solid var(--gray-300);
-      transition: all .2s;
-    }
-    .region-card:hover { border-color: var(--primary); box-shadow: 0 4px 12px rgba(0,0,0,.06); }
-    .region-card h3 { font-size: 16px; color: var(--dark); margin-bottom: 4px; }
-    .region-card p { font-size: 13px; color: var(--gray-500); }
+<!-- ============================================= -->
+<!-- ERSETZE: Die Nav-CTA (Jetzt anfragen Button)  -->
+<!-- SUCHE nach: tel:+4900000000                   -->
+<!-- ERSETZE DURCH:                                -->
+<!-- ============================================= -->
 
-    /* HOW IT WORKS */
-    .steps {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 32px;
-      margin-top: 48px;
-    }
-    @media(max-width:768px) { .steps { grid-template-columns: 1fr; } }
-    .step { text-align: center; }
-    .step-number {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 48px;
-      height: 48px;
-      background: var(--primary);
-      color: white;
-      font-weight: 700;
-      font-size: 20px;
-      border-radius: 50%;
-      margin-bottom: 16px;
-    }
-    .step h3 { font-size: 18px; margin-bottom: 8px; }
-    .step p { font-size: 14px; color: var(--gray-500); max-width: 280px; margin: 0 auto; }
+<!-- Überall wo tel:+4900000000 steht → tel:+491791676205 -->
+<!-- Überall wo wa.me/4900000000 steht → wa.me/491791676205 -->
 
-    /* CTA */
-    .cta-section {
-      background: var(--primary);
-      color: white;
-      text-align: center;
-      padding: 80px 24px;
-    }
-    .cta-section h2 { font-size: clamp(1.6rem, 4vw, 2.4rem); margin-bottom: 16px; }
-    .cta-section p { font-size: 18px; opacity: .9; max-width: 500px; margin: 0 auto 32px; }
-    .cta-section .btn-white {
-      background: white;
-      color: var(--primary);
-      font-weight: 700;
-      padding: 16px 32px;
-      border-radius: 10px;
-      font-size: 16px;
-      display: inline-block;
-      transition: all .2s;
-    }
-    .cta-section .btn-white:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,.2); }
-    .cta-phone {
-      margin-top: 16px;
-      font-size: 14px;
-      opacity: .8;
-    }
-    .cta-phone a { color: white; font-weight: 600; }
 
-    /* FAQ */
-    .faq-list { max-width: 700px; margin: 0 auto; }
-    .faq-item {
-      border-bottom: 1px solid var(--gray-100);
-      padding: 20px 0;
-    }
-    .faq-q {
-      font-weight: 600;
-      font-size: 16px;
-      color: var(--dark);
-      cursor: pointer;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .faq-q::after { content: '+'; font-size: 24px; color: var(--primary); font-weight: 300; }
-    .faq-a {
-      font-size: 15px;
-      color: var(--gray-500);
-      margin-top: 12px;
-      line-height: 1.7;
-    }
+<!-- ============================================= -->
+<!-- ERSETZE: Den Footer                           -->
+<!-- SUCHE nach: <footer                           -->
+<!-- ============================================= -->
 
-    /* FOOTER */
-    .footer {
-      background: var(--dark);
-      color: var(--gray-300);
-      padding: 48px 0 32px;
-    }
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 2fr 1fr 1fr;
-      gap: 48px;
-      margin-bottom: 32px;
-    }
-    @media(max-width:768px) { .footer-grid { grid-template-columns: 1fr; gap: 32px; } }
-    .footer-brand { font-size: 20px; font-weight: 700; color: white; margin-bottom: 12px; }
-    .footer-brand span { color: var(--primary); }
-    .footer p { font-size: 14px; line-height: 1.7; }
-    .footer h4 { color: white; font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; }
-    .footer-links { list-style: none; }
-    .footer-links li { margin-bottom: 8px; }
-    .footer-links a { font-size: 14px; color: var(--gray-300); transition: color .2s; }
-    .footer-links a:hover { color: white; }
-    .footer-copy {
-      border-top: 1px solid var(--gray-700);
-      padding-top: 24px;
-      font-size: 13px;
-      color: var(--gray-500);
-      text-align: center;
-    }
-  </style>
-</head>
-<body>
-
-  <!-- NAV -->
-  <nav class="nav">
-    <div class="nav-inner">
-      <div class="nav-logo">fahrservice<span>-buchen</span>.com</div>
-      <button class="nav-toggle" aria-label="Menü" onclick="document.querySelector('.nav-links').classList.toggle('open')"><span></span><span></span><span></span></button>
-      <ul class="nav-links">
-        <li><a href="#leistungen">Leistungen</a></li>
-        <li><a href="#region">Region</a></li>
-        <li><a href="#ablauf">So geht's</a></li>
-        <li><a href="#faq">FAQ</a></li>
-        <li><a href="#kontakt" class="nav-cta">Jetzt anfragen</a></li>
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <strong>fahrservice-buchen.com</strong>
+      <p>Ihr zuverlässiger Fahrservice in Worms und der Rhein-Neckar-Region. Pünktlich, fair, unkompliziert — seit 2026.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Leistungen</h4>
+      <ul>
+        <li><a href="#leistungen">Flughafentransfer</a></li>
+        <li><a href="#leistungen">Krankenfahrten</a></li>
+        <li><a href="#leistungen">Besorgungsfahrten</a></li>
+        <li><a href="#leistungen">Eventfahrten</a></li>
       </ul>
     </div>
-  </nav>
-
-  <!-- HERO -->
-  <section class="hero">
-    <div class="container">
-      <div class="hero-badge">✓ Fahrservice in Worms & Umgebung</div>
-      <h1>Ihr Fahrservice in <span>Worms</span> — einfach buchen.</h1>
-      <p class="hero-sub">Zuverlässig, pünktlich und fair. Ob Flughafentransfer, Arztfahrt oder Besorgung — wir fahren Sie sicher ans Ziel.</p>
-      <div class="hero-actions">
-        <a href="#kontakt" class="btn btn-primary">✆ Jetzt anrufen</a>
-        <a href="#leistungen" class="btn btn-outline">Leistungen ansehen</a>
-      </div>
+    <div class="footer-col">
+      <h4>Region</h4>
+      <ul>
+        <li><a href="/worms">Fahrservice Worms</a></li>
+        <li><a href="/baddürkheim">Fahrservice Bad Dürkheim</a></li>
+      </ul>
     </div>
-  </section>
-
-  <!-- TRUST BAR -->
-  <div class="trust-bar">
-    <div class="trust-items">
-      <div class="trust-item"><span class="trust-icon">⏰</span> Pünktlich & zuverlässig</div>
-      <div class="trust-item"><span class="trust-icon">💶</span> Faire Festpreise</div>
-      <div class="trust-item"><span class="trust-icon">📱</span> Einfach per Anruf buchen</div>
-      <div class="trust-item"><span class="trust-icon">🚗</span> Komfortable Fahrzeuge</div>
+    <div class="footer-col">
+      <h4>Kontakt</h4>
+      <ul>
+        <li><a href="tel:+491791676205">✆ 0179 1676205</a></li>
+        <li><a href="https://wa.me/491791676205">💬 WhatsApp</a></li>
+        <li><a href="mailto:kontakt@fahrservice-buchen.com">✉️ kontakt@fahrservice-buchen.com</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Rechtliches</h4>
+      <ul>
+        <li><a href="/impressum">Impressum</a></li>
+        <li><a href="/datenschutz">Datenschutz</a></li>
+      </ul>
     </div>
   </div>
-
-  <!-- LEISTUNGEN -->
-  <section class="section" id="leistungen">
-    <div class="container">
-      <div class="section-label">Leistungen</div>
-      <h2 class="section-title">Was wir für Sie fahren</h2>
-      <p class="section-sub">Ob kurze Strecke oder Langstrecke — wir bringen Sie zuverlässig ans Ziel. Alle Fahrten zum Festpreis, keine versteckten Kosten.</p>
-
-      <div class="services-grid">
-        <div class="service-card">
-          <div class="service-icon">✈️</div>
-          <h3>Flughafentransfer</h3>
-          <p>Bequem von Worms zum Flughafen Frankfurt, Mannheim oder Stuttgart. Pünktlich, stressfrei, mit Gepäckhilfe.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">🏥</div>
-          <h3>Arzt- & Krankenfahrten</h3>
-          <p>Zuverlässige Fahrten zu Ärzten, Kliniken und Therapie. Auch Rückfahrten und Wartezeit möglich.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">🛒</div>
-          <h3>Besorgungsfahrten</h3>
-          <p>Einkäufe, Behördengänge oder Apotheke — wir fahren Sie hin und bringen Sie zurück.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">🎉</div>
-          <h3>Veranstaltungen & Events</h3>
-          <p>Sicher nach Hause nach der Feier. Hochzeiten, Firmenfeiern, Konzerte — wir sind Ihr Fahrservice.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">🏢</div>
-          <h3>Geschäftsfahrten</h3>
-          <p>Diskret und professionell zu Meetings, Messen und Geschäftsterminen in der Rhein-Neckar-Region.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">👴</div>
-          <h3>Seniorenfahrdienst</h3>
-          <p>Einfühlsam und geduldig. Wir helfen beim Ein- und Aussteigen und fahren in Ihrem Tempo.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- REGION -->
-  <section class="section region-section" id="region">
-    <div class="container">
-      <div class="section-label">Einsatzgebiet</div>
-      <h2 class="section-title">Fahrservice in Ihrer Nähe</h2>
-      <p class="section-sub">Wir sind in Worms und der gesamten Region für Sie unterwegs. Kurze Wege, schnelle Verfügbarkeit.</p>
-
-      <div class="region-grid">
-        <div class="region-card">
-          <h3>🏛️ Worms</h3>
-          <p>Kerngebiet</p>
-        </div>
-        <div class="region-card">
-          <h3>Frankenthal</h3>
-          <p>~15 Min.</p>
-        </div>
-        <div class="region-card">
-          <h3>Ludwigshafen</h3>
-          <p>~20 Min.</p>
-        </div>
-        <div class="region-card">
-          <h3>Mannheim</h3>
-          <p>~25 Min.</p>
-        </div>
-        <div class="region-card">
-          <h3>Bobenheim-Roxheim</h3>
-          <p>~10 Min.</p>
-        </div>
-        <div class="region-card">
-          <h3>Lampertheim</h3>
-          <p>~15 Min.</p>
-        </div>
-        <div class="region-card">
-          <h3>Osthofen</h3>
-          <p>~10 Min.</p>
-        </div>
-        <div class="region-card">
-          <h3>Alzey</h3>
-          <p>~20 Min.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- HOW IT WORKS -->
-  <section class="section" id="ablauf">
-    <div class="container">
-      <div class="section-label">So einfach geht's</div>
-      <h2 class="section-title">In 3 Schritten zur Fahrt</h2>
-
-      <div class="steps">
-        <div class="step">
-          <div class="step-number">1</div>
-          <h3>Anfragen</h3>
-          <p>Rufen Sie an oder schreiben Sie uns. Nennen Sie Start, Ziel und Wunschtermin.</p>
-        </div>
-        <div class="step">
-          <div class="step-number">2</div>
-          <h3>Festpreis erhalten</h3>
-          <p>Sie erhalten sofort einen verbindlichen Festpreis — keine Überraschungen, keine Zuschläge.</p>
-        </div>
-        <div class="step">
-          <div class="step-number">3</div>
-          <h3>Einsteigen & losfahren</h3>
-          <p>Wir holen Sie pünktlich ab und bringen Sie sicher und komfortabel ans Ziel.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="cta-section" id="kontakt">
-    <h2>Fahrt buchen — jetzt anfragen</h2>
-    <p>Kostenlos und unverbindlich. Wir melden uns innerhalb von 30 Minuten mit Ihrem Festpreis.</p>
-    <a href="tel:+4900000000" class="btn-white">✆ Jetzt anrufen</a>
-    <div class="cta-phone">Oder per WhatsApp: <a href="https://wa.me/4900000000">0000 000 0000</a></div>
-  </section>
-
-  <!-- FAQ -->
-  <section class="section" id="faq">
-    <div class="container">
-      <div class="section-label">Häufige Fragen</div>
-      <h2 class="section-title">Gut zu wissen</h2>
-
-      <div class="faq-list">
-        <div class="faq-item">
-          <div class="faq-q">Was kostet eine Fahrt zum Flughafen Frankfurt?</div>
-          <div class="faq-a">Der Preis für eine Fahrt von Worms zum Flughafen Frankfurt liegt je nach Tageszeit zwischen 89 € und 119 € als Festpreis. Im Preis enthalten: Abholung an der Haustür, Gepäckhilfe und Wartezeit bei Verspätung des Fluges.</div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-q">Wie weit im Voraus muss ich buchen?</div>
-          <div class="faq-a">Idealerweise 24 Stunden vorher. Bei Verfügbarkeit sind auch kurzfristige Buchungen am selben Tag möglich. Für Flughafentransfers empfehlen wir mindestens 2 Tage Vorlauf.</div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-q">Fahren Sie auch am Wochenende und an Feiertagen?</div>
-          <div class="faq-a">Ja, wir sind 7 Tage die Woche für Sie da — auch an Feiertagen und nachts. Kein Aufpreis am Wochenende.</div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-q">Kann ich eine Fahrt für jemand anderen buchen?</div>
-          <div class="faq-a">Selbstverständlich. Viele Kunden buchen Fahrten für Eltern, Großeltern oder Geschäftspartner. Nennen Sie uns einfach die Kontaktdaten der Person.</div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-q">Bieten Sie auch Krankenfahrten an?</div>
-          <div class="faq-a">Ja, wir bieten Fahrten zu Ärzten, Kliniken und Therapieeinrichtungen an. Auf Wunsch warten wir vor Ort und fahren Sie anschließend zurück.</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div>
-          <div class="footer-brand">fahrservice<span>-buchen</span>.com</div>
-          <p>Ihr zuverlässiger Fahrservice in Worms und der Rhein-Neckar-Region. Pünktlich, fair, unkompliziert — seit 2026.</p>
-        </div>
-        <div>
-          <h4>Leistungen</h4>
-          <ul class="footer-links">
-            <li><a href="#leistungen">Flughafentransfer</a></li>
-            <li><a href="#leistungen">Krankenfahrten</a></li>
-            <li><a href="#leistungen">Besorgungsfahrten</a></li>
-            <li><a href="#leistungen">Eventfahrten</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Rechtliches</h4>
-          <ul class="footer-links">
-            <li><a href="/impressum.html">Impressum</a></li>
-            <li><a href="/datenschutz.html">Datenschutz</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-copy">© 2026 fahrservice-buchen.com — Alle Rechte vorbehalten.</div>
-    </div>
-  </footer>
-
-</body>
-</html>
+  <div class="footer-bottom">
+    &copy; 2026 fahrservice-buchen.com — Alle Rechte vorbehalten.
+  </div>
+</footer>
