@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fahrservice Worms – Shuttle zum Backfischfest, Festzelt & Events | fahrservice-buchen.com</title>
+  <meta name="description" content="Ihr zuverlässiger Fahrservice in Worms und Umgebung. Shuttle zum Backfischfest, Wurstmarkt, Nibelungenfestspiele & mehr. Jetzt per WhatsApp oder Telefon buchen!">
+  <meta name="keywords" content="Fahrservice Worms, Shuttle Backfischfest, Fahrservice Wurstmarkt Bad Dürkheim, Taxi Worms, Shuttle Nibelungenfestspiele, Fahrservice Rhein-Neckar, Event Shuttle Worms">
+  <meta property="og:title" content="Fahrservice Worms – Sicher & bequem zu jedem Event">
+  <meta property="og:description" content="Backfischfest, Wurstmarkt, Weihnachtsmarkt – wir fahren Sie hin und sicher wieder nach Hause. Jetzt buchen!">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://fahrservice-buchen.com/worms">
+  <link rel="canonical" href="https://fahrservice-buchen.com/worms">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --night: #0f1923;
+      --night-soft: #1a2a38;
+      --ink: #2c3e50;
+      --slate: #64748b;
+      --mist: #e2e8f0;
+      --cloud: #f1f5f9;
+      --white: #ffffff;
+      --gold: #d4a03c;
+      --gold-light: #f5e6c4;
+      --gold-dark: #b8862e;
+      --green-whatsapp: #25d366;
+      --green-whatsapp-dark: #1da851;
+      --warm: #faf8f5;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
+      color: var(--ink);
+      background: var(--white);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── NAV ── */
+    .nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(15, 25, 35, 0.95);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(212, 160, 60, 0.2);
+    }
+    .nav-inner {
+      max-width: 1120px; margin: 0 auto;
+      padding: 0.75rem 1.5rem;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 1rem;
+    }
+    .nav-brand {
+      font-family: 'Fraunces', serif;
+      font-weight: 800; font-size: 1.15rem;
+      color: var(--white); text-decoration: none;
+      letter-spacing: -0.01em;
+    }
+    .nav-brand span { color: var(--gold); }
+    .nav-cta {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      background: var(--green-whatsapp);
+      color: var(--white);
+      padding: 0.5rem 1.1rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600; font-size: 0.85rem;
+      transition: background 0.2s;
+    }
+    .nav-cta:hover { background: var(--green-whatsapp-dark); }
+    .nav-cta svg { width: 18px; height: 18px; flex-shrink: 0; }
+
+    /* ── HERO ── */
+    .hero {
+      background: linear-gradient(165deg, var(--night) 0%, var(--night-soft) 100%);
+      color: var(--white);
+      padding: 7rem 1.5rem 3.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::after {
+      content: '';
+      position: absolute; bottom: 0; left: 0; right: 0;
+      height: 120px;
+      background: linear-gradient(to bottom, transparent, var(--white));
+      pointer-events: none;
+    }
+    .hero-inner {
+      max-width: 800px; margin: 0 auto;
+      position: relative; z-index: 1;
+    }
+    .hero-badge {
+      display: inline-block;
+      background: rgba(212, 160, 60, 0.15);
+      border: 1px solid rgba(212, 160, 60, 0.3);
+      color: var(--gold);
+      padding: 0.35rem 0.9rem;
+      border-radius: 50px;
+      font-size: 0.8rem; font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 1.25rem;
+    }
+    .hero h1 {
+      font-family: 'Fraunces', serif;
+      font-weight: 900; font-size: clamp(2rem, 5.5vw, 3.2rem);
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.25rem;
+    }
+    .hero h1 em {
+      font-style: italic;
+      color: var(--gold);
+    }
+    .hero-sub {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.75);
+      max-width: 600px;
+      margin-bottom: 2rem;
+      line-height: 1.7;
+    }
+    .hero-actions {
+      display: flex; flex-wrap: wrap; gap: 0.75rem;
+    }
+    .btn {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      padding: 0.85rem 1.6rem;
+      border-radius: 50px;
+      font-size: 1rem; font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s;
+      border: none; cursor: pointer;
+    }
+    .btn svg { width: 20px; height: 20px; flex-shrink: 0; }
+    .btn-whatsapp {
+      background: var(--green-whatsapp);
+      color: var(--white);
+    }
+    .btn-whatsapp:hover { background: var(--green-whatsapp-dark); transform: translateY(-1px); }
+    .btn-call {
+      background: rgba(255,255,255,0.12);
+      color: var(--white);
+      border: 1px solid rgba(255,255,255,0.25);
+    }
+    .btn-call:hover { background: rgba(255,255,255,0.2); }
+
+    /* ── TRUST ── */
+    .trust {
+      padding: 2.5rem 1.5rem 1rem;
+      position: relative; z-index: 2;
+    }
+    .trust-inner {
+      max-width: 900px; margin: 0 auto;
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1.25rem;
+    }
+    .trust-item {
+      text-align: center;
+      padding: 1.25rem 1rem;
+      background: var(--cloud);
+      border-radius: 12px;
+    }
+    .trust-icon {
+      font-size: 1.5rem;
+      margin-bottom: 0.4rem;
+    }
+    .trust-label {
+      font-weight: 600; font-size: 0.9rem;
+      color: var(--ink);
+    }
+    .trust-detail {
+      font-size: 0.8rem; color: var(--slate);
+      margin-top: 0.15rem;
+    }
+
+    /* ── SECTION COMMON ── */
+    .section {
+      padding: 4rem 1.5rem;
+    }
+    .section-warm { background: var(--warm); }
+    .section-dark {
+      background: var(--night);
+      color: var(--white);
+    }
+    .section-header {
+      max-width: 700px;
+      margin: 0 auto 2.5rem;
+      text-align: center;
+    }
+    .section-eyebrow {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--gold-dark);
+      margin-bottom: 0.5rem;
+    }
+    .section-dark .section-eyebrow { color: var(--gold); }
+    .section-header h2 {
+      font-family: 'Fraunces', serif;
+      font-weight: 800;
+      font-size: clamp(1.6rem, 4vw, 2.2rem);
+      line-height: 1.2;
+      letter-spacing: -0.015em;
+    }
+    .section-header p {
+      margin-top: 0.75rem;
+      color: var(--slate);
+      font-size: 1.05rem;
+    }
+    .section-dark .section-header p { color: rgba(255,255,255,0.6); }
+
+    /* ── EVENTS ── */
+    .events-grid {
+      max-width: 1000px; margin: 0 auto;
+      display: grid; gap: 1.25rem;
+    }
+    .event-card {
+      background: var(--white);
+      border: 1px solid var(--mist);
+      border-radius: 14px;
+      padding: 1.75rem;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 1.25rem;
+      align-items: start;
+      transition: box-shadow 0.25s, border-color 0.25s;
+    }
+    .event-card:hover {
+      box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+      border-color: var(--gold-light);
+    }
+    .event-card.highlight {
+      border-color: var(--gold);
+      background: linear-gradient(135deg, var(--white), var(--gold-light));
+    }
+    .event-date {
+      background: var(--night);
+      color: var(--white);
+      border-radius: 10px;
+      padding: 0.6rem 0.7rem;
+      text-align: center;
+      min-width: 60px;
+    }
+    .highlight .event-date { background: var(--gold-dark); }
+    .event-date .month {
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      opacity: 0.8;
+    }
+    .event-date .day {
+      font-family: 'Fraunces', serif;
+      font-weight: 800;
+      font-size: 1.3rem;
+      line-height: 1.1;
+    }
+    .event-body h3 {
+      font-family: 'Fraunces', serif;
+      font-weight: 700;
+      font-size: 1.15rem;
+      margin-bottom: 0.3rem;
+    }
+    .event-period {
+      font-size: 0.8rem;
+      color: var(--gold-dark);
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    .event-body p {
+      font-size: 0.92rem;
+      color: var(--slate);
+      line-height: 1.6;
+    }
+    .event-tag {
+      display: inline-block;
+      background: var(--cloud);
+      color: var(--ink);
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 0.25rem 0.6rem;
+      border-radius: 6px;
+      white-space: nowrap;
+      align-self: start;
+      margin-top: 0.15rem;
+    }
+    .event-tag.hot {
+      background: #fef2e5;
+      color: #c2410c;
+    }
+    @media (max-width: 640px) {
+      .event-card {
+        grid-template-columns: auto 1fr;
+      }
+      .event-tag {
+        grid-column: 2;
+      }
+    }
+
+    /* ── SERVICES ── */
+    .services-grid {
+      max-width: 1000px; margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.25rem;
+    }
+    .service-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 14px;
+      padding: 1.75rem;
+    }
+    .service-icon {
+      font-size: 1.8rem;
+      margin-bottom: 0.75rem;
+    }
+    .service-card h3 {
+      font-family: 'Fraunces', serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+    .service-card p {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.65);
+      line-height: 1.6;
+    }
+
+    /* ── SEO TEXT ── */
+    .seo-text {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+    .seo-text h2 {
+      font-family: 'Fraunces', serif;
+      font-weight: 800;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    .seo-text h3 {
+      font-family: 'Fraunces', serif;
+      font-weight: 700;
+      font-size: 1.15rem;
+      margin-top: 1.75rem;
+      margin-bottom: 0.5rem;
+    }
+    .seo-text p {
+      color: var(--slate);
+      font-size: 0.95rem;
+      margin-bottom: 0.75rem;
+      line-height: 1.7;
+    }
+
+    /* ── CTA BANNER ── */
+    .cta-banner {
+      background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+      padding: 3.5rem 1.5rem;
+      text-align: center;
+      color: var(--white);
+    }
+    .cta-banner h2 {
+      font-family: 'Fraunces', serif;
+      font-weight: 900;
+      font-size: clamp(1.5rem, 4vw, 2rem);
+      margin-bottom: 0.75rem;
+    }
+    .cta-banner p {
+      font-size: 1.05rem;
+      opacity: 0.9;
+      margin-bottom: 1.75rem;
+      max-width: 500px;
+      margin-left: auto; margin-right: auto;
+    }
+    .cta-banner .btn-whatsapp {
+      font-size: 1.1rem;
+      padding: 1rem 2rem;
+    }
+    .cta-contacts {
+      margin-top: 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      font-size: 0.9rem;
+      opacity: 0.9;
+    }
+    .cta-contacts a {
+      color: var(--white);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+    .cta-contacts a:hover { text-decoration: underline; }
+
+    /* ── FOOTER ── */
+    .footer {
+      background: var(--night);
+      color: rgba(255,255,255,0.5);
+      padding: 2.5rem 1.5rem;
+      text-align: center;
+      font-size: 0.8rem;
+    }
+    .footer a {
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+    }
+    .footer a:hover { color: var(--gold); }
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+    }
+
+    /* ── FLOATING WHATSAPP ── */
+    .wa-float {
+      position: fixed;
+      bottom: 1.25rem;
+      right: 1.25rem;
+      z-index: 99;
+      width: 56px; height: 56px;
+      background: var(--green-whatsapp);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 16px rgba(37, 211, 102, 0.35);
+      transition: transform 0.2s, box-shadow 0.2s;
+      text-decoration: none;
+    }
+    .wa-float:hover {
+      transform: scale(1.08);
+      box-shadow: 0 6px 24px rgba(37, 211, 102, 0.45);
+    }
+    .wa-float svg { width: 28px; height: 28px; fill: var(--white); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 480px) {
+      .hero { padding: 6rem 1.25rem 3rem; }
+      .hero h1 { font-size: 1.75rem; }
+      .hero-actions { flex-direction: column; }
+      .btn { justify-content: center; width: 100%; }
+      .trust-inner { grid-template-columns: 1fr 1fr; }
+      .section { padding: 3rem 1.25rem; }
+      .services-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ── REDUCED MOTION ── */
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: 0.01ms !important; }
+    }
+  </style>
+
+  <!-- Structured Data for Local Business -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Fahrservice-buchen.com",
+    "description": "Ihr zuverlässiger Fahrservice in Worms und der Rhein-Neckar-Region. Shuttle zu Events, Festzelt-Fahrten, Flughafentransfer.",
+    "url": "https://fahrservice-buchen.com/worms",
+    "telephone": "+491791676205",
+    "email": "kontakt@fahrservice-buchen.com",
+    "areaServed": {
+      "@type": "GeoCircle",
+      "geoMidpoint": { "@type": "GeoCoordinates", "latitude": 49.6341, "longitude": 8.3507 },
+      "geoRadius": "50000"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Worms",
+      "addressRegion": "Rheinland-Pfalz",
+      "addressCountry": "DE"
+    },
+    "serviceType": ["Fahrservice", "Shuttle-Service", "Event-Transfer", "Flughafentransfer"]
+  }
+  </script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" role="navigation" aria-label="Hauptnavigation">
+  <div class="nav-inner">
+    <a href="https://fahrservice-buchen.com" class="nav-brand">fahrservice<span>-buchen</span>.com</a>
+    <a href="https://wa.me/491791676205?text=Hallo%2C%20ich%20möchte%20eine%20Fahrt%20in%20Worms%20buchen." class="nav-cta" aria-label="Jetzt per WhatsApp buchen">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.955 9.955 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18a8 8 0 01-4.243-1.214l-.293-.175-2.864.852.852-2.864-.175-.293A8 8 0 1112 20z"/></svg>
+      WhatsApp
+    </a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">Ihr Fahrservice in Worms & Region</div>
+    <h1>Feiern Sie. <em>Wir fahren.</em></h1>
+    <p class="hero-sub">
+      Backfischfest, Wurstmarkt, Nibelungenfestspiele – genießen Sie die besten Events der Region ohne Sorge um die Heimfahrt. Zuverlässig, pünktlich, fair.
+    </p>
+    <div class="hero-actions">
+      <a href="https://wa.me/491791676205?text=Hallo%2C%20ich%20möchte%20eine%20Fahrt%20buchen.%20" class="btn btn-whatsapp">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.955 9.955 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18a8 8 0 01-4.243-1.214l-.293-.175-2.864.852.852-2.864-.175-.293A8 8 0 1112 20z"/></svg>
+        Per WhatsApp buchen
+      </a>
+      <a href="tel:+491791676205" class="btn btn-call">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z"/></svg>
+        0179 1676205
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- TRUST -->
+<section class="trust" aria-label="Vorteile">
+  <div class="trust-inner">
+    <div class="trust-item">
+      <div class="trust-icon">⏱️</div>
+      <div class="trust-label">Pünktlich</div>
+      <div class="trust-detail">Wir sind da, wenn Sie uns brauchen</div>
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon">🍷</div>
+      <div class="trust-label">Sorglos feiern</div>
+      <div class="trust-detail">Genießen ohne Promille-Sorgen</div>
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon">👥</div>
+      <div class="trust-label">Gruppen willkommen</div>
+      <div class="trust-detail">Allein oder mit Freunden</div>
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon">📱</div>
+      <div class="trust-label">Einfach buchen</div>
+      <div class="trust-detail">WhatsApp, Anruf oder E-Mail</div>
+    </div>
+  </div>
+</section>
+
+<!-- EVENTS -->
+<section class="section section-warm" id="events">
+  <div class="section-header">
+    <div class="section-eyebrow">Events in Worms & Umgebung</div>
+    <h2>Die nächsten Highlights – wir bringen Sie hin</h2>
+    <p>Sichern Sie sich jetzt Ihren Fahrservice zu den beliebtesten Veranstaltungen der Region.</p>
+  </div>
+
+  <div class="events-grid">
+
+    <!-- Backfischfest -->
+    <article class="event-card highlight">
+      <div class="event-date">
+        <div class="month">Aug</div>
+        <div class="day">29</div>
+      </div>
+      <div class="event-body">
+        <h3>🎪 Backfischfest Worms</h3>
+        <div class="event-period">29. August – 6. September 2026</div>
+        <p>Das größte Volks- und Weinfest am Rhein auf der Kisselswiese. Neun Festtage mit drei Festzelten, Festumzug am 30. August, Fischerstechen und Höhenfeuerwerk am letzten Abend. Wir holen Sie sicher nach Hause – auch nach Mitternacht.</p>
+      </div>
+      <span class="event-tag hot">Hohe Nachfrage</span>
+    </article>
+
+    <!-- Wurstmarkt -->
+    <article class="event-card highlight">
+      <div class="event-date">
+        <div class="month">Sep</div>
+        <div class="day">11</div>
+      </div>
+      <div class="event-body">
+        <h3>🍷 Wurstmarkt Bad Dürkheim</h3>
+        <div class="event-period">11.–15. & 18.–21. September 2026</div>
+        <p>Das größte Weinfest der Welt mit über 600.000 Besuchern, 36 Schubkarchständen und rund 300 Weinspezialitäten. Wer Wein genießen will, braucht einen Fahrer. Wir bringen Sie von Worms nach Bad Dürkheim und wieder zurück.</p>
+      </div>
+      <span class="event-tag hot">Hohe Nachfrage</span>
+    </article>
+
+    <!-- Heidelberger Herbst -->
+    <article class="event-card">
+      <div class="event-date">
+        <div class="month">Sep</div>
+        <div class="day">26</div>
+      </div>
+      <div class="event-body">
+        <h3>🍂 Heidelberger Herbst</h3>
+        <div class="event-period">26. – 27. September 2026</div>
+        <p>Das große Altstadtfest in Heidelberg mit Live-Musik auf allen Plätzen. Entspannt anreisen ohne Parkplatzsuche in der vollen Altstadt – wir fahren Sie direkt hin.</p>
+      </div>
+      <span class="event-tag">Beliebte Strecke</span>
+    </article>
+
+    <!-- Heidelberger Weindorf -->
+    <article class="event-card">
+      <div class="event-date">
+        <div class="month">Okt</div>
+        <div class="day">01</div>
+      </div>
+      <div class="event-body">
+        <h3>🥂 Heidelberger Weindorf</h3>
+        <div class="event-period">1. – 18. Oktober 2026</div>
+        <p>Beste Weine von Winzern aus Heidelberg und der Region auf dem Karlsplatz und Schloss Heidelberg. Genuss und Weinprobe ohne Fahrstress – wir übernehmen.</p>
+      </div>
+      <span class="event-tag">Weinfahrt</span>
+    </article>
+
+    <!-- Bergsträßer Winzerfest -->
+    <article class="event-card">
+      <div class="event-date">
+        <div class="month">Okt</div>
+        <div class="day">02</div>
+      </div>
+      <div class="event-body">
+        <h3>🍇 Bergsträßer Winzerfest</h3>
+        <div class="event-period">2. – 4. Oktober 2026 · Weinheim-Lützelsachsen</div>
+        <p>Gemütliches Winzerfest an der Bergstraße mit regionalen Weinen und kulinarischen Spezialitäten. Perfekt für einen Tagesausflug mit Shuttle.</p>
+      </div>
+      <span class="event-tag">Regional</span>
+    </article>
+
+    <!-- Oktoberfest Mannheim -->
+    <article class="event-card">
+      <div class="event-date">
+        <div class="month">Okt</div>
+        <div class="day">16</div>
+      </div>
+      <div class="event-body">
+        <h3>🍺 Mannheimer Oktoberfest</h3>
+        <div class="event-period">16. Oktober – 7. November 2026</div>
+        <p>Die größte Wiesn der Region – neun Veranstaltungstage mit Live-Bands und Festzelt-Stimmung. O'zapft is – und wir fahren Sie sicher heim nach Worms!</p>
+      </div>
+      <span class="event-tag hot">Hohe Nachfrage</span>
+    </article>
+
+    <!-- Marktwinzer -->
+    <article class="event-card">
+      <div class="event-date">
+        <div class="month">Sam</div>
+        <div class="day">🍷</div>
+      </div>
+      <div class="event-body">
+        <h3>🥂 Wormser Marktwinzer</h3>
+        <div class="event-period">Jeden Samstag bis 31. Oktober 2026</div>
+        <p>Jeden Samstag laden die sechs Wormser Marktwinzer auf dem Wochenmarkt am Siegfriedbrunnen zum Verkosten ein. Das Jubiläumsjahr – 10 Jahre Marktwinzer! Abschlussveranstaltung am 31. Oktober.</p>
+      </div>
+      <span class="event-tag">Wöchentlich</span>
+    </article>
+
+    <!-- Weihnachtsmarkt -->
+    <article class="event-card">
+      <div class="event-date">
+        <div class="month">Nov</div>
+        <div class="day">20</div>
+      </div>
+      <div class="event-body">
+        <h3>🎄 Wormser Weihnacht</h3>
+        <div class="event-period">20. November – 23. Dezember 2026</div>
+        <p>Glühwein, gebrannte Mandeln und Budenzauber in der Wormser Innenstadt. Ideal für Firmenweihnachtsfeiern und Gruppenausflüge – wir bringen Ihr Team sicher hin und zurück.</p>
+      </div>
+      <span class="event-tag">Firmenfeiern</span>
+    </article>
+
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section section-dark" id="leistungen">
+  <div class="section-header">
+    <div class="section-eyebrow">Unsere Leistungen</div>
+    <h2>Für jeden Anlass die richtige Fahrt</h2>
+    <p>Von der spontanen Heimfahrt bis zum geplanten Gruppenausflug – wir sind für Sie da.</p>
+  </div>
+
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-icon">🎉</div>
+      <h3>Festzelt-Shuttle</h3>
+      <p>Backfischfest, Wurstmarkt, Oktoberfest – genießen Sie den Abend, wir fahren Sie sicher nach Hause. Auch nach Mitternacht und am Wochenende.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🍷</div>
+      <h3>Weinfahrten & Weinproben</h3>
+      <p>Shuttle zu Weinfesten, Winzern und Weinproben in Rheinhessen, der Pfalz und an der Bergstraße. Wein genießen ohne Promille-Sorgen.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🎭</div>
+      <h3>Kultur & Theater</h3>
+      <p>Komfortabel zu den Nibelungenfestspielen, ins Wormser Theater oder zu Konzerten in der SAP Arena Mannheim. Pünktlich hin, entspannt zurück.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">👔</div>
+      <h3>Firmen & Gruppen</h3>
+      <p>Betriebsausflüge, Teamevents, Weihnachtsfeiern – wir organisieren den Transport für Ihr Team. Planung und Abrechnung unkompliziert.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">✈️</div>
+      <h3>Flughafentransfer</h3>
+      <p>Von Worms zum Flughafen Frankfurt in ca. 60 Minuten. Zuverlässig, pünktlich, mit Flugüberwachung bei Verspätungen.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🏥</div>
+      <h3>Alltags- & Sonderfahrten</h3>
+      <p>Arztbesuche, Bahnhofstransfer, Einkaufsfahrten oder besondere Anlässe – wir sind Ihr Fahrservice für alle Gelegenheiten.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SEO TEXT -->
+<section class="section" id="fahrservice-worms">
+  <div class="seo-text">
+    <h2>Ihr Fahrservice in Worms – zuverlässig, flexibel, regional</h2>
+    <p>
+      Als Ihr Fahrservice in Worms und der Metropolregion Rhein-Neckar sind wir Ihr Ansprechpartner Nr. 1 für sichere und bequeme Fahrten zu allen Anlässen. Ob Backfischfest auf der Kisselswiese, Wurstmarkt in Bad Dürkheim oder Weihnachtsmarkt in der Innenstadt – wir bringen Sie hin und holen Sie wieder ab.
+    </p>
+
+    <h3>Warum ein Fahrservice statt Taxi?</h3>
+    <p>
+      Im Gegensatz zum klassischen Taxi planen wir Ihre Fahrt gemeinsam mit Ihnen. Sie buchen bequem per WhatsApp oder Anruf, nennen uns Abholzeit und Ziel, und wir sind pünktlich vor Ort. Besonders bei Großveranstaltungen wie dem Backfischfest oder dem Dürkheimer Wurstmarkt, wenn Taxis Mangelware sind, sichern Sie sich mit uns Ihre garantierte Heimfahrt.
+    </p>
+
+    <h3>Unsere Region – Worms und darüber hinaus</h3>
+    <p>
+      Wir bedienen Worms und die gesamte Umgebung: Viernheim, Lampertheim, Bürstadt, Biblis, Lorsch, Bensheim, Heppenheim, Mannheim, Ludwigshafen, Frankenthal, Grünstadt, Bad Dürkheim, Heidelberg und den Flughafen Frankfurt. Egal ob Kurzstrecke oder Langstrecke – sprechen Sie uns an.
+    </p>
+
+    <h3>Einfach buchen – so geht's</h3>
+    <p>
+      Schreiben Sie uns per WhatsApp unter <strong>0179 1676205</strong> oder senden Sie eine E-Mail an <strong>kontakt@fahrservice-buchen.com</strong>. Teilen Sie uns Datum, Uhrzeit, Abholort und Ziel mit – wir bestätigen Ihre Fahrt schnell und unkompliziert.
+    </p>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<section class="cta-banner" id="kontakt">
+  <h2>Fahrt buchen – in 30 Sekunden</h2>
+  <p>Schreiben Sie uns einfach per WhatsApp mit Datum, Uhrzeit und Ziel. Wir melden uns sofort.</p>
+  <a href="https://wa.me/491791676205?text=Hallo%2C%20ich%20möchte%20eine%20Fahrt%20buchen.%20Datum%3A%20%0AUhrzeit%3A%20%0AVon%3A%20%0ANach%3A%20" class="btn btn-whatsapp" style="background:#fff;color:#25d366;">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.955 9.955 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18a8 8 0 01-4.243-1.214l-.293-.175-2.864.852.852-2.864-.175-.293A8 8 0 1112 20z"/></svg>
+    Jetzt per WhatsApp buchen
+  </a>
+  <div class="cta-contacts">
+    <a href="tel:+491791676205">📞 0179 1676205</a>
+    <a href="mailto:kontakt@fahrservice-buchen.com">✉️ kontakt@fahrservice-buchen.com</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-links">
+    <a href="https://fahrservice-buchen.com">Startseite</a>
+    <a href="https://fahrservice-buchen.com/worms">Worms</a>
+    <a href="https://fahrservice-buchen.com/baddürkheim">Bad Dürkheim</a>
+    <a href="https://fahrservice-buchen.com/impressum">Impressum</a>
+    <a href="https://fahrservice-buchen.com/datenschutz">Datenschutz</a>
+  </div>
+  <p>&copy; 2026 fahrservice-buchen.com – Ihr Fahrservice in Worms & der Rhein-Neckar-Region</p>
+</footer>
+
+<!-- FLOATING WHATSAPP BUTTON -->
+<a href="https://wa.me/491791676205?text=Hallo%2C%20ich%20möchte%20eine%20Fahrt%20buchen." class="wa-float" aria-label="Per WhatsApp kontaktieren">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.955 9.955 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18a8 8 0 01-4.243-1.214l-.293-.175-2.864.852.852-2.864-.175-.293A8 8 0 1112 20z"/></svg>
+</a>
+
+</body>
+</html>
