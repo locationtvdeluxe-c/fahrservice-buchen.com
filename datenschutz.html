@@ -4,15 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Datenschutzerklärung | fahrservice-buchen.com</title>
-  <meta name="robots" content="noindex, follow">
-  <link href="https://fonts.bunny.net/css?family=inter:400,500,600,700" rel="stylesheet">
+  <meta name="description" content="Datenschutzerklärung und Informationen zur Datenverarbeitung auf fahrservice-buchen.com.">
+  <link href="https://fonts.bunny.net/css?family=inter:400,500,600,700|dm-mono:400" rel="stylesheet">
+  
+  <!-- UMAMI ANALYTICS -->
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="03fe2c2b-a847-4de7-9cab-bf54cd5da43b"></script>
+
   <style>
     :root {
       --primary: #2563EB;
+      --primary-dark: #1D4ED8;
+      --primary-light: #DBEAFE;
       --dark: #111827;
       --gray-900: #1F2937;
       --gray-700: #374151;
       --gray-500: #6B7280;
+      --gray-300: #D1D5DB;
       --gray-100: #F3F4F6;
       --white: #FFFFFF;
     }
@@ -20,87 +27,133 @@
     body {
       font-family: 'Inter', -apple-system, sans-serif;
       font-size: 16px;
-      line-height: 1.7;
+      line-height: 1.6;
       color: var(--gray-900);
       background: var(--white);
       -webkit-font-smoothing: antialiased;
     }
     a { color: var(--primary); text-decoration: none; }
     a:hover { text-decoration: underline; }
-    
+
+    /* NAV HEADER */
     .nav { border-bottom: 1px solid var(--gray-100); padding: 16px 0; background: var(--white); }
     .nav-inner { max-width: 900px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; }
     .nav-logo { font-weight: 700; font-size: 18px; color: var(--dark); }
     .nav-logo span { color: var(--primary); }
 
-    .container { max-width: 900px; margin: 40px auto 80px; padding: 0 24px; }
-    h1 { font-size: 2.2rem; color: var(--dark); margin-bottom: 24px; }
-    h2 { font-size: 1.4rem; color: var(--dark); margin-top: 32px; margin-bottom: 12px; border-bottom: 2px solid var(--gray-100); padding-bottom: 6px; }
-    h3 { font-size: 1.1rem; color: var(--gray-900); margin-top: 20px; margin-bottom: 8px; }
-    p, ul { margin-bottom: 16px; color: var(--gray-700); }
+    /* MAIN CONTAINER */
+    .container { max-width: 800px; margin: 40px auto 80px; padding: 0 24px; }
+    .header-box { text-align: center; margin-bottom: 32px; }
+    .header-box h1 { font-size: clamp(1.8rem, 4vw, 2.4rem); color: var(--dark); margin-bottom: 8px; }
+    .header-box p { color: var(--gray-500); font-size: 16px; }
+
+    /* CONTENT CARD */
+    .content-card {
+      background: var(--white);
+      border: 1px solid var(--gray-300);
+      border-radius: 16px;
+      padding: 32px;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+    }
+
+    h2 { font-size: 20px; color: var(--dark); margin-top: 28px; margin-bottom: 12px; border-bottom: 2px solid var(--primary-light); padding-bottom: 6px; }
+    h2:first-of-type { margin-top: 0; }
+    h3 { font-size: 16px; color: var(--gray-900); margin-top: 18px; margin-bottom: 8px; }
+    p, ul { color: var(--gray-700); font-size: 15px; margin-bottom: 14px; }
     ul { padding-left: 20px; }
     li { margin-bottom: 6px; }
     
+    .highlight-box {
+      background: var(--gray-100);
+      border-left: 4px solid var(--primary);
+      padding: 16px;
+      border-radius: 6px;
+      margin: 16px 0;
+      font-size: 14px;
+    }
+
+    /* FOOTER */
     .footer { border-top: 1px solid var(--gray-100); padding: 32px 0; text-align: center; font-size: 14px; color: var(--gray-500); }
+
+    @media(max-width: 600px) {
+      .content-card { padding: 20px; }
+    }
   </style>
 </head>
 <body>
 
+  <!-- HEADER NAVIGATION -->
   <nav class="nav">
     <div class="nav-inner">
-      <div class="nav-logo"><a href="index.html" style="color:inherit;">fahrservice<span>-buchen</span>.com</a></div>
+      <div class="nav-logo"><a href="index.html" style="color:inherit; text-decoration:none;">fahrservice<span>-buchen</span>.com</a></div>
       <a href="index.html">← Zurück zur Startseite</a>
     </div>
   </nav>
 
+  <!-- HAUPTINHALT -->
   <main class="container">
-    <h1>Datenschutzerklärung</h1>
+    <div class="header-box">
+      <h1>Datenschutzerklärung</h1>
+      <p>Informationen über die Verarbeitung Ihrer personenbezogenen Daten gemäß DSGVO</p>
+    </div>
 
-    <h2>1. Datenschutz auf einen Blick</h2>
-    <h3>Allgemeine Hinweise</h3>
-    <p>Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie unsere Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können. Ausführliche Informationen zum Thema Datenschutz entnehmen Sie unserer unter diesem Text aufgeführten Datenschutzerklärung.</p>
+    <div class="content-card">
+      
+      <h2>1. Datenschutz auf einen Blick</h2>
+      <h3>Allgemeine Hinweise</h3>
+      <p>Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie unsere Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können.</p>
 
-    <h3>Datenerfassung auf unserer Website</h3>
-    <p><strong>Wer ist verantwortlich für die Datenerfassung auf dieser Website?</strong><br>
-    Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Dessen Kontaktdaten können Sie dem Impressum dieser Website entnehmen.</p>
-    <p><strong>Wie erfassen wir Ihre Daten?</strong><br>
-    Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese mitteilen. Hierbei kann es sich z. B. um Daten handeln, die Sie in ein Kontakt- oder Bewerbungsformular eingeben. Andere Daten werden automatisch oder nach Ihrer Einwilligung beim Besuch der Website durch unsere IT-Systeme erfasst. Das sind vor allem technische Daten (z. B. Internetbrowser, Betriebssystem oder Uhrzeit des Seitenaufrufs).</p>
+      <h3>Datenerfassung auf dieser Website</h3>
+      <p>Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Dessen Kontaktdaten können Sie dem Impressum dieser Website entnehmen.</p>
 
-    <h2>2. Hosting</h2>
-    <p>Wir hosten die Inhalte unserer Website bei folgendem Anbieter:</p>
-    <h3>Externes Hosting</h3>
-    <p>Diese Website wird extern gehostet. Die personenbezogenen Daten, die auf dieser Website erfasst werden, werden auf den Servern des Hosters gespeichert. Hierbei kann es sich v. a. um IP-Adressen, Kontaktanfragen, Meta- und Kommunikationsdaten, Webseitenzugriffe und sonstige Daten, die über eine Website generiert werden, handeln.</p>
-    <p>Das externe Hosting erfolgt zum Zwecke der Vertragserfüllung gegenüber unseren potenziellen und bestehenden Kunden (Art. 6 Abs. 1 lit. b DSGVO) und im Interesse einer sicheren, schnellen und effizienten Bereitstellung unseres Online-Angebots durch einen professionellen Anbieter (Art. 6 Abs. 1 lit. f DSGVO).</p>
+      <h2>2. Verantwortliche Stelle</h2>
+      <p>Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:</p>
+      <div class="highlight-box">
+        <strong>Sebastian Eschenfelder</strong><br>
+        Digital Media &amp; Plattformbetrieb<br>
+        E-Mail: <a href="mailto:eschenfelder.office@gmail.com">eschenfelder.office@gmail.com</a>
+      </div>
 
-    <h2>3. Allgemeine Hinweise und Pflichtinformationen</h2>
-    <h3>Datenschutz</h3>
-    <p>Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend den gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung.</p>
+      <h2>3. Webanalyse mit Umami Analytics (Datenschutzfreundlich &amp; EU-Hosted)</h2>
+      <p>Wir nutzen auf unserer Website den Open-Source-Webanalysedienst <strong>Umami Analytics</strong> (Cloud-Variante). Der Schutz Ihrer Daten steht dabei an erster Stelle:</p>
+      <ul>
+        <li><strong>Keine Cookies:</strong> Umami verwendet keine Cookies und speichert keine Daten im Local Storage Ihres Browsers.</li>
+        <li><strong>Keine personenbezogenen Daten:</strong> Es werden keine IP-Adressen dauerhaft gespeichert, keine Tracking-IDs vergeben und keine benutzerübergreifenden Profile erstellt.</li>
+        <li><strong>Serverstandort in der EU:</strong> Unsere Umami-Cloud-Instanz wird ausschließlich auf Servern in <strong>Frankfurt am Main, Deutschland (Europäische Union)</strong> betrieben.</li>
+      </ul>
+      <p>Erfasst werden lediglich anonyme Kennzahlen wie aufgerufene Seiten, Verweildauer, verwendetes Betriebssystem und aggregierte Interaktionen (z. B. Nutzung des Preisrechners). Rechtsgrundlage ist unser berechtigtes Interesse an der bedarfsgerechten Gestaltung und Optimierung unserer Website gemäß Art. 6 Abs. 1 lit. f DSGVO.</p>
 
-    <h3>Hinweis zur verantwortlichen Stelle</h3>
-    <p>Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist im Impressum ausgewiesen.</p>
-    <p>Verantwortliche Stelle ist die natürliche oder juristische Person, die allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten (z. B. Namen, E-Mail-Adressen o. Ä.) entscheidet.</p>
+      <h2>4. Kontaktaufnahme &amp; Buchungsanfragen</h2>
+      <p>Wenn Sie uns per Kontaktformular oder über den integrierten Preis- und Anfragerechner Anfragen zukommen lassen, werden Ihre Angaben aus dem Formular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert.</p>
+      
+      <h3>Verarbeitung via Formspree</h3>
+      <p>Für den Versand von Formularanfragen nutzen wir den Dienst Formspree (Formspree Inc.). Die von Ihnen im Formular eingegebenen Daten werden an die Server von Formspree übertragen, um die Nachricht als E-Mail an uns weiterzuleiten. Die Datenverarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO (Vertragsanbahnung bzw. Erfüllung vorvertraglicher Maßnahmen).</p>
 
-    <h3>Speicherdauer</h3>
-    <p>Soweit innerhalb dieser Datenschutzerklärung keine spätere Speicherdauer genannt wurde, verbleiben Ihre personenbezogenen Daten bei uns, bis der Zweck für die Datenverarbeitung entfällt. Wenn Sie ein berechtigtes Löschersuchen geltend machen oder eine Einwilligung zur Datenverarbeitung widerrufen, werden Ihre Daten gelöscht, sofern wir keine anderen rechtlich zulässigen Gründe für die Speicherung Ihrer personenbezogenen Daten haben (z. B. steuer- oder handelsrechtliche Aufbewahrungsfristen).</p>
+      <h2>5. Server-Log-Dateien</h2>
+      <p>Der Provider der Seiten erhebt und speichert automatisch Informationen in sogenannten Server-Log-Dateien, die Ihr Browser automatisch an uns übermittelt. Dies sind:</p>
+      <ul>
+        <li>Browser-Typ und Browser-Version</li>
+        <li>Verwendetes Betriebssystem</li>
+        <li>Referrer URL (die zuvor besuchte Seite)</li>
+        <li>Uhrzeit der Serveranfrage</li>
+        <li>IP-Adresse (in anonymisierter/gekürzter Form)</li>
+      </ul>
+      <p>Eine Zusammenführung dieser Daten mit anderen Datenquellen wird nicht vorgenommen. Grundlage für die Datenverarbeitung ist Art. 6 Abs. 1 lit. f DSGVO.</p>
 
-    <h3>SSL- bzw. TLS-Verschlüsselung</h3>
-    <p>Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte, wie zum Beispiel Bestellungen oder Anfragen, die Sie an uns als Seitenbetreiber senden, eine SSL- bzw. TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie daran, dass die Adresszeile des Browsers von „http://“ auf „https://“ wechselt und an dem Schloss-Symbol in Ihrer Browserzeile.</p>
+      <h2>6. Ihre Rechte als betroffene Person</h2>
+      <p>Sie haben im Rahmen der geltenden gesetzlichen Bestimmungen jederzeit das Recht auf:</p>
+      <ul>
+        <li><strong>Auskunft:</strong> Recht auf kostenlose Auskunft über Ihre gespeicherten personenbezogenen Daten, deren Herkunft und Empfänger und den Zweck der Datenverarbeitung (Art. 15 DSGVO).</li>
+        <li><strong>Berichtigung &amp; Löschung:</strong> Recht auf Berichtigung unrichtiger Daten oder Löschung Ihrer bei uns gespeicherten Daten (Art. 16, 17 DSGVO).</li>
+        <li><strong>Einschränkung der Verarbeitung:</strong> Recht, die Einschränkung der Verarbeitung Ihrer Daten zu verlangen (Art. 18 DSGVO).</li>
+        <li><strong>Widerspruch:</strong> Recht auf Widerspruch gegen die Verarbeitung Ihrer Daten (Art. 21 DSGVO).</li>
+      </ul>
+      <p>Hierzu sowie zu weiteren Fragen zum Thema personenbezogene Daten können Sie sich jederzeit unter der im Impressum angegebenen E-Mail-Adresse an uns wenden.</p>
 
-    <h3>Ihre Rechte: Auskunft, Löschung und Berichtigung</h3>
-    <p>Sie haben im Rahmen der geltenden gesetzlichen Bestimmungen jederzeit das Recht auf unentgeltliche Auskunft über Ihre gespeicherten personenbezogenen Daten, deren Herkunft und Empfänger und den Zweck der Datenverarbeitung und ggf. ein Recht auf Berichtigung oder Löschung dieser Daten. Hierzu sowie zu weiteren Fragen zum Thema personenbezogene Daten können Sie sich jederzeit an uns wenden.</p>
-
-    <h2>4. Datenerfassung auf dieser Website</h2>
-    <h3>Formularübermittlung via Formspree</h3>
-    <p>Für die Übermittlung von Formulareingaben (z. B. Anfragen oder Bewerbungen als Fahrer) nutzen wir den Dienst <strong>Formspree</strong> (Formspree Inc., 2201 Menalto Ave, Menlo Park, CA 94025, USA).</p>
-    <p>Wenn Sie ein Formular auf unserer Website ausfüllen und absenden, werden die von Ihnen eingegebenen Daten an Formspree übertragen und per E-Mail an uns weitergeleitet. Formspree verarbeitet diese Daten ausschließlich in unserem Auftrag, um die Übermittlung der Nachrichten zu gewährleisten.</p>
-    <p>Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern Ihre Anfrage mit der Erfüllung eines Vertrags zusammenhängt oder zur Durchführung vorvertraglicher Maßnahmen erforderlich ist. In allen übrigen Fällen beruht die Verarbeitung auf unserem berechtigten Interesse an der effektiven Bearbeitung der an uns gerichteten Anfragen (Art. 6 Abs. 1 lit. f DSGVO).</p>
-    <p>Weitere Informationen zum Datenschutz von Formspree finden Sie unter: <a href="https://formspree.io/legal/privacy-policy" target="_blank" rel="noopener">https://formspree.io/legal/privacy-policy</a>.</p>
-
-    <h3>Anfrage per E-Mail, Telefon oder WhatsApp</h3>
-    <p>Wenn Sie uns per E-Mail, Telefon oder WhatsApp kontaktieren, wird Ihre Anfrage inklusive aller daraus hervorgehenden personenbezogenen Daten (Name, Anfrage) zum Zwecke der Bearbeitung Ihres Anliegens bei uns gespeichert und verarbeitet. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.</p>
-    <p>Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern Ihre Anfrage mit der Erfüllung eines Vertrags zusammenhängt oder zur Durchführung vorvertraglicher Maßnahmen erforderlich ist. In allen übrigen Fällen beruht die Verarbeitung auf unserem berechtigten Interesse an der effektiven Bearbeitung der an uns gerichteten Anfragen (Art. 6 Abs. 1 lit. f DSGVO).</p>
+    </div>
   </main>
 
+  <!-- FOOTER -->
   <footer class="footer">
     <p>© 2026 fahrservice-buchen.com — <a href="impressum.html">Impressum</a> | <a href="datenschutz.html">Datenschutz</a></p>
   </footer>
