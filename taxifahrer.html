@@ -1,23 +1,183 @@
-<!-- BEWERBUNG SECTION -->
-  <section class="section" id="bewerbung">
-    <div class="container">
-      <div class="section-label">Karriere / Verstärkung</div>
-      <h2 class="section-title">Fahrer in Bad Dürkheim werden</h2>
-      <p class="section-sub">Du möchtest als Chauffeur oder Taxifahrer in Bad Dürkheim arbeiten? Bewirb dich direkt über unser Online-Formular.</p>
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jobs & Partner für Taxifahrer & Mietwagenunternehmen | fahrservice-buchen.com</title>
+  <meta name="description" content="Fahraufträge erhalten oder als Fahrer/Partner durchstarten. Wir suchen qualifizierte Fahrer und kooperieren mit Taxi- und Mietwagenunternehmen.">
+  <link href="https://fonts.bunny.net/css?family=inter:400,500,600,700|dm-mono:400" rel="stylesheet">
+  
+  <!-- UMAMI ANALYTICS -->
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="03fe2c2b-a847-4de7-9cab-bf54cd5da43b"></script>
 
-      <div class="form-container">
-        <form action="https://formspree.io/f/mzepjpny" method="POST">
-          <!-- Weiterleitung nach dem Absenden direkt auf deine Jobseite -->
-          <input type="hidden" name="_next" value="https://fahrservice-buchen.com/taxifahrer">
+  <style>
+    :root {
+      --primary: #2563EB;
+      --primary-dark: #1D4ED8;
+      --primary-light: #DBEAFE;
+      --dark: #111827;
+      --gray-900: #1F2937;
+      --gray-700: #374151;
+      --gray-500: #6B7280;
+      --gray-300: #D1D5DB;
+      --gray-100: #F3F4F6;
+      --white: #FFFFFF;
+      --accent: #10B981;
+    }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--gray-900);
+      background: var(--white);
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
 
+    /* NAV */
+    .nav { border-bottom: 1px solid var(--gray-100); padding: 16px 0; background: var(--white); }
+    .nav-inner { max-width: 900px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; }
+    .nav-logo { font-weight: 700; font-size: 18px; color: var(--dark); }
+    .nav-logo span { color: var(--primary); }
+
+    /* MAIN CONTAINER */
+    .container { max-width: 800px; margin: 40px auto 80px; padding: 0 24px; }
+    .header-box { text-align: center; margin-bottom: 32px; }
+    .header-box h1 { font-size: clamp(1.8rem, 4vw, 2.4rem); color: var(--dark); margin-bottom: 8px; }
+    .header-box p { color: var(--gray-500); font-size: 16px; }
+
+    /* USPs / ADVANTAGES GRID */
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+    .benefit-card {
+      background: var(--gray-100);
+      border: 1px solid var(--gray-300);
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+    }
+    .benefit-card h3 { font-size: 16px; color: var(--dark); margin-bottom: 6px; }
+    .benefit-card p { font-size: 13px; color: var(--gray-500); margin: 0; }
+
+    /* FORM CARD */
+    .form-card {
+      background: var(--white);
+      border: 1px solid var(--gray-300);
+      border-radius: 16px;
+      padding: 32px;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+    }
+
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .form-group { margin-bottom: 20px; }
+    .form-group.full { grid-column: 1 / -1; }
+    
+    label { display: block; font-weight: 600; font-size: 14px; margin-bottom: 6px; color: var(--dark); }
+    input[type="text"], input[type="email"], input[type="tel"], select, textarea {
+      width: 100%;
+      padding: 12px 14px;
+      border-radius: 8px;
+      border: 1px solid var(--gray-300);
+      font-size: 15px;
+      font-family: inherit;
+    }
+    input:focus, select:focus, textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px var(--primary-light);
+    }
+
+    /* BUTTON */
+    .btn-submit {
+      width: 100%;
+      background: var(--primary);
+      color: white;
+      font-weight: 700;
+      font-size: 16px;
+      padding: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background .2s;
+    }
+    .btn-submit:hover { background: var(--primary-dark); }
+
+    /* FOOTER */
+    .footer { border-top: 1px solid var(--gray-100); padding: 32px 0; text-align: center; font-size: 14px; color: var(--gray-500); }
+
+    @media(max-width: 600px) {
+      .benefits-grid { grid-template-columns: 1fr; }
+      .form-grid { grid-template-columns: 1fr; }
+      .form-card { padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <div class="nav-logo"><a href="index.html" style="color:inherit; text-decoration:none;">fahrservice<span>-buchen</span>.com</a></div>
+      <a href="index.html">← Zurück zur Startseite</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="header-box">
+      <h1>Fahrer &amp; Partnerunternehmen gesucht</h1>
+      <p>Wir vermitteln qualifizierte Fahraufträge in der Region. Werden Sie Teil unseres Netzwerks als selbstständiger Fahrer oder Partnerbetrieb.</p>
+    </div>
+
+    <!-- USPs -->
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <h3>Zusätzliche Fahrten</h3>
+        <p>Bessere Auslastung für Ihre Fahrzeuge und Chauffeure.</p>
+      </div>
+      <div class="benefit-card">
+        <h3>Faire Konditionen</h3>
+        <p>Transparente Abrechnung ohne versteckte Gebühren.</p>
+      </div>
+      <div class="benefit-card">
+        <h3>Starkes Netzwerk</h3>
+        <p>Direkter Zugang zu regionalen Transfer- &amp; B2B-Anfragen.</p>
+      </div>
+    </div>
+
+    <div class="form-card">
+      <form action="https://formspree.io/f/mzepjpny" method="POST" data-umami-event="Fahrer_Partner_Anfrage">
+        
+        <input type="hidden" name="Anfrage_Typ" value="Fahrer / Unternehmen Bewerbung">
+
+        <h3 style="font-size: 18px; margin-bottom: 20px; color: var(--dark); border-bottom: 1px solid var(--gray-100); padding-bottom: 10px;">Art der Partnerschaft</h3>
+
+        <div class="form-group full">
+          <label for="kategorie">Ich bewerbe mich als: *</label>
+          <select id="kategorie" name="Partner_Kategorie" required>
+            <option value="">Bitte auswählen...</option>
+            <option value="Selbstständiger Taxifahrer / Mietwagenfahrer">Selbstständiger Fahrer (mit Personbeförderungsschein)</option>
+            <option value="Unternehmen (Taxi / Mietwagenbetrieb)">Mietwagen- / Taxiunternehmen (Flotte/Konzession vorhanden)</option>
+            <option value="Angestellter Fahrer gesucht">Fahrer auf der Suche nach einer Anstellung</option>
+          </select>
+        </div>
+
+        <div class="form-grid">
           <div class="form-group">
             <label for="vorname">Vorname *</label>
             <input type="text" id="vorname" name="Vorname" required>
           </div>
           <div class="form-group">
-            <label for="nachname">Nachname *</label>
-            <input type="text" id="nachname" name="Nachname" required>
+            <label for="nachname">Nachname / Firmenname *</label>
+            <input type="text" id="nachname" name="Nachname_Firma" required>
           </div>
+        </div>
+
+        <div class="form-grid">
           <div class="form-group">
             <label for="email">E-Mail-Adresse *</label>
             <input type="email" id="email" name="E-Mail" required>
@@ -26,40 +186,37 @@
             <label for="telefon">Telefonnummer *</label>
             <input type="tel" id="telefon" name="Telefon" required>
           </div>
-          <div class="form-group">
-            <label for="wohnort">Wohnort / PLZ *</label>
-            <input type="text" id="wohnort" name="Wohnort" placeholder="z. B. 67098 Bad Dürkheim" required>
-          </div>
-
-          <div class="form-group">
-            <label>Anstellungsverhältnis *</label>
-            <div class="radio-group">
-              <label><input type="radio" name="Anstellung" value="Vollzeit" required> Vollzeit</label>
-              <label><input type="radio" name="Anstellung" value="Teilzeit"> Teilzeit</label>
-              <label><input type="radio" name="Anstellung" value="Minijob"> Minijob / Aushilfe</label>
-              <label><input type="radio" name="Anstellung" value="Saisonkraft"> Saisonkraft (z. B. Wurstmarkt)</label>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label>Personenbeförderungsschein (P-Schein) vorhanden? *</label>
-            <div class="radio-group">
-              <label><input type="radio" name="P_Schein" value="Ja, vorhanden" required> Ja, vorhanden</label>
-              <label><input type="radio" name="P_Schein" value="Nein, bereit zur Beantragung"> Nein, aber Bereitschaft vorhanden</label>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="nachricht">Nachricht / Anmerkungen (optional)</label>
-            <textarea id="nachricht" name="Nachricht" rows="3"></textarea>
-          </div>
-
-          <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">Bewerbung absenden</button>
-        </form>
-
-        <div style="text-align: center; margin-top: 20px;">
-          <a href="/taxifahrer" style="font-size: 14px; font-weight: 500; text-decoration: underline;">Mehr Informationen auf unserer Karriereseite /taxifahrer</a>
         </div>
-      </div>
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="standort">Einsatzgebiet / Ort *</label>
+            <input type="text" id="standort" name="Einsatzgebiet" placeholder="z. B. Worms, Bad Dürkheim, Mannheim..." required>
+          </div>
+          <div class="form-group">
+            <label for="schein">P-Schein / Konzession vorhanden? *</label>
+            <select id="schein" name="P_Schein_Status" required>
+              <option value="Ja, Personenbeförderungsschein vorhanden">Ja, P-Schein vorhanden</option>
+              <option value="Konzession / Fuhrpark vorhanden">Ja, Konzession &amp; Fuhrpark vorhanden</option>
+              <option value="In Vorbereitung / Beantragung">In Vorbereitung / Beantragung</option>
+              <option value="Nein">Nein</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group full">
+          <label for="nachricht">Fahrzeuge / Verfügbarkeit / Anmerkungen</label>
+          <textarea id="nachricht" name="Nachricht" rows="4" placeholder="Kurze Info zu Ihren Fahrzeugen (z. B. Limousine, Kombi, Großraum-Van) oder Ihren zeitlichen Verfügbarkeiten..."></textarea>
+        </div>
+
+        <button type="submit" class="btn-submit">Jetzt als Fahrer / Partner bewerben</button>
+      </form>
     </div>
-  </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 fahrservice-buchen.com — <a href="impressum.html">Impressum</a> | <a href="datenschutz.html">Datenschutz</a></p>
+  </footer>
+
+</body>
+</html>
