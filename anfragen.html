@@ -6,6 +6,10 @@
   <title>Fahrt anfragen | fahrservice-buchen.com</title>
   <meta name="description" content="Berechnen Sie Ihre geplante Fahrt, sehen Sie die transparenten Tarif-Konditionen und senden Sie Ihre unverbindliche Anfrage.">
   <link href="https://fonts.bunny.net/css?family=inter:400,500,600,700|dm-mono:400" rel="stylesheet">
+  
+  <!-- UMAMI ANALYTICS -->
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="03fe2c2b-a847-4de7-9cab-bf54cd5da43b"></script>
+
   <style>
     :root {
       --primary: #2563EB;
@@ -78,6 +82,14 @@
       padding: 24px;
       margin-bottom: 24px;
       border: 1px solid var(--gray-300);
+    }
+    .calculator-intro {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
     }
     .slider-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
     .km-display { font-family: 'DM Mono', monospace; font-weight: 700; color: var(--primary); font-size: 18px; }
@@ -163,10 +175,12 @@
     </div>
 
     <div class="form-card">
-      <form action="https://formspree.io/f/mzepjpny" method="POST">
+      <form action="https://formspree.io/f/mzepjpny" method="POST" data-umami-event="Fahrt_Anfrage_Absendung">
         
         <!-- DYNAMISCHER PREIS-RECHNER -->
         <div class="calculator-box">
+          <div class="calculator-intro">Unsere faire und transparente Preisberechnung für Deine Fahrt</div>
+
           <div class="slider-header">
             <label for="kmRange" style="margin:0;">Geschätzte Entfernung (km):</label>
             <span class="km-display" id="kmValue">25 km</span>
@@ -268,7 +282,7 @@
     <p>© 2026 fahrservice-buchen.com — <a href="impressum.html">Impressum</a> | <a href="datenschutz.html">Datenschutz</a></p>
   </footer>
 
-  <!-- CALCULATOR SCRIPT -->
+  <!-- CALCULATOR SCRIPT & UMAMI TRACKING -->
   <script>
     const kmRange = document.getElementById('kmRange');
     const kmValue = document.getElementById('kmValue');
@@ -308,6 +322,14 @@
     }
 
     kmRange.addEventListener('input', updateCalculator);
+    
+    // Umami Event: Erfasst die Nutzung des Preisrechners nach dem Loslassen
+    kmRange.addEventListener('change', () => {
+      if (window.umami) {
+        umami.track('Rechner_Interaktion', { km: kmRange.value + ' km' });
+      }
+    });
+
     updateCalculator();
   </script>
 
