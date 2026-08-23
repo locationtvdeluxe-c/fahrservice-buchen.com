@@ -1,64 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- HAUPTSEITE -->
-  <url>
-    <loc>https://fahrservice-buchen.com/</loc>
-    <lastmod>2026-08-23</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
+    <!-- Hauptseite -->
+    <url>
+        <loc>https://locationtvdeluxe.com/</loc>
+        <lastmod>2026-08-23</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
 
-  <!-- PHISHING- & BRAND-PROTECTION SEITE -->
-  <url>
-    <loc>https://fahrservice-buchen.com/vorsicht-phishing</loc>
-    <lastmod>2026-08-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
+    <!-- Services & Angebote -->
+    <url>
+        <loc>https://locationtvdeluxe.com/contentcreation.html</loc>
+        <lastmod>2026-08-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
 
-  <!-- LANDINGPAGES / SPECIALS -->
-  <url>
-    <loc>https://fahrservice-buchen.com/oktoberfest-worms</loc>
-    <lastmod>2026-08-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
+    <url>
+        <loc>https://locationtvdeluxe.com/drohnenblick.html</loc>
+        <lastmod>2026-08-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
 
-  <url>
-    <loc>https://fahrservice-buchen.com/worms</loc>
-    <lastmod>2026-08-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
+    <url>
+        <loc>https://locationtvdeluxe.com/travelhacks.html</loc>
+        <lastmod>2026-08-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
 
-  <url>
-    <loc>https://fahrservice-buchen.com/bad-duerkheim</loc>
-    <lastmod>2026-08-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
+    <url>
+        <loc>https://locationtvdeluxe.com/filmverleih.html</loc>
+        <lastmod>2026-08-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
 
-  <url>
-    <loc>https://fahrservice-buchen.com/taxifahrer</loc>
-    <lastmod>2026-08-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
+    <url>
+        <loc>https://locationtvdeluxe.com/vermietung.html</loc>
+        <lastmod>2026-08-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
 
-  <!-- RECHTLICHES -->
-  <url>
-    <loc>https://fahrservice-buchen.com/impressum</loc>
-    <lastmod>2026-08-23</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
+    <!-- Reise- & Destination-Seiten -->
+    <url>
+        <loc>https://locationtvdeluxe.com/bodrum.html</loc>
+        <lastmod>2026-08-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
 
-  <url>
-    <loc>https://fahrservice-buchen.com/datenschutz</loc>
-    <lastmod>2026-08-23</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
+    <url>
+        <loc>https://locationtvdeluxe.com/mykonos.html</loc>
+        <lastmod>2026-08-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://locationtvdeluxe.com/norwegen-kreuzfahrt.html</loc>
+        <lastmod>2026-08-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Rechtliches -->
+    <url>
+        <loc>https://locationtvdeluxe.com/impressum.html</loc>
+        <lastmod>2026-08-23</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+
+    <url>
+        <loc>https://locationtvdeluxe.com/datenschutz.html</loc>
+        <lastmod>2026-08-23</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
 
 </urlset>
