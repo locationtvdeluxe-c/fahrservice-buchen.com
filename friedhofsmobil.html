@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Friedhofsmobil & Fahrtservice</title>
+    <style>
+        /* Grundlegende Formatierung & Farben */
+        :root {
+            --primary-color: #2c3e50; /* Dunkles, würdevolles Blau/Grau */
+            --accent-color: #4a7c59;  /* Sanftes Grün */
+            --bg-light: #f8f9fa;      /* Heller Hintergrund */
+            --text-dark: #333333;
+            --border-radius: 8px;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* Hero / Haupt-Block */
+        .hero-card {
+            background-color: #ffffff;
+            border-left: 6px solid var(--primary-color);
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .hero-card h1 {
+            color: var(--primary-color);
+            margin-top: 0;
+            font-size: 1.8rem;
+        }
+
+        /* Raster für Service-Blöcke */
+        .service-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+
+        @media (min-width: 768px) {
+            .service-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .service-card {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            border: 1px solid #e9ecef;
+        }
+
+        .service-card h2 {
+            color: var(--primary-color);
+            font-size: 1.3rem;
+            margin-top: 0;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 8px;
+        }
+
+        /* Listen-Styling */
+        .feature-list {
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+        }
+
+        .feature-list li {
+            padding: 8px 0;
+            border-bottom: 1px dotted #dddddd;
+        }
+
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+
+        .feature-list li strong {
+            color: var(--primary-color);
+        }
+
+        /* Kompakter Infokasten */
+        .info-box {
+            background-color: #eef5f0;
+            border: 1px solid #c2e0c9;
+            padding: 20px;
+            border-radius: var(--border-radius);
+            margin-top: 25px;
+        }
+
+        .info-box h3 {
+            margin-top: 0;
+            color: var(--accent-color);
+        }
+
+        .info-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .info-list li {
+            margin-bottom: 8px;
+            font-size: 1.05rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Block 1: Haupt-Beschreibung -->
+    <section class="hero-card">
+        <h1>Bequemer Fahrservice direkt bis zum Friedhofseingang</h1>
+        <p>Der Besuch von Gräbern, Trauerfeiern oder Gedenkstätten erfordert oft Energie und gute Planung. Unser Friedhofsmobil holt Sie pünktlich an Ihrer Haustür oder Ihrer Pflegeeinrichtung ab und bringt Sie auf direktem Weg zum Haupteingang oder dem nächstgelegenen Parkplatz des jeweiligen Friedhofs. Nach Ihrem Besuch erwarten wir Sie zur vereinbarten Zeit am Treffpunkt und fahren Sie entspannt wieder nach Hause.</p>
+    </section>
+
+    <!-- Raster für zwei Service-Blöcke -->
+    <div class="service-grid">
+
+        <!-- Block 2: Unterstützung & Service -->
+        <section class="service-card">
+            <h2>Ihr verlässlicher Begleiter für Senioren & Gehbehinderte</h2>
+            <p>Ein Friedhofsbesuch sollte nicht an fehlenden Transportmöglichkeiten scheitern. Wir unterstützen Sie von Anfang an:</p>
+            <ul class="feature-list">
+                <li><strong>Tür-zu-Tür-Service:</strong> Abholung direkt an der Wohnungstür oder am Altenheim.</li>
+                <li><strong>Platz für Hilfsmittel:</strong> Rollatoren, Gehhilfen und Grabschmuck verladen wir kostenlos und sicher im Kofferraum.</li>
+                <li><strong>Ausstiegs-Hilfe:</strong> Wir helfen Ihnen achtsam beim Ein- und Aussteigen am Friedhofseingang.</li>
+                <li><strong>Flexible Rückfahrt:</strong> Sie bestimmen das Tempo – wir vereinbaren eine feste Abholzeit oder warten auf Ihren Anruf.</li>
+            </ul>
+        </section>
+
+        <!-- Block 3: Fahrten zu Trauerfeiern -->
+        <section class="service-card">
+            <h2>Pünktlicher Fahrservice zu Beerdigungen & Trauerfeiern</h2>
+            <p>In schweren Stunden zählt Zuverlässigkeit. Wir bringen Angehörige, Freunde und Wegbegleiter pünktlich und stressfrei zur Trauerhalle oder Kapelle am Friedhofseingang.</p>
+            <p>Sie müssen sich weder um die Parkplatzsuche noch um Fahrpläne kümmern – wir sorgen für eine ruhige, sichere Anreise, damit Sie sich ganz dem Abschiednehmen widmen können.</p>
+        </section>
+
+    </div>
+
+    <!-- Block 4: Fahrten aus Seniorenheimen -->
+    <section class="service-card">
+        <h2>Fahrten für Bewohner von Seniorenresidenzen & Altenheimen</h2>
+        <p>Viele Bewohner von Seniorenheimen möchten regelmäßig das Grab ihres Partners oder von Verwandten besuchen. Unser Fahrservice bietet Heimleitungen und Angehörigen eine komfortable Lösung: Wir holen die Fahrgäste direkt in der Einrichtung ab, fahren sie sicher zum Friedhofseingang und bringen sie nach dem Besuch wohlbehalten wieder zurück.</p>
+    </section>
+
+    <!-- Block 5: Kompakter Übersichtskasten -->
+    <div class="info-box">
+        <h3>Auf einen Blick: Ihr Friedhofsmobil</h3>
+        <ul class="info-list">
+            <li>🚕 <strong>Sichere An- & Abreise:</strong> Direkt bis zum Friedhofseingang oder Parkplatz.</li>
+            <li>🚪 <strong>Haustür-Abholung:</strong> Von Zuhause oder aus dem Seniorenheim.</li>
+            <li>👨‍🦽 <strong>Rollator-Mitnahme:</strong> Viel Platz für Gehhilfen, Blumen & Gestecke.</li>
+            <li>⏱️ <strong>Unkomplizierte Buchung:</strong> Einfach anrufen und Wunschtermin vereinbaren!</li>
+        </ul>
+    </div>
+
+</div>
+
+</body>
+</html>
