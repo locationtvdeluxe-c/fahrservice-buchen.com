@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Kaffeebar & Catering-Stop | Exklusiver Zusatzservice</title>
+    <style>
+        :root {
+            --primary-color: #1a1a1a;
+            --accent-color: #c9932b;
+            --bg-light: #f9f9f9;
+            --card-bg: #ffffff;
+            --text-color: #333333;
+            --text-muted: #666666;
+            --border-color: #e5e5e5;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-light);
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+        }
+
+        .service-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-left: 5px solid var(--accent-color);
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .badge {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: #ffffff;
+            font-size: 0.75rem;
+            font-weight: bold;
+            padding: 4px 10px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+        }
+
+        .service-title {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        .service-description {
+            color: var(--text-muted);
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
+        .grid-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 25px;
+            align-items: center;
+        }
+
+        @media (max-width: 768px) {
+            .grid-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .feature-list {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+
+        .feature-list li {
+            position: relative;
+            padding-left: 28px;
+            margin-bottom: 10px;
+            font-size: 0.98rem;
+            color: var(--text-color);
+        }
+
+        .feature-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: var(--accent-color);
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .info-box {
+            background-color: var(--bg-light);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .info-box .icon {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .info-box strong {
+            display: block;
+            color: var(--primary-color);
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .info-box span {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .cta-section {
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="service-card">
+        <span class="badge">Zubuchbar & Exklusiv</span>
+        <h1 class="service-title">☕ Mobile Kaffeebar & Catering-Stop</h1>
+        
+        <div class="grid-content">
+            <div>
+                <p class="service-description">
+                    Werten Sie Ihre Tour, Ihren Dreh oder Ihr Event mit einem exklusiven Catering-Zwischenstopp auf. Wir organisieren für Ihre Gruppe eine voll ausgestattete mobile Kaffeebar direkt an Ihrem Wunschort in Worms und Umgebung.
+                </p>
+
+                <ul class="feature-list">
+                    <li>Frisch zubereitete Kaffeespezialitäten & Erfrischungen direkt vor Ort</li>
+                    <li>Perfektes Highlight für Jubiläen, Firmenevents, Empfänge & Gruppen</li>
+                    <li>Stilvoll, kompakt und flexibel in jeden Ablauf integrierbar</li>
+                    <li>Kompletter Service aus einer Hand – ohne organisatorischen Aufwand für Sie</li>
+                </ul>
+            </div>
+
+            <div class="info-box">
+                <span class="icon">☕🚗</span>
+                <strong>Mobiles Catering</strong>
+                <span>Individuell auf Anfrage zubuchbar</span>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            Sprechen Sie uns einfach bei der Buchung oder Anfrage direkt darauf an – wir stimmen das passende Catering-Konzept individuell mit Ihnen ab!
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
