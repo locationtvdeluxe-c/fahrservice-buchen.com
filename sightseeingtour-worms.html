@@ -240,6 +240,29 @@
       margin-bottom: 5px;
     }
 
+    /* Translation Guide Box */
+    .translate-guide-card {
+      margin: 30px 0;
+      background-color: #f0f9ff;
+      border: 1px solid #bae6fd;
+      padding: 25px;
+      border-radius: 8px;
+    }
+
+    .translate-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 15px;
+    }
+
+    .translate-device-box {
+      background: #fff;
+      padding: 15px;
+      border-radius: 6px;
+      border: 1px solid #e2e8f0;
+    }
+
     /* Formular */
     .form-section {
       padding: 50px 0;
@@ -388,7 +411,7 @@
       <div class="spot-item"><span>🌳</span> Schloss & Schlosspark Herrnsheim</div>
       <div class="spot-item"><span>🌊</span> Die malerische Rheinpromenade</div>
       <div class="spot-item"><span>🏛️</span> Das Heylshof Museum & Park</div>
-      <div class="spot-item"><span>🎭</span> Das Das Theater Worms (Lincoln Theater)</div>
+      <div class="spot-item"><span>🎭</span> Das Theater Worms (Lincoln Theater)</div>
       <div class="spot-item"><span>🌊</span> Hagendenkmal am Rhein</div>
       <div class="spot-item"><span>👑</span> Der Siegfried-Thron & historische Brunnen</div>
     </div>
@@ -413,6 +436,47 @@
         </svg>
         <span>QR-Code scannen<br>& Tour starten</span>
       </div>
+    </div>
+
+    <!-- Smartphone Übersetzung / Live Translation Guide -->
+    <div class="translate-guide-card">
+      <h2 style="border-bottom: 2px solid var(--accent-color); padding-bottom: 8px; margin-bottom: 15px;">🌐 Website in Ihrer Sprache lesen / Read in Your Language</h2>
+      
+      <p>Unsere Webseite lässt sich auf jedem modernen Smartphone ganz einfach per Browser in Ihre Wunschsprache übersetzen. So funktioniert es:</p>
+
+      <div class="translate-grid">
+        
+        <!-- iPhone / Safari -->
+        <div class="translate-device-box">
+          <h3 style="margin-top:0; color: #0f172a; font-size: 1.1rem;">📱 iPhone (Safari Browser)</h3>
+          <ol style="padding-left: 20px; margin-bottom: 0;">
+            <li>Tippen Sie unten links in der Adressleiste auf das <strong>„aA“-Symbol</strong> (oder das Übersetzen-Symbol).</li>
+            <li>Wählen Sie <strong>„Website übersetzen…“</strong>.</li>
+            <li>Wählen Sie Ihre gewünschte Sprache aus.</li>
+          </ol>
+        </div>
+
+        <!-- Android / Chrome -->
+        <div class="translate-device-box">
+          <h3 style="margin-top:0; color: #0f172a; font-size: 1.1rem;">🤖 Android (Google Chrome)</h3>
+          <ol style="padding-left: 20px; margin-bottom: 0;">
+            <li>Tippen Sie oben rechts auf die <strong>drei Punkte (⋮)</strong>.</li>
+            <li>Wählen Sie den Menüpunkt <strong>„Übersetzen…“</strong>.</li>
+            <li>Wählen Sie unten Ihre bevorzugte Sprache aus.</li>
+          </ol>
+        </div>
+
+      </div>
+
+      <hr style="border: 0; border-top: 1px solid #bae6fd; margin: 20px 0;">
+
+      <!-- Englische Anleitung -->
+      <p style="font-size: 0.95rem; color: #475569; margin-bottom: 5px;"><strong>🇬🇧 English Instruction:</strong></p>
+      <p style="font-size: 0.9rem; color: #475569; margin-top: 0;">
+        You can easily translate this website into your language using your phone's browser:<br>
+        • <strong>iPhone (Safari):</strong> Tap the <strong>"aA" icon</strong> in the address bar & select <em>"Translate Website"</em>.<br>
+        • <strong>Android (Chrome):</strong> Tap the <strong>three dots (⋮)</strong> in the top right corner & select <em>"Translate"</em>.
+      </p>
     </div>
 
     <!-- Eckdaten / Details -->
