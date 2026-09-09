@@ -1,179 +1,437 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mobile Kaffeebar & Catering-Stop | Exklusiver Zusatzservice</title>
-    <style>
-        :root {
-            --primary-color: #1a1a1a;
-            --accent-color: #c9932b;
-            --bg-light: #f9f9f9;
-            --card-bg: #ffffff;
-            --text-color: #333333;
-            --text-muted: #666666;
-            --border-color: #e5e5e5;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mobile Kaffeebar Worms | Exklusiver Kaffeeservice & Catering mieten</title>
+  <meta name="description" content="Buchen Sie die mobile Kaffeebar in Worms & Umgebung für Events, Hochzeiten, Firmenfeiern und Sightseeing. Frischer Barista-Kaffee direkt vor Ort!">
+  <meta name="robots" content="index, follow">
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+  <style>
+    :root {
+      --primary-color: #0f172a;
+      --accent-color: #2563eb;
+      --coffee-main: #b45309;
+      --coffee-bg: #fffbeb;
+      --coffee-border: #fef3c7;
+      --success-color: #16a34a;
+      --text-color: #334155;
+      --bg-light: #f8fafc;
+      --border-color: #e2e8f0;
+    }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--bg-light);
-            padding: 20px;
-        }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-        .container {
-            max-width: 900px;
-            margin: 40px auto;
-        }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: var(--text-color);
+      background-color: #fff;
+    }
 
-        .service-card {
-            background-color: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-left: 5px solid var(--accent-color);
-            border-radius: 8px;
-            padding: 30px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-        }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
 
-        .badge {
-            display: inline-block;
-            background-color: var(--accent-color);
-            color: #ffffff;
-            font-size: 0.75rem;
-            font-weight: bold;
-            padding: 4px 10px;
-            border-radius: 4px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 12px;
-        }
+    /* Header & Nav */
+    header {
+      background-color: var(--primary-color);
+      color: #fff;
+      padding: 35px 0 20px 0;
+      text-align: center;
+    }
 
-        .service-title {
-            color: var(--primary-color);
-            font-size: 1.8rem;
-            margin-bottom: 12px;
-            font-weight: 700;
-        }
+    header h1 {
+      font-size: 2.2rem;
+      margin-bottom: 8px;
+    }
 
-        .service-description {
-            color: var(--text-muted);
-            font-size: 1rem;
-            margin-bottom: 20px;
-        }
+    header p {
+      color: #cbd5e1;
+      font-size: 1.1rem;
+    }
 
-        .grid-content {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 25px;
-            align-items: center;
-        }
+    nav.main-nav {
+      background-color: #1e293b;
+      padding: 10px 0;
+      border-top: 1px solid #334155;
+      border-bottom: 1px solid #334155;
+    }
 
-        @media (max-width: 768px) {
-            .grid-content {
-                grid-template-columns: 1fr;
-            }
-        }
+    nav.main-nav ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+    }
 
-        .feature-list {
-            list-style: none;
-            margin-bottom: 20px;
-        }
+    nav.main-nav a {
+      color: #f1f5f9;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.92rem;
+      padding: 5px 10px;
+      border-radius: 4px;
+    }
 
-        .feature-list li {
-            position: relative;
-            padding-left: 28px;
-            margin-bottom: 10px;
-            font-size: 0.98rem;
-            color: var(--text-color);
-        }
+    nav.main-nav a:hover,
+    nav.main-nav a.active {
+      background-color: var(--accent-color);
+      color: #fff;
+    }
 
-        .feature-list li::before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            top: 0;
-            color: var(--accent-color);
-            font-weight: bold;
-            font-size: 1.1rem;
-        }
+    /* CTA Top Bar */
+    .cta-bar {
+      background-color: #fef3c7;
+      border-bottom: 1px solid #fde68a;
+      padding: 15px 0;
+      text-align: center;
+    }
 
-        .info-box {
-            background-color: var(--bg-light);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 25px;
-            text-align: center;
-        }
+    .btn-phone {
+      display: inline-block;
+      background-color: var(--success-color);
+      color: #fff;
+      font-size: 1.2rem;
+      font-weight: bold;
+      padding: 12px 24px;
+      border-radius: 6px;
+      text-decoration: none;
+      margin-left: 10px;
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+    }
 
-        .info-box .icon {
-            font-size: 3rem;
-            margin-bottom: 10px;
-            display: block;
-        }
+    .btn-phone:hover {
+      background-color: #15803d;
+    }
 
-        .info-box strong {
-            display: block;
-            color: var(--primary-color);
-            font-size: 1.1rem;
-            margin-bottom: 5px;
-        }
+    /* Hero / Banner Area */
+    .hero-banner {
+      background: linear-gradient(135deg, #78350f 0%, #b45309 100%);
+      color: #fff;
+      padding: 40px 25px;
+      border-radius: 12px;
+      margin: 30px 0;
+      box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+      text-align: center;
+    }
 
-        .info-box span {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-        }
+    .hero-banner h2 {
+      font-size: 2rem;
+      margin-bottom: 12px;
+    }
 
-        .cta-section {
-            margin-top: 20px;
-            padding-top: 15px;
-            border-top: 1px solid var(--border-color);
-            font-size: 0.95rem;
-            color: var(--text-muted);
-            font-style: italic;
-        }
-    </style>
+    .hero-banner p {
+      font-size: 1.15rem;
+      color: #fef3c7;
+      max-width: 700px;
+      margin: 0 auto 20px auto;
+    }
+
+    .btn-action-large {
+      display: inline-block;
+      background-color: #fff;
+      color: var(--coffee-main);
+      font-size: 1.15rem;
+      font-weight: bold;
+      padding: 14px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      transition: transform 0.2s;
+    }
+
+    .btn-action-large:hover {
+      transform: translateY(-2px);
+    }
+
+    /* Feature Grid */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      margin: 30px 0;
+    }
+
+    .feature-card {
+      background: var(--bg-light);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 25px;
+    }
+
+    .feature-card h3 {
+      color: var(--primary-color);
+      font-size: 1.25rem;
+      margin-bottom: 10px;
+      border-bottom: 2px solid var(--coffee-main);
+      padding-bottom: 6px;
+    }
+
+    .feature-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .feature-list li {
+      padding: 8px 0;
+      border-bottom: 1px dotted var(--border-color);
+    }
+
+    .feature-list li::before {
+      content: "☕ ";
+    }
+
+    /* Formular Section */
+    .form-section {
+      padding: 40px 0;
+      background-color: var(--coffee-bg);
+      border-top: 1px solid var(--coffee-border);
+      border-bottom: 1px solid var(--coffee-border);
+      margin-top: 40px;
+    }
+
+    .booking-form {
+      max-width: 600px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      border: 1px solid var(--coffee-border);
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 600;
+      color: var(--primary-color);
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+
+    .btn-submit {
+      width: 100%;
+      background-color: var(--coffee-main);
+      color: #fff;
+      border: none;
+      padding: 15px;
+      font-size: 1.15rem;
+      font-weight: bold;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .btn-submit:hover {
+      background-color: #92400e;
+    }
+
+    /* Fixed Mobile CTA Button */
+    .sticky-mobile-cta {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: var(--success-color);
+      color: #fff;
+      text-align: center;
+      padding: 14px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 0 -4px 10px rgba(0,0,0,0.15);
+      z-index: 1000;
+    }
+
+    @media (max-width: 768px) {
+      .sticky-mobile-cta {
+        display: block;
+      }
+      body {
+        padding-bottom: 50px;
+      }
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 0;
+      font-size: 0.9rem;
+      background-color: #fff;
+    }
+
+    footer a {
+      color: var(--text-color);
+      text-decoration: none;
+      margin: 0 8px;
+    }
+  </style>
 </head>
 <body>
 
-<div class="container">
-    <div class="service-card">
-        <span class="badge">Zubuchbar & Exklusiv</span>
-        <h1 class="service-title">☕ Mobile Kaffeebar & Catering-Stop</h1>
-        
-        <div class="grid-content">
-            <div>
-                <p class="service-description">
-                    Werten Sie Ihre Tour, Ihren Dreh oder Ihr Event mit einem exklusiven Catering-Zwischenstopp auf. Wir organisieren für Ihre Gruppe eine voll ausgestattete mobile Kaffeebar direkt an Ihrem Wunschort in Worms und Umgebung.
-                </p>
-
-                <ul class="feature-list">
-                    <li>Frisch zubereitete Kaffeespezialitäten & Erfrischungen direkt vor Ort</li>
-                    <li>Perfektes Highlight für Jubiläen, Firmenevents, Empfänge & Gruppen</li>
-                    <li>Stilvoll, kompakt und flexibel in jeden Ablauf integrierbar</li>
-                    <li>Kompletter Service aus einer Hand – ohne organisatorischen Aufwand für Sie</li>
-                </ul>
-            </div>
-
-            <div class="info-box">
-                <span class="icon">☕🚗</span>
-                <strong>Mobiles Catering</strong>
-                <span>Individuell auf Anfrage zubuchbar</span>
-            </div>
-        </div>
-
-        <div class="cta-section">
-            Sprechen Sie uns einfach bei der Buchung oder Anfrage direkt darauf an – wir stimmen das passende Catering-Konzept individuell mit Ihnen ab!
-        </div>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <h1>☕ Mobile Kaffeebar Worms</h1>
+      <p>Frisch zubereitete Kaffeespezialitäten & Mobiles Catering an Ihrem Wunschort</p>
     </div>
-</div>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="main-nav">
+    <div class="container">
+      <ul>
+        <li><a href="index.html">Startseite</a></li>
+        <li><a href="sightseeing-worms.html">Sightseeingtour</a></li>
+        <li><a href="mobile-kaffeebar.html" class="active">Mobile Kaffeebar</a></li>
+        <li><a href="friedhofsmobil.html">Friedhofsmobil</a></li>
+        <li><a href="krankenfahrten-worms.html">Krankenfahrten</a></li>
+        <li><a href="einkaufshilfe.html">Einkaufshilfe</a></li>
+        <li><a href="bringdienst-krankenhaus.html">Bringdienst</a></li>
+        <li><a href="partner.html">Partner werden</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Header Telefon Bar -->
+  <div class="cta-bar">
+    <div class="container">
+      <span>Sofort-Terminanfrage & Beratung:</span>
+      <a href="tel:+491791676205" class="btn-phone">📞 0179 1676205</a>
+    </div>
+  </div>
+
+  <main class="container">
+
+    <!-- Hero Banner (Aufmerksamkeits-Anker) -->
+    <section class="hero-banner">
+      <h2>Das Highlight für Ihr Event oder Ihre Tour!</h2>
+      <p>Verwöhnen Sie Ihre Gäste, Kunden oder Ihr Team mit einer voll ausgestatteten mobilen Kaffeebar. Perfekter Kaffeegenuss – individuell, flexibel und direkt vor Ort in Worms & Region.</p>
+      <a href="#anfrage" class="btn-action-large">📋 Jetzt Angebot anfordern</a>
+    </section>
+
+    <!-- Vorteile / Einsatzbereiche Grid -->
+    <div class="features-grid">
+      
+      <div class="feature-card">
+        <h3>Einsatzmöglichkeiten</h3>
+        <ul class="feature-list">
+          <li><strong>Firmen-Events & Jubiläen:</strong> Professioneller Auftritt für Mitarbeiter & Kunden.</li>
+          <li><strong>Hochzeiten & Feiern:</strong> Der perfekte Sektempfang- oder Nachmittags-Kaffee.</li>
+          <li><strong>Messen & Promotion:</strong> Der verlässliche Magnet für Ihren Stand.</li>
+          <li><strong>Sightseeing-Pausen:</strong> Exklusiver Zwischenstopp bei Gruppenreisen.</li>
+        </ul>
+      </div>
+
+      <div class="feature-card">
+        <h3>Unser Rundum-Service</h3>
+        <ul class="feature-list">
+          <li><strong>Vollautonomer Einsatz:</strong> Überall in Worms & Umgebung flexibel aufstellbar.</li>
+          <li><strong>Breite Auswahl:</strong> Espresso, Cappuccino, Latte Macchiato, Tee & Snacks.</li>
+          <li><strong>Alles in Eigenregie:</strong> Pünktlicher Aufbau, Ablauf und Betreuung aus einer Hand.</li>
+          <li><strong>Unkomplizierte Buchung:</strong> Schnelle Absprache per Telefon oder Formular.</li>
+        </ul>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- Anfrageformular Section (Conversion-Fokus) -->
+  <section class="form-section" id="anfrage">
+    <div class="container">
+      <h2 style="text-align: center; margin-bottom: 8px; color: var(--primary-color);">Unverbindliche Catering-Anfrage</h2>
+      <p style="text-align: center; margin-bottom: 25px; color: #666;">Nennen Sie uns Ihren Wunschtermin – wir melden uns umgehend bei Ihnen!</p>
+
+      <form class="booking-form" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+        
+        <div class="form-group">
+          <label for="name">Name / Ansprechpartner *</label>
+          <input type="text" id="name" name="name" required placeholder="Vor- und Nachname / Firma">
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Telefonnummer für Rückfragen *</label>
+          <input type="tel" id="phone" name="phone" required placeholder="0179 1676205">
+        </div>
+
+        <div class="form-group">
+          <label for="email">E-Mail Adresse *</label>
+          <input type="email" id="email" name="email" required placeholder="ihre@email.de">
+        </div>
+
+        <div class="form-group">
+          <label for="event_type">Art der Veranstaltung</label>
+          <select id="event_type" name="event_type">
+            <option value="Firmenevent">Firmenevent / Jubiläum</option>
+            <option value="Private Feier">Private Feier / Geburtstag / Hochzeit</option>
+            <option value="Sightseeing / Tour">Ergänzung zu Sightseeing-Tour</option>
+            <option value="Sonstiges">Sonstiges</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="guests">Geschätzte Personenzahl</label>
+          <input type="text" id="guests" name="guests" placeholder="z. B. 20 - 50 Personen">
+        </div>
+
+        <div class="form-group">
+          <label for="datetime">Wunschdatum & Uhrzeit *</label>
+          <input type="datetime-local" id="datetime" name="datetime" required>
+        </div>
+
+        <div class="form-group">
+          <label for="location">Veranstaltungsort / Einsatzort in Worms</label>
+          <input type="text" id="location" name="location" placeholder="Straße, Ortsteil oder Event-Location">
+        </div>
+
+        <div class="form-group">
+          <label for="notes">Sonderwünsche / Anmerkungen</label>
+          <textarea id="notes" name="notes" rows="3" placeholder="Z. B. benötigte Dauer, gewünschte Snacks, etc."></textarea>
+        </div>
+
+        <button type="submit" class="btn-submit">☕ Kaffeebar unverbindlich anfragen</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Sticky CTA Button für Smartphones -->
+  <a href="tel:+491791676205" class="sticky-mobile-cta">📞 JETZT ANRUFEN: 0179 1676205</a>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <a href="index.html">Startseite</a> | 
+      <a href="sightseeing-worms.html">Sightseeingtour</a> | 
+      <a href="mobile-kaffeebar.html">Mobile Kaffeebar</a> | 
+      <a href="friedhofsmobil.html">Friedhofsmobil</a> | 
+      <a href="krankenfahrten-worms.html">Krankenfahrten</a> | 
+      <a href="einkaufshilfe.html">Einkaufshilfe</a> | 
+      <a href="bringdienst-krankenhaus.html">Bringdienst</a> | 
+      <a href="partner.html">Partner werden</a> | 
+      <a href="impressum.html">Impressum</a> | 
+      <a href="datenschutz.html">Datenschutz</a>
+    </div>
+  </footer>
 
 </body>
 </html>
