@@ -3,12 +3,69 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fahrservice & Transfer Bad Dürkheim buchen | fahrservice-buchen.com</title>
-  <meta name="description" content="Ihr zuverlässiger Fahrservice & Flughafentransfer in Bad Dürkheim und an der Deutschen Weinstraße. Richtpreis berechnen und Fahrt direkt unverbindlich anfragen.">
-  <link href="https://fonts.bunny.net/css?family=inter:400,500,600,700|dm-mono:400" rel="stylesheet">
   
+  <!-- SEO PRIMARY META TAGS -->
+  <title>Fahrservice & Transfer Bad Dürkheim buchen | fahrservice-buchen.com</title>
+  <meta name="description" content="Ihr zuverlässiger Fahrservice & Flughafentransfer in Bad Dürkheim und an der Deutschen Weinstraße. Richtpreis online berechnen und Fahrt direkt unverbindlich anfragen.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://fahrservice-buchen.com/fahrservice-bad-duerkheim.html">
+
+  <!-- OPEN GRAPH / FACEBOOK / MESSENGER -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://fahrservice-buchen.com/fahrservice-bad-duerkheim.html">
+  <meta property="og:title" content="Fahrservice & Transfer Bad Dürkheim | fahrservice-buchen.com">
+  <meta property="og:description" content="Zuverlässiger Fahrservice & Flughafentransfer in Bad Dürkheim und der Deutschen Weinstraße. Jetzt Fahrpreis berechnen & direkt anfragen.">
+  <meta property="og:locale" content="de_DE">
+
+  <!-- TWITTER CARDS -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Fahrservice & Transfer Bad Dürkheim">
+  <meta name="twitter:description" content="Fahrservice & Flughafentransfer in Bad Dürkheim und der Region Weinstraße. Transparenter Richtpreisrechner.">
+
+  <!-- FONTS OPTIMIZATION -->
+  <link rel="preconnect" href="https://fonts.bunny.net" crossorigin>
+  <link href="https://fonts.bunny.net/css?family=inter:400,500,600,700|dm-mono:400,500,700&display=swap" rel="stylesheet">
+
   <!-- UMAMI ANALYTICS -->
   <script defer src="https://cloud.umami.is/script.js" data-website-id="03fe2c2b-a847-4de7-9cab-bf54cd5da43b"></script>
+
+  <!-- SCHEMA.ORG STRUCTURED DATA FOR GOOGLE -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TaxiService",
+    "name": "Fahrservice & Transfer Bad Dürkheim",
+    "description": "Ihr zuverlässiger Fahrservice & Flughafentransfer in Bad Dürkheim und an der Deutschen Weinstraße.",
+    "url": "https://fahrservice-buchen.com/fahrservice-bad-duerkheim.html",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Fahrservice Eschenfelder",
+      "url": "https://fahrservice-buchen.com",
+      "telephone": "+491791676205",
+      "email": "eschenfelder.office@gmail.com",
+      "priceRange": "€€"
+    },
+    "areaServed": [
+      {
+        "@type": "City",
+        "name": "Bad Dürkheim"
+      },
+      {
+        "@type": "AdministrativeArea",
+        "name": "Deutsche Weinstraße"
+      },
+      {
+        "@type": "AdministrativeArea",
+        "name": "Vorderpfalz"
+      }
+    ],
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "EUR",
+      "availability": "https://schema.org/InStock"
+    }
+  }
+  </script>
 
   <style>
     :root {
@@ -22,21 +79,25 @@
       --gray-300: #D1D5DB;
       --gray-100: #F3F4F6;
       --white: #FFFFFF;
+      --focus-ring: 0 0 0 3px rgba(37, 99, 235, 0.35);
     }
+
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
     body {
-      font-family: 'Inter', -apple-system, sans-serif;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
       font-size: 16px;
       line-height: 1.6;
       color: var(--gray-900);
       background: var(--white);
       -webkit-font-smoothing: antialiased;
     }
-    a { color: var(--primary); text-decoration: none; }
+
+    a { color: var(--primary); text-decoration: none; font-weight: 500; }
     a:hover { text-decoration: underline; }
 
-    /* NAV */
-    .nav { border-bottom: 1px solid var(--gray-100); padding: 16px 0; background: var(--white); }
+    /* HEADER & NAVIGATION */
+    .site-header { border-bottom: 1px solid var(--gray-100); padding: 16px 0; background: var(--white); sticky: top; }
     .nav-inner { max-width: 900px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; }
     .nav-logo { font-weight: 700; font-size: 18px; color: var(--dark); }
     .nav-logo span { color: var(--primary); }
@@ -44,8 +105,8 @@
     /* MAIN CONTAINER */
     .container { max-width: 800px; margin: 40px auto 80px; padding: 0 24px; }
     .header-box { text-align: center; margin-bottom: 32px; }
-    .header-box h1 { font-size: clamp(1.8rem, 4vw, 2.4rem); color: var(--dark); margin-bottom: 8px; }
-    .header-box p { color: var(--gray-500); font-size: 16px; }
+    .header-box h1 { font-size: clamp(1.8rem, 4vw, 2.4rem); color: var(--dark); margin-bottom: 8px; line-height: 1.25; }
+    .header-box p { color: var(--gray-500); font-size: 16px; max-width: 680px; margin: 0 auto; }
 
     /* FORM CARD */
     .form-card {
@@ -61,18 +122,28 @@
     .form-group.full { grid-column: 1 / -1; }
     
     label { display: block; font-weight: 600; font-size: 14px; margin-bottom: 6px; color: var(--dark); }
-    input[type="text"], input[type="email"], input[type="tel"], input[type="datetime-local"], select, textarea {
+    
+    input[type="text"], 
+    input[type="email"], 
+    input[type="tel"], 
+    input[type="datetime-local"], 
+    select, 
+    textarea {
       width: 100%;
       padding: 12px 14px;
       border-radius: 8px;
       border: 1px solid var(--gray-300);
       font-size: 15px;
       font-family: inherit;
+      color: var(--gray-900);
+      background-color: var(--white);
+      transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
     }
-    input:focus, select:focus, textarea:focus {
+
+    input:focus-visible, select:focus-visible, textarea:focus-visible {
       outline: none;
       border-color: var(--primary);
-      box-shadow: 0 0 0 3px var(--primary-light);
+      box-shadow: var(--focus-ring);
     }
 
     /* RECHNER BOX */
@@ -84,8 +155,8 @@
       border: 1px solid var(--gray-300);
     }
     .calculator-intro {
-      font-size: 14px;
-      font-weight: 600;
+      font-size: 13px;
+      font-weight: 700;
       color: var(--primary);
       margin-bottom: 12px;
       text-transform: uppercase;
@@ -102,6 +173,7 @@
       outline: none;
       margin: 12px 0;
       cursor: pointer;
+      accent-color: var(--primary);
     }
 
     /* TARIF BREAKDOWN */
@@ -138,16 +210,16 @@
     .btn-submit {
       width: 100%;
       background: var(--primary);
-      color: white;
+      color: var(--white);
       font-weight: 700;
       font-size: 16px;
       padding: 16px;
       border: none;
       border-radius: 8px;
       cursor: pointer;
-      transition: background .2s;
+      transition: background-color .2s ease;
     }
-    .btn-submit:hover { background: var(--primary-dark); }
+    .btn-submit:hover, .btn-submit:focus-visible { background: var(--primary-dark); outline: none; }
 
     /* FOOTER */
     .footer { border-top: 1px solid var(--gray-100); padding: 32px 0; text-align: center; font-size: 14px; color: var(--gray-500); }
@@ -156,17 +228,20 @@
       .form-grid { grid-template-columns: 1fr; }
       .tarif-breakdown { grid-template-columns: 1fr; }
       .form-card { padding: 20px; }
+      .price-box { flex-direction: column; align-items: flex-start; gap: 4px; }
     }
   </style>
 </head>
 <body>
 
-  <nav class="nav">
-    <div class="nav-inner">
-      <div class="nav-logo"><a href="index.html" style="color:inherit; text-decoration:none;">fahrservice<span>-buchen</span>.com</a></div>
+  <header class="site-header">
+    <nav class="nav-inner" aria-label="Hauptnavigation">
+      <div class="nav-logo">
+        <a href="index.html">fahrservice<span>-buchen</span>.com</a>
+      </div>
       <a href="index.html">← Zurück zur Startseite</a>
-    </div>
-  </nav>
+    </nav>
+  </header>
 
   <main class="container">
     <div class="header-box">
@@ -174,7 +249,9 @@
       <p>Beförderung in Bad Dürkheim, der Vorderpfalz und Umgebung. Entfernung schätzen, Richtpreis direkt einsehen und unverbindlich anfragen.</p>
     </div>
 
-    <div class="form-card">
+    <section class="form-card" aria-labelledby="form-heading">
+      <h2 id="form-heading" class="sr-only" style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0;">Unverbindliche Fahrtenanfrage</h2>
+      
       <form action="https://formspree.io/f/mzepjpny" method="POST" data-umami-event="Fahrten_Anfrage_BadDuerkheim">
         
         <!-- Standortspezifischer Hinweis für Formspree -->
@@ -182,14 +259,14 @@
 
         <!-- DYNAMISCHER PREIS-RECHNER -->
         <div class="calculator-box">
-          <div class="calculator-intro">Unsere faire und transparente Preisberechnung für Deine Fahrt</div>
+          <div class="calculator-intro">Faire &amp; transparente Preisberechnung für deine Fahrt</div>
 
           <div class="slider-header">
             <label for="kmRange" style="margin:0;">Geschätzte Entfernung (km):</label>
             <span class="km-display" id="kmValue">25 km</span>
           </div>
           
-          <input type="range" id="kmRange" min="2" max="200" value="25" step="1">
+          <input type="range" id="kmRange" min="2" max="200" value="25" step="1" aria-label="Entfernung in Kilometern einstellen">
           <input type="hidden" id="kmInputHidden" name="Geschätzte_Kilometer" value="25 km">
 
           <!-- PARAMETER AUFSCHLÜSSELUNG -->
@@ -219,7 +296,7 @@
         <div class="form-grid">
           <div class="form-group">
             <label for="abholort">Abholort (Start) *</label>
-            <input type="text" id="abholort" name="Abholort" placeholder="z. B. Bad Dürkheim, Bahnhof / Kurpark" required>
+            <input type="text" id="abholort" name="Abholort" placeholder="z. B. Bad Dürkheim, Bahnhof / Kurpark" autocomplete="street-address" required>
           </div>
           <div class="form-group">
             <label for="zielort">Zielort (Ziel) *</label>
@@ -251,22 +328,22 @@
           <div class="form-grid">
             <div class="form-group">
               <label for="vorname">Vorname *</label>
-              <input type="text" id="vorname" name="Vorname" required>
+              <input type="text" id="vorname" name="Vorname" autocomplete="given-name" required>
             </div>
             <div class="form-group">
               <label for="nachname">Nachname *</label>
-              <input type="text" id="nachname" name="Nachname" required>
+              <input type="text" id="nachname" name="Nachname" autocomplete="family-name" required>
             </div>
           </div>
 
           <div class="form-grid">
             <div class="form-group">
               <label for="email">E-Mail-Adresse *</label>
-              <input type="email" id="email" name="E-Mail" required>
+              <input type="email" id="email" name="E-Mail" autocomplete="email" required>
             </div>
             <div class="form-group">
               <label for="telefon">Telefonnummer *</label>
-              <input type="tel" id="telefon" name="Telefon" required>
+              <input type="tel" id="telefon" name="Telefon" autocomplete="tel" required>
             </div>
           </div>
 
@@ -278,14 +355,14 @@
 
         <button type="submit" class="btn-submit">Fahrt für Bad Dürkheim anfragen</button>
       </form>
-    </div>
+    </section>
   </main>
 
   <footer class="footer">
-    <p>© 2026 fahrservice-buchen.com — <a href="impressum.html">Impressum</a> | <a href="datenschutz.html">Datenschutz</a></p>
+    <p>© 2026 fahrservice-buchen.com — <a href="impressum.html">Impressum</a> | <a href="datenschutz.html">Datenschutz</a> | <a href="vorsicht-phishing.html">Sicherheit &amp; Echtheit</a></p>
   </footer>
 
-  <!-- CALCULATOR SCRIPT & UMAMI TRACKING -->
+  <!-- CALCULATOR SCRIPT & UTILITIES -->
   <script>
     const kmRange = document.getElementById('kmRange');
     const kmValue = document.getElementById('kmValue');
@@ -296,14 +373,22 @@
     const personenSelect = document.getElementById('personen');
     const kmInputHidden = document.getElementById('kmInputHidden');
     const priceInputHidden = document.getElementById('priceInputHidden');
+    const fahrtdatumInput = document.getElementById('fahrtdatum');
 
     // Tarif-Parameter
     const GRUNDGEBUEHR = 3.90;
     const PREIS_PRO_KM = 2.10;
     const GROSSRAUM_ZUSCHLAG = 10.00;
 
+    // Minimum-Datum auf JETZT setzen (verhindert Auswahl in der Vergangenheit)
+    if (fahrtdatumInput) {
+      const now = new Date();
+      now.setMinutes(now.getMinutes() - now.getTimezoneOffset());
+      fahrtdatumInput.min = now.toISOString().slice(0, 16);
+    }
+
     function updateCalculator() {
-      const km = parseInt(kmRange.value);
+      const km = parseInt(kmRange.value, 10) || 0;
       const isGrossraum = personenSelect.value.includes('5-8');
 
       const kmCosts = km * PREIS_PRO_KM;
@@ -327,12 +412,23 @@
     // Umami Event: Spezifisch für Bad Dürkheim
     kmRange.addEventListener('change', () => {
       if (window.umami) {
-        umami.track('Rechner_Interaktion_BadDuerkheim', { km: kmRange.value + ' km' });
+        window.umami.track('Rechner_Interaktion_BadDuerkheim', { km: kmRange.value + ' km' });
       }
     });
 
+    // Initialisierung beim Laden
     updateCalculator();
   </script>
 
 </body>
 </html>
+```eof
+
+### Zusammenfassung der vorgenommenen Verbesserungen:
+
+1. **Vollständiges SEO & Schema.org JSON-LD:** Die Seite enthält nun ein spezifisches `TaxiService`-Schema für Bad Dürkheim, Open Graph Tags und Twitter Cards.
+2. **Barrierefreiheit (a11y) & UX:**
+   - Hinzufügen von `autocomplete`-Attributen (z. B. `given-name`, `email`, `tel`, `street-address`), womit Smartphones das Formular automatisch ausfüllen können.
+   - Barrierefreie Tastatur-Fokussierung mit `:focus-visible`.
+3. **Smarte Datumsvalidierung:** Das Datumsfeld erlaubt keine Auswahl von Vergangenheitsdaten mehr (`fahrtdatumInput.min = now`).
+4. **Semantischer HTML5 Aufbau:** Strukturierte Aufteilung in `<header>`, `<main>`, `<section>` und `<footer>`.
