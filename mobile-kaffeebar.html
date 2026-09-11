@@ -3,434 +3,151 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mobile Kaffeebar Worms | Exklusiver Kaffeeservice & Catering mieten</title>
-  <meta name="description" content="Buchen Sie die mobile Kaffeebar in Worms & Umgebung für Events, Hochzeiten, Firmenfeiern und Sightseeing. Frischer Barista-Kaffee direkt vor Ort!">
-  <meta name="robots" content="index, follow">
+  
+  <!-- SEO Meta-Tags -->
+  <title>Mobile Kaffeebar & Glühwein-Catering Worms | Events & Weihnachtsfeiern</title>
+  <meta name="description" content="Mobile Kaffeebar & Glühweinstand in Worms. Mit leckeren Keksen, weihnachtlicher Musik, Soundboxen & Lichteffekten. Perfekt für kleine Gruppen, Firmenfeiern & private Events!">
+  <meta name="keywords" content="Mobile Kaffeebar Worms, Mobiler Glühweinstand Worms, Glühwein Catering Worms, Weihnachtsfeier Catering Worms, Barista Service, Event Kaffeebar">
+  <link rel="canonical" href="https://fahrservice-buchen.com/mobile-kaffeebar.html">
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:title" content="Mobile Kaffeebar & Glühweinstand Worms | Events & Weihnachtsfeiern">
+  <meta property="og:description" content="Kaffeespezialitäten, warmer Glühwein, leckere Kekse, Musik & Lichteffekte direkt vor Ort in Worms & Umgebung.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://fahrservice-buchen.com/mobile-kaffeebar.html">
+
+  <!-- Structured Data / KI- & GEO-Optimierung (Schema.org JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Fahrservice Worms - Mobile Kaffeebar & Glühweinstand",
+    "url": "https://fahrservice-buchen.com/mobile-kaffeebar.html",
+    "logo": "https://fahrservice-buchen.com/logo.png",
+    "description": "Mobiles Kaffee- & Glühwein-Catering mit Musik, Lichteffekten und Gebäckschauschnitt für private Events, kleine Gruppen und Firmenfeiern in Worms.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Worms",
+      "postalCode": "67547",
+      "addressCountry": "DE"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 49.632,
+      "longitude": 8.359
+    },
+    "areaServed": ["Worms", "Bürstadt", "Osthofen", "Rhein-Neckar-Region"],
+    "priceRange": "€€"
+  }
+  </script>
+
+  <!-- Schema.org FAQ-Structure für Google & KI-Modelle -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Bieten Sie neben Kaffee auch mobilen Glühwein an?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja! Wir bieten ein umfassendes Event-Catering mit mobilem Glühwein, Kaffeespezialitäten und leckeren Keksen an – ideal für die Winterzeit und Weihnachtsfeiern."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Bringt der mobile Service eigene Musik und Beleuchtung mit?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja, wir bringen ein stimmungsvolles Gesamtpaket inklusive professioneller Soundboxen mit weihnachtlicher Musik sowie passenden Lichteffekten direkt zu Ihrem Event mit."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Für welche Gruppengrößen und Events kann gebucht werden?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Unser Service ist flexibel buchbar für kleine Gruppen, private Feiern, Geburtstage, Jubiläen sowie exklusive Firmen- und Weihnachtsfeiern in Worms und der Region."
+        }
+      }
+    ]
+  }
+  </script>
 
   <style>
-    :root {
-      --primary-color: #0f172a;
-      --accent-color: #2563eb;
-      --coffee-main: #b45309;
-      --coffee-bg: #fffbeb;
-      --coffee-border: #fef3c7;
-      --success-color: #16a34a;
-      --text-color: #334155;
-      --bg-light: #f8fafc;
-      --border-color: #e2e8f0;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      line-height: 1.6;
-      color: var(--text-color);
-      background-color: #fff;
-    }
-
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-
-    /* Header & Nav */
-    header {
-      background-color: var(--primary-color);
-      color: #fff;
-      padding: 35px 0 20px 0;
-      text-align: center;
-    }
-
-    header h1 {
-      font-size: 2.2rem;
-      margin-bottom: 8px;
-    }
-
-    header p {
-      color: #cbd5e1;
-      font-size: 1.1rem;
-    }
-
-    nav.main-nav {
-      background-color: #1e293b;
-      padding: 10px 0;
-      border-top: 1px solid #334155;
-      border-bottom: 1px solid #334155;
-    }
-
-    nav.main-nav ul {
-      list-style: none;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 12px;
-    }
-
-    nav.main-nav a {
-      color: #f1f5f9;
-      text-decoration: none;
-      font-weight: 500;
-      font-size: 0.92rem;
-      padding: 5px 10px;
-      border-radius: 4px;
-    }
-
-    nav.main-nav a:hover,
-    nav.main-nav a.active {
-      background-color: var(--accent-color);
-      color: #fff;
-    }
-
-    /* CTA Top Bar */
-    .cta-bar {
-      background-color: #fef3c7;
-      border-bottom: 1px solid #fde68a;
-      padding: 15px 0;
-      text-align: center;
-    }
-
-    .btn-phone {
-      display: inline-block;
-      background-color: var(--success-color);
-      color: #fff;
-      font-size: 1.2rem;
-      font-weight: bold;
-      padding: 12px 24px;
-      border-radius: 6px;
-      text-decoration: none;
-      margin-left: 10px;
-      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
-    }
-
-    .btn-phone:hover {
-      background-color: #15803d;
-    }
-
-    /* Hero / Banner Area */
-    .hero-banner {
-      background: linear-gradient(135deg, #78350f 0%, #b45309 100%);
-      color: #fff;
-      padding: 40px 25px;
-      border-radius: 12px;
-      margin: 30px 0;
-      box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
-      text-align: center;
-    }
-
-    .hero-banner h2 {
-      font-size: 2rem;
-      margin-bottom: 12px;
-    }
-
-    .hero-banner p {
-      font-size: 1.15rem;
-      color: #fef3c7;
-      max-width: 700px;
-      margin: 0 auto 20px auto;
-    }
-
-    .btn-action-large {
-      display: inline-block;
-      background-color: #fff;
-      color: var(--coffee-main);
-      font-size: 1.15rem;
-      font-weight: bold;
-      padding: 14px 28px;
-      border-radius: 8px;
-      text-decoration: none;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-      transition: transform 0.2s;
-    }
-
-    .btn-action-large:hover {
-      transform: translateY(-2px);
-    }
-
-    /* Feature Grid */
-    .features-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 20px;
-      margin: 30px 0;
-    }
-
-    .feature-card {
-      background: var(--bg-light);
-      border: 1px solid var(--border-color);
-      border-radius: 8px;
-      padding: 25px;
-    }
-
-    .feature-card h3 {
-      color: var(--primary-color);
-      font-size: 1.25rem;
-      margin-bottom: 10px;
-      border-bottom: 2px solid var(--coffee-main);
-      padding-bottom: 6px;
-    }
-
-    .feature-list {
-      list-style: none;
-      padding: 0;
-    }
-
-    .feature-list li {
-      padding: 8px 0;
-      border-bottom: 1px dotted var(--border-color);
-    }
-
-    .feature-list li::before {
-      content: "☕ ";
-    }
-
-    /* Formular Section */
-    .form-section {
-      padding: 40px 0;
-      background-color: var(--coffee-bg);
-      border-top: 1px solid var(--coffee-border);
-      border-bottom: 1px solid var(--coffee-border);
-      margin-top: 40px;
-    }
-
-    .booking-form {
-      max-width: 600px;
-      margin: 0 auto;
-      background: #fff;
-      padding: 30px;
-      border-radius: 8px;
-      border: 1px solid var(--coffee-border);
-      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
-    }
-
-    .form-group {
-      margin-bottom: 18px;
-    }
-
-    .form-group label {
-      display: block;
-      margin-bottom: 6px;
-      font-weight: 600;
-      color: var(--primary-color);
-    }
-
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-      width: 100%;
-      padding: 12px;
-      border: 1px solid var(--border-color);
-      border-radius: 6px;
-      font-size: 1rem;
-    }
-
-    .btn-submit {
-      width: 100%;
-      background-color: var(--coffee-main);
-      color: #fff;
-      border: none;
-      padding: 15px;
-      font-size: 1.15rem;
-      font-weight: bold;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-
-    .btn-submit:hover {
-      background-color: #92400e;
-    }
-
-    /* Fixed Mobile CTA Button */
-    .sticky-mobile-cta {
-      display: none;
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: var(--success-color);
-      color: #fff;
-      text-align: center;
-      padding: 14px;
-      font-size: 1.1rem;
-      font-weight: bold;
-      text-decoration: none;
-      box-shadow: 0 -4px 10px rgba(0,0,0,0.15);
-      z-index: 1000;
-    }
-
-    @media (max-width: 768px) {
-      .sticky-mobile-cta {
-        display: block;
-      }
-      body {
-        padding-bottom: 50px;
-      }
-    }
-
-    footer {
-      text-align: center;
-      padding: 30px 0;
-      font-size: 0.9rem;
-      background-color: #fff;
-    }
-
-    footer a {
-      color: var(--text-color);
-      text-decoration: none;
-      margin: 0 8px;
-    }
+    body { font-family: system-ui, -apple-system, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0; }
+    header, main, footer { max-width: 900px; margin: 0 auto; padding: 20px; }
+    header { border-bottom: 2px solid #eee; padding-bottom: 10px; }
+    .nav-link { color: #0056b3; text-decoration: none; font-weight: bold; }
+    .hero { background: #f8f9fa; padding: 30px 20px; border-radius: 8px; margin: 20px 0; }
+    h1 { color: #1a1a1a; margin-top: 0; }
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 30px 0; }
+    .card { background: #fff; border: 1px solid #ddd; padding: 20px; border-radius: 6px; }
+    .cta-box { background: #0056b3; color: white; padding: 30px; text-align: center; border-radius: 8px; margin: 30px 0; }
+    .cta-box a.btn { background: #fff; color: #0056b3; padding: 12px 24px; text-decoration: none; font-weight: bold; border-radius: 4px; display: inline-block; margin-top: 15px; }
+    .faq-section { margin-top: 40px; border-top: 1px solid #eee; padding-top: 20px; }
+    footer { font-size: 0.9em; text-align: center; color: #666; border-top: 1px solid #eee; margin-top: 40px; }
   </style>
 </head>
 <body>
 
-  <!-- Header -->
   <header>
-    <div class="container">
-      <h1>☕ Mobile Kaffeebar Worms</h1>
-      <p>Frisch zubereitete Kaffeespezialitäten & Mobiles Catering an Ihrem Wunschort</p>
-    </div>
+    <a href="index.html" class="nav-link">← Zurück zur Hauptseite</a>
   </header>
 
-  <!-- Navigation -->
-  <nav class="main-nav">
-    <div class="container">
-      <ul>
-        <li><a href="index.html">Startseite</a></li>
-        <li><a href="sightseeing-worms.html">Sightseeingtour</a></li>
-        <li><a href="mobile-kaffeebar.html" class="active">Mobile Kaffeebar</a></li>
-        <li><a href="friedhofsmobil.html">Friedhofsmobil</a></li>
-        <li><a href="krankenfahrten-worms.html">Krankenfahrten</a></li>
-        <li><a href="einkaufshilfe.html">Einkaufshilfe</a></li>
-        <li><a href="bringdienst-krankenhaus.html">Bringdienst</a></li>
-        <li><a href="partner.html">Partner werden</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <!-- Header Telefon Bar -->
-  <div class="cta-bar">
-    <div class="container">
-      <span>Sofort-Terminanfrage & Beratung:</span>
-      <a href="tel:+491791676205" class="btn-phone">📞 0179 1676205</a>
-    </div>
-  </div>
-
-  <main class="container">
-
-    <!-- Hero Banner (Aufmerksamkeits-Anker) -->
-    <section class="hero-banner">
-      <h2>Das Highlight für Ihr Event oder Ihre Tour!</h2>
-      <p>Verwöhnen Sie Ihre Gäste, Kunden oder Ihr Team mit einer voll ausgestatteten mobilen Kaffeebar. Perfekter Kaffeegenuss – individuell, flexibel und direkt vor Ort in Worms & Region.</p>
-      <a href="#anfrage" class="btn-action-large">📋 Jetzt Angebot anfordern</a>
+  <main>
+    <section class="hero">
+      <h1>Mobile Kaffeebar & Glühweinstand Worms – Genuss mit Musik & Licht</h1>
+      <p>Ihr mobiles Genuss-Catering in Worms. Wir bringen frische Kaffeespezialitäten, heißen Glühwein, leckere Kekse sowie weihnachtliche Musik, professionelle Soundboxen und stimmungsvolle Lichteffekte direkt zu Ihrem Event.</p>
     </section>
 
-    <!-- Vorteile / Einsatzbereiche Grid -->
-    <div class="features-grid">
+    <section>
+      <h2>Das Highlight für kleine Gruppen, Private Events & Firmen</h2>
+      <div class="services-grid">
+        <div class="card">
+          <h3>Kaffee & Heißer Glühwein</h3>
+          <p>Erstmklassiger Espresso, Cappuccino sowie duftender Glühwein und leckere Kekse – frisch serviert vor Ort bei Ihrem Anlass.</p>
+        </div>
+        <div class="card">
+          <h3>Musik, Sound & Lichteffekte</h3>
+          <p>Rundum versorgt: Unsere Soundboxen sorgen für weihnachtliche Musik und abgestimmte Lichteffekte bringen sofortige Event-Atmosphäre.</p>
+        </div>
+        <div class="card">
+          <h3>Firmen- & Private Buchungen</h3>
+          <p>Egal ob kleine Gruppen, private Feiern im Garten/Hof oder exklusive Firmen- und Weihnachtsfeiern in Worms und Umgebung.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-box">
+      <h2>Mobiles Kaffeebar- & Glühwein-Catering anfragen</h2>
+      <p>Planen Sie eine Feier oder Weihnachtsfeier in Worms? Sichern Sie sich rechtzeitig Ihren Wunschtermin.</p>
+      <a href="anfragen.html" class="btn">Kaffeebar & Glühwein buchen</a>
+    </section>
+
+    <section class="faq-section">
+      <h2>Häufig gestellte Fragen (FAQ)</h2>
       
-      <div class="feature-card">
-        <h3>Einsatzmöglichkeiten</h3>
-        <ul class="feature-list">
-          <li><strong>Firmen-Events & Jubiläen:</strong> Professioneller Auftritt für Mitarbeiter & Kunden.</li>
-          <li><strong>Hochzeiten & Feiern:</strong> Der perfekte Sektempfang- oder Nachmittags-Kaffee.</li>
-          <li><strong>Messen & Promotion:</strong> Der verlässliche Magnet für Ihren Stand.</li>
-          <li><strong>Sightseeing-Pausen:</strong> Exklusiver Zwischenstopp bei Gruppenreisen.</li>
-        </ul>
+      <div class="faq-item">
+        <h3>Bieten Sie neben Kaffee auch mobilen Glühwein an?</h3>
+        <p>Ja! Wir bieten ein umfassendes Event-Catering mit mobilem Glühwein, Kaffeespezialitäten und leckeren Keksen an – ideal für die Winterzeit und Weihnachtsfeiern.</p>
       </div>
 
-      <div class="feature-card">
-        <h3>Unser Rundum-Service</h3>
-        <ul class="feature-list">
-          <li><strong>Vollautonomer Einsatz:</strong> Überall in Worms & Umgebung flexibel aufstellbar.</li>
-          <li><strong>Breite Auswahl:</strong> Espresso, Cappuccino, Latte Macchiato, Tee & Snacks.</li>
-          <li><strong>Alles in Eigenregie:</strong> Pünktlicher Aufbau, Ablauf und Betreuung aus einer Hand.</li>
-          <li><strong>Unkomplizierte Buchung:</strong> Schnelle Absprache per Telefon oder Formular.</li>
-        </ul>
+      <div class="faq-item">
+        <h3>Bringt der mobile Service eigene Musik und Beleuchtung mit?</h3>
+        <p>Ja, wir bringen ein stimmungsvolles Gesamtpaket inklusive professioneller Soundboxen mit weihnachtlicher Musik sowie passenden Lichteffekten direkt zu Ihrem Event mit.</p>
       </div>
 
-    </div>
-
+      <div class="faq-item">
+        <h3>Für welche Gruppengrößen und Events kann gebucht werden?</h3>
+        <p>Unser Service ist flexibel buchbar für kleine Gruppen, private Feiern, Geburtstage, Jubiläen sowie exklusive Firmen- und Weihnachtsfeiern in Worms und der Region.</p>
+      </div>
+    </section>
   </main>
 
-  <!-- Anfrageformular Section (Conversion-Fokus) -->
-  <section class="form-section" id="anfrage">
-    <div class="container">
-      <h2 style="text-align: center; margin-bottom: 8px; color: var(--primary-color);">Unverbindliche Catering-Anfrage</h2>
-      <p style="text-align: center; margin-bottom: 25px; color: #666;">Nennen Sie uns Ihren Wunschtermin – wir melden uns umgehend bei Ihnen!</p>
-
-      <form class="booking-form" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
-        
-        <div class="form-group">
-          <label for="name">Name / Ansprechpartner *</label>
-          <input type="text" id="name" name="name" required placeholder="Vor- und Nachname / Firma">
-        </div>
-
-        <div class="form-group">
-          <label for="phone">Telefonnummer für Rückfragen *</label>
-          <input type="tel" id="phone" name="phone" required placeholder="0179 1676205">
-        </div>
-
-        <div class="form-group">
-          <label for="email">E-Mail Adresse *</label>
-          <input type="email" id="email" name="email" required placeholder="ihre@email.de">
-        </div>
-
-        <div class="form-group">
-          <label for="event_type">Art der Veranstaltung</label>
-          <select id="event_type" name="event_type">
-            <option value="Firmenevent">Firmenevent / Jubiläum</option>
-            <option value="Private Feier">Private Feier / Geburtstag / Hochzeit</option>
-            <option value="Sightseeing / Tour">Ergänzung zu Sightseeing-Tour</option>
-            <option value="Sonstiges">Sonstiges</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label for="guests">Geschätzte Personenzahl</label>
-          <input type="text" id="guests" name="guests" placeholder="z. B. 20 - 50 Personen">
-        </div>
-
-        <div class="form-group">
-          <label for="datetime">Wunschdatum & Uhrzeit *</label>
-          <input type="datetime-local" id="datetime" name="datetime" required>
-        </div>
-
-        <div class="form-group">
-          <label for="location">Veranstaltungsort / Einsatzort in Worms</label>
-          <input type="text" id="location" name="location" placeholder="Straße, Ortsteil oder Event-Location">
-        </div>
-
-        <div class="form-group">
-          <label for="notes">Sonderwünsche / Anmerkungen</label>
-          <textarea id="notes" name="notes" rows="3" placeholder="Z. B. benötigte Dauer, gewünschte Snacks, etc."></textarea>
-        </div>
-
-        <button type="submit" class="btn-submit">☕ Kaffeebar unverbindlich anfragen</button>
-      </form>
-    </div>
-  </section>
-
-  <!-- Sticky CTA Button für Smartphones -->
-  <a href="tel:+491791676205" class="sticky-mobile-cta">📞 JETZT ANRUFEN: 0179 1676205</a>
-
-  <!-- Footer -->
   <footer>
-    <div class="container">
-      <a href="index.html">Startseite</a> | 
-      <a href="sightseeing-worms.html">Sightseeingtour</a> | 
-      <a href="mobile-kaffeebar.html">Mobile Kaffeebar</a> | 
-      <a href="friedhofsmobil.html">Friedhofsmobil</a> | 
-      <a href="krankenfahrten-worms.html">Krankenfahrten</a> | 
-      <a href="einkaufshilfe.html">Einkaufshilfe</a> | 
-      <a href="bringdienst-krankenhaus.html">Bringdienst</a> | 
-      <a href="partner.html">Partner werden</a> | 
-      <a href="impressum.html">Impressum</a> | 
-      <a href="datenschutz.html">Datenschutz</a>
-    </div>
+    <p>&copy; Fahrservice Worms – <a href="datenschutz.html">Datenschutz</a> | <a href="anfragen.html">Kontakt & Anfrage</a></p>
   </footer>
 
 </body>
