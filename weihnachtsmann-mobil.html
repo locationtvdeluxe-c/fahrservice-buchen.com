@@ -15,13 +15,15 @@
   <meta property="og:description" content="Der Weihnachtsmann kommt persönlich mit dem Auto gefahren. Unvergessliches Meet & Greet an der Haustür mit Geschenkeübergabe.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://fahrservice-buchen.com/weihnachtsmann-mobil.html">
+  <meta property="og:image" content="https://fahrservice-buchen.com/IMG_7978.jpeg">
 
-  <!-- Structured Data (Schema.org JSON-LD for Local Experience / Service) -->
+  <!-- Structured Data (Schema.org JSON-LD) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Service",
     "name": "Weihnachtsmann Mobil",
+    "image": "https://fahrservice-buchen.com/IMG_7978.jpeg",
     "provider": {
       "@type": "LocalBusiness",
       "name": "Fahrservice Worms",
@@ -39,40 +41,6 @@
       "availabilityStarts": "2026-10-01",
       "priceCurrency": "EUR"
     }
-  }
-  </script>
-
-  <!-- Structured Data (FAQ Schema) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Ab wann kann das Weihnachtsmann Mobil gebucht werden?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Das Weihnachtsmann Mobil ist ab Oktober direkt per WhatsApp oder E-Mail buchbar."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Für wen eignet sich der Besuch des Weihnachtsmanns?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Der Service eignet sich für Kinder & Familien, Rentner & Senioren sowie für Singles oder Freunde als originelle Weihnachtsüberraschung."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Wie läuft der Besuch an der Haustür ab?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Der Weihnachtsmann fährt persönlich mit dem Auto vor. Es gibt ein kurzes Meet & Greet an der Haustür, Zeit für Fotos und die persönliche Übergabe Ihres vorbereiteten Geschenks."
-        }
-      }
-    ]
   }
   </script>
 
@@ -99,9 +67,32 @@
 
     main, footer { max-width: 900px; margin: 0 auto; padding: 20px; }
     
-    /* Festive Hero Box */
-    .hero-santa { background: linear-gradient(135deg, #b30000 0%, #7a0000 100%); color: white; padding: 40px 25px; border-radius: 12px; margin: 20px 0; text-align: center; box-shadow: 0 4px 12px rgba(179,0,0,0.15); }
-    .hero-santa h1 { margin-top: 10px; font-size: 2.2rem; line-height: 1.2; }
+    /* Festive Hero Box mit Bild */
+    .hero-santa { 
+      background: linear-gradient(135deg, #b30000 0%, #7a0000 100%); 
+      color: white; 
+      padding: 30px 20px; 
+      border-radius: 12px; 
+      margin: 20px 0; 
+      text-align: center; 
+      box-shadow: 0 4px 12px rgba(179,0,0,0.15); 
+    }
+    
+    .hero-image-wrapper {
+      margin: 15px 0 20px 0;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    }
+
+    .hero-image {
+      width: 100%;
+      max-height: 450px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .hero-santa h1 { margin-top: 15px; font-size: 2.2rem; line-height: 1.2; }
     .hero-santa p { font-size: 1.25rem; margin-bottom: 0; opacity: 0.95; }
     .badge { background: #fff; color: #b30000; padding: 6px 16px; border-radius: 20px; font-weight: bold; font-size: 0.95rem; display: inline-block; text-transform: uppercase; letter-spacing: 0.5px; }
 
@@ -153,9 +144,14 @@
   </header>
 
   <main>
-    <!-- Hero Banner -->
+    <!-- Hero Banner mit Bild -->
     <section class="hero-santa">
       <span class="badge">🎅 Buchbar ab Oktober</span>
+      
+      <div class="hero-image-wrapper">
+        <img src="IMG_7978.jpeg" alt="Weihnachtsmann Mobil Hausbesuch" class="hero-image">
+      </div>
+
       <h1>Das Weihnachtsmann Mobil besucht Sie!</h1>
       <p>Der Weihnachtsmann kommt persönlich mit dem Auto zu euch gefahren. Ein kurzes Meet & Greet an der Haustür und die Übergabe eines Geschenks.</p>
     </section>
@@ -241,4 +237,3 @@
 
 </body>
 </html>
-
