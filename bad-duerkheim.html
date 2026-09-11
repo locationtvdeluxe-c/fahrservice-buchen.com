@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <!-- SEO PRIMARY META TAGS -->
-  <title>Fahrservice & Transfer Bad Dürkheim buchen | fahrservice-buchen.com</title>
-  <meta name="description" content="Ihr zuverlässiger Fahrservice & Flughafentransfer in Bad Dürkheim und an der Deutschen Weinstraße. Richtpreis online berechnen und Fahrt direkt unverbindlich anfragen.">
+  <title>Fahrservice & Transfer Bad Dürkheim | Wurstmarkt, Dürkheimer Advent & Ausflüge</title>
+  <meta name="description" content="Ihr zuverlässiger Fahrservice in Bad Dürkheim. Transfers zum Dürkheimer Wurstmarkt, Dürkheimer Advent, Kurpark, Limburg & Ausflugszielen an der Weinstraße. Unverbindlich online berechnen!">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://fahrservice-buchen.com/fahrservice-bad-duerkheim.html">
 
@@ -14,13 +14,13 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://fahrservice-buchen.com/fahrservice-bad-duerkheim.html">
   <meta property="og:title" content="Fahrservice & Transfer Bad Dürkheim | fahrservice-buchen.com">
-  <meta property="og:description" content="Zuverlässiger Fahrservice & Flughafentransfer in Bad Dürkheim und der Deutschen Weinstraße. Jetzt Fahrpreis berechnen & direkt anfragen.">
+  <meta property="og:description" content="Fahrservice für Bad Dürkheim, Dürkheimer Advent, Wurstmarkt, Wandertouren & Flughafentransfer. Jetzt Richtpreis berechnen & online anfragen.">
   <meta property="og:locale" content="de_DE">
 
   <!-- TWITTER CARDS -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Fahrservice & Transfer Bad Dürkheim">
-  <meta name="twitter:description" content="Fahrservice & Flughafentransfer in Bad Dürkheim und der Region Weinstraße. Transparenter Richtpreisrechner.">
+  <meta name="twitter:description" content="Ihr VIP- & Event-Fahrservice in Bad Dürkheim und an der Deutschen Weinstraße. Transparenter Preisrechner.">
 
   <!-- FONTS OPTIMIZATION -->
   <link rel="preconnect" href="https://fonts.bunny.net" crossorigin>
@@ -35,7 +35,7 @@
     "@context": "https://schema.org",
     "@type": "TaxiService",
     "name": "Fahrservice & Transfer Bad Dürkheim",
-    "description": "Ihr zuverlässiger Fahrservice & Flughafentransfer in Bad Dürkheim und an der Deutschen Weinstraße.",
+    "description": "Ihr zuverlässiger Fahrservice & Event-Transfer in Bad Dürkheim, zum Wurstmarkt, Dürkheimer Advent, Gradierbau und zu Wanderzielen an der Deutschen Weinstraße.",
     "url": "https://fahrservice-buchen.com/fahrservice-bad-duerkheim.html",
     "provider": {
       "@type": "LocalBusiness",
@@ -80,6 +80,8 @@
       --gray-100: #F3F4F6;
       --white: #FFFFFF;
       --focus-ring: 0 0 0 3px rgba(37, 99, 235, 0.35);
+      --accent-fest: #991B1B; /* Elegantes Festtags-Rot für Advent & Wurstmarkt */
+      --accent-bg: #FEF2F2;
     }
 
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -97,7 +99,7 @@
     a:hover { text-decoration: underline; }
 
     /* HEADER & NAVIGATION */
-    .site-header { border-bottom: 1px solid var(--gray-100); padding: 16px 0; background: var(--white); sticky: top; }
+    .site-header { border-bottom: 1px solid var(--gray-100); padding: 16px 0; background: var(--white); position: sticky; top: 0; z-index: 100; }
     .nav-inner { max-width: 900px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; }
     .nav-logo { font-weight: 700; font-size: 18px; color: var(--dark); }
     .nav-logo span { color: var(--primary); }
@@ -108,6 +110,30 @@
     .header-box h1 { font-size: clamp(1.8rem, 4vw, 2.4rem); color: var(--dark); margin-bottom: 8px; line-height: 1.25; }
     .header-box p { color: var(--gray-500); font-size: 16px; max-width: 680px; margin: 0 auto; }
 
+    /* EVENT BANNER */
+    .event-banner {
+      background: var(--accent-bg);
+      border: 1px solid #FECACA;
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin-bottom: 32px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .event-banner-badge {
+      background: var(--accent-fest);
+      color: var(--white);
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 20px;
+      white-space: nowrap;
+    }
+    .event-banner-text { font-size: 14px; color: #7F1D1D; }
+    .event-banner-text strong { color: #991B1B; }
+
     /* FORM CARD */
     .form-card {
       background: var(--white);
@@ -115,6 +141,7 @@
       border-radius: 16px;
       padding: 32px;
       box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+      margin-bottom: 48px;
     }
 
     .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
@@ -221,14 +248,50 @@
     }
     .btn-submit:hover, .btn-submit:focus-visible { background: var(--primary-dark); outline: none; }
 
+    /* CITY INFO & DESTINATIONS SECTION */
+    .info-section {
+      margin-top: 40px;
+      border-top: 1px solid var(--gray-300);
+      padding-top: 40px;
+    }
+    .info-section h2 { font-size: 22px; color: var(--dark); margin-bottom: 16px; }
+    .info-section h3 { font-size: 17px; color: var(--gray-900); margin: 24px 0 10px; }
+    .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 16px; }
+    .info-card {
+      background: var(--gray-100);
+      padding: 20px;
+      border-radius: 12px;
+      border: 1px solid var(--gray-300);
+    }
+    .info-card h4 { font-size: 16px; color: var(--dark); margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
+    .info-card p { font-size: 14px; color: var(--gray-700); }
+
+    .event-list { list-style: none; margin-top: 12px; }
+    .event-list li {
+      position: relative;
+      padding-left: 20px;
+      margin-bottom: 8px;
+      font-size: 14px;
+      color: var(--gray-700);
+    }
+    .event-list li::before {
+      content: "•";
+      color: var(--primary);
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+    }
+
     /* FOOTER */
     .footer { border-top: 1px solid var(--gray-100); padding: 32px 0; text-align: center; font-size: 14px; color: var(--gray-500); }
 
     @media(max-width: 600px) {
       .form-grid { grid-template-columns: 1fr; }
       .tarif-breakdown { grid-template-columns: 1fr; }
+      .info-grid { grid-template-columns: 1fr; }
       .form-card { padding: 20px; }
       .price-box { flex-direction: column; align-items: flex-start; gap: 4px; }
+      .event-banner { flex-direction: column; align-items: flex-start; }
     }
   </style>
 </head>
@@ -244,17 +307,25 @@
   </header>
 
   <main class="container">
+    
     <div class="header-box">
-      <h1>Fahrservice Bad Dürkheim &amp; Weinstraße</h1>
-      <p>Beförderung in Bad Dürkheim, der Vorderpfalz und Umgebung. Entfernung schätzen, Richtpreis direkt einsehen und unverbindlich anfragen.</p>
+      <h1>Fahrservice &amp; Transfer Bad Dürkheim</h1>
+      <p>Entspannt zu Festen, Wanderungen &amp; Sehenswürdigkeiten an der Deutschen Weinstraße. Richtpreis berechnen und Fahrt direkt online anfragen.</p>
+    </div>
+
+    <!-- ANKÜNDIGUNGEN / EVENT HIGHLIGHT BANNER -->
+    <div class="event-banner">
+      <span class="event-banner-badge">Saisontipp / Event</span>
+      <div class="event-banner-text">
+        <strong>Vorausplanung für den Dürkheimer Advent &amp; Feste:</strong> Sichern Sie sich rechtzeitig Ihren Transfer zum Weihnachtsmarkt, Kurpark oder zum Wurstmarktgelände ohne Parkplatzsorgen!
+      </div>
     </div>
 
     <section class="form-card" aria-labelledby="form-heading">
-      <h2 id="form-heading" class="sr-only" style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0;">Unverbindliche Fahrtenanfrage</h2>
+      <h2 id="form-heading" class="sr-only" style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0;">Unverbindliche Fahrtenanfrage Bad Dürkheim</h2>
       
       <form action="https://formspree.io/f/mzepjpny" method="POST" data-umami-event="Fahrten_Anfrage_BadDuerkheim">
         
-        <!-- Standortspezifischer Hinweis für Formspree -->
         <input type="hidden" name="Standort_Quellseite" value="Bad Dürkheim Landingpage">
 
         <!-- DYNAMISCHER PREIS-RECHNER -->
@@ -296,11 +367,11 @@
         <div class="form-grid">
           <div class="form-group">
             <label for="abholort">Abholort (Start) *</label>
-            <input type="text" id="abholort" name="Abholort" placeholder="z. B. Bad Dürkheim, Bahnhof / Kurpark" autocomplete="street-address" required>
+            <input type="text" id="abholort" name="Abholort" placeholder="z. B. Bad Dürkheim Bahnhof, Hotel oder Zuhaused" autocomplete="street-address" required>
           </div>
           <div class="form-group">
             <label for="zielort">Zielort (Ziel) *</label>
-            <input type="text" id="zielort" name="Zielort" placeholder="z. B. Flughafen Frankfurt / Mannheim Hbf" required>
+            <input type="text" id="zielort" name="Zielort" placeholder="z. B. Dürkheimer Fass, Flughafen FRA, Mannheim Hbf" required>
           </div>
         </div>
 
@@ -349,13 +420,63 @@
 
           <div class="form-group full">
             <label for="hinweise">Besondere Wünsche / Anmerkungen (optional)</label>
-            <textarea id="hinweise" name="Anmerkungen" rows="3" placeholder="z. B. Kindersitz benötigt, Wurstmarkt-Transfer, Gepäckhinweise..."></textarea>
+            <textarea id="hinweise" name="Anmerkungen" rows="3" placeholder="z. B. Gepäck / Kofferzahl, Abholung nach der Weinprobe, Wandertransfer..."></textarea>
           </div>
         </div>
 
         <button type="submit" class="btn-submit">Fahrt für Bad Dürkheim anfragen</button>
       </form>
     </section>
+
+    <!-- INFORMATIONEN ZU EVENTS & SEHENSWÜRDIGKEITEN -->
+    <section class="info-section">
+      <h2>Ihr Ziel in Bad Dürkheim – Perfekt erreichbar mit unserem Fahrservice</h2>
+      <p style="color: var(--gray-700);">Ob Sie zum legendären Wurstmarkt anreisen, die besinnliche Adventszeit genießen oder Wanderungen im Pfälzerwald planen: Wir sorgen für eine entspannte An- und Abreise ohne lästige Parkplatzsuche.</p>
+
+      <div class="info-grid">
+        
+        <div class="info-card">
+          <h4>🎄 Dürkheimer Advent &amp; Winterzeit</h4>
+          <p>In der Vorweihnachtszeit verwandelt sich Bad Dürkheim vom Römerplatz bis zum Kurpark in ein weihnachtliches Lichtermeer. Genießen Sie Glühwein und kulinarische Highlights – wir fahren Sie sicher nach Hause.</p>
+          <ul class="event-list">
+            <li><strong>Dürkheimer Advent:</strong> An allen 4 Adventswochenenden im Stadtzentrum &amp; Kurpark.</li>
+            <li><strong>Winterliche Thermal-Ausklang:</strong> Fahrten zum Kurpark-Hotel &amp; Thermenbereich.</li>
+          </ul>
+        </div>
+
+        <div class="info-card">
+          <h4>🍷 Dürkheimer Wurstmarkt &amp; Wein-Events</h4>
+          <p>Das größte Weinfest der Welt zieht jährlich hunderttausende Besucher an. Buchen Sie Ihren Shuttle-Service im Voraus für Gruppen oder die bequeme Heimfahrt.</p>
+          <ul class="event-list">
+            <li><strong>Dürkheimer Wurstmarkt:</strong> Jährlich im September auf den Brühlwiesen.</li>
+            <li><strong>Weinkultur &amp; Weinproben:</strong> Transfers zu Gütern in Ungstein, Leistadt, Seebach &amp; Grethen.</li>
+          </ul>
+        </div>
+
+        <div class="info-card">
+          <h4>🏰 Sehenswürdigkeiten &amp; Kultur</h4>
+          <p>Bad Dürkheim bietet faszinierende Kulturdenkmäler und Museen. Nutzen Sie unseren Fahrservice für Ihre individuelle Sightseeing-Tour.</p>
+          <ul class="event-list">
+            <li><strong>Dürkheimer Riesenfass &amp; Gradierbau (Saline):</strong> Das Wahrzeichen der Stadt.</li>
+            <li><strong>Klosterruine Limburg &amp; Hardenburg:</strong> Imposante Bauwerke im Pfälzerwald.</li>
+            <li><strong>Stadtmuseum Haus Catoir:</strong> Geschichte &amp; Kultur der Vorderpfalz.</li>
+            <li><strong>Römisches Weingut Weilberg:</strong> Antike Weinbaukultur in Ungstein.</li>
+          </ul>
+        </div>
+
+        <div class="info-card">
+          <h4>🥾 Wandern &amp; Natur im Pfälzerwald</h4>
+          <p>Starten Sie Ihre Wanderung sorgenfrei an beliebten Etappen und lassen Sie sich am Zielort flexibel abholen.</p>
+          <ul class="event-list">
+            <li><strong>Pfälzer Weinsteig:</strong> Etappen rund um Bad Dürkheim.</li>
+            <li><strong>Kaiser-Wilhelm-Turm (Bismarckturm):</strong> Panoramablick über die Rheinebene.</li>
+            <li><strong>Pfälzer Mandelpfad:</strong> Im Frühjahr die rosa Blütenpracht genießen.</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
   </main>
 
   <footer class="footer">
@@ -422,13 +543,3 @@
 
 </body>
 </html>
-```eof
-
-### Zusammenfassung der vorgenommenen Verbesserungen:
-
-1. **Vollständiges SEO & Schema.org JSON-LD:** Die Seite enthält nun ein spezifisches `TaxiService`-Schema für Bad Dürkheim, Open Graph Tags und Twitter Cards.
-2. **Barrierefreiheit (a11y) & UX:**
-   - Hinzufügen von `autocomplete`-Attributen (z. B. `given-name`, `email`, `tel`, `street-address`), womit Smartphones das Formular automatisch ausfüllen können.
-   - Barrierefreie Tastatur-Fokussierung mit `:focus-visible`.
-3. **Smarte Datumsvalidierung:** Das Datumsfeld erlaubt keine Auswahl von Vergangenheitsdaten mehr (`fahrtdatumInput.min = now`).
-4. **Semantischer HTML5 Aufbau:** Strukturierte Aufteilung in `<header>`, `<main>`, `<section>` und `<footer>`.
