@@ -3,305 +3,164 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Einkaufshilfe & Großeinkauf-Fahrservice Worms | Für Alt & Jung</title>
-  <meta name="description" content="Flexibler Einkaufs- & Besorgungsdienst in Worms für Alt & Jung. Unterstützung beim Großeinkauf, Fahrten ohne eigenes Auto & Transport schwerer Taschen. Jetzt buchen!">
-  <meta name="robots" content="index, follow">
   
-  <style>
-    :root {
-      --primary-color: #0f172a;
-      --accent-color: #2563eb;
-      --success-color: #16a34a;
-      --text-color: #334155;
-      --bg-light: #f8fafc;
-      --border-color: #e2e8f0;
-    }
-    
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      line-height: 1.6;
-      color: var(--text-color);
-      margin: 0;
-      padding: 0;
-      background-color: #fff;
-    }
+  <!-- SEO Meta-Tags -->
+  <title>Einkaufshilfe Worms | Senior Service & Fahrservice mit Begleitung</title>
+  <meta name="description" content="Ihre persönliche Einkaufshilfe in Worms und Umgebung. Entspannte Fahrten zum Supermarkt, Markt oder Einkaufszentrum inklusive Begleitung. Jetzt buchen!">
+  <meta name="keywords" content="Einkaufshilfe Worms, Senioreneinkauf Worms, Einkaufsbegleitung Worms, Fahrservice Einkauf, Botenfahrten Worms">
+  <link rel="canonical" href="https://fahrservice-buchen.com/einkaufshilfe.html">
 
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
+  <!-- Open Graph / Social Media -->
+  <meta property="og:title" content="Einkaufshilfe Worms | Fahrservice & Einkaufsbegleitung">
+  <meta property="og:description" content="Bequeme Beförderung & Unterstützung beim Einkauf in Worms. Wir helfen Ihnen von Haustür zu Haustür.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://fahrservice-buchen.com/einkaufshilfe.html">
 
-    header {
-      background-color: var(--primary-color);
-      color: #fff;
-      padding: 50px 0 40px 0;
-      text-align: center;
-    }
-
-    header h1 {
-      margin: 0 0 15px 0;
-      font-size: 2.2rem;
-      line-height: 1.2;
-    }
-
-    header p {
-      font-size: 1.2rem;
-      max-width: 650px;
-      margin: 0 auto;
-      color: #cbd5e1;
-    }
-
-    .cta-bar {
-      background-color: #e0f2fe;
-      border-bottom: 1px solid #bae6fd;
-      padding: 15px 0;
-      text-align: center;
-    }
-
-    .btn-phone {
-      display: inline-block;
-      background-color: var(--success-color);
-      color: #fff;
-      font-size: 1.2rem;
-      font-weight: bold;
-      padding: 12px 25px;
-      border-radius: 6px;
-      text-decoration: none;
-      margin-left: 10px;
-    }
-
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 20px;
-      margin: 40px 0;
-    }
-
-    .service-card {
-      background: var(--bg-light);
-      padding: 25px;
-      border-radius: 8px;
-      border: 1px solid var(--border-color);
-    }
-
-    .service-card h3 {
-      margin-top: 0;
-      color: var(--primary-color);
-    }
-
-    .content-section {
-      padding: 30px 0;
-    }
-
-    .form-section {
-      padding: 50px 0;
-      background-color: var(--bg-light);
-      border-top: 1px solid var(--border-color);
-    }
-
-    .booking-form {
-      max-width: 600px;
-      margin: 0 auto;
-      background: #fff;
-      padding: 30px;
-      border-radius: 8px;
-      border: 1px solid var(--border-color);
-      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-    }
-
-    .form-group {
-      margin-bottom: 20px;
-    }
-
-    .form-group label {
-      display: block;
-      margin-bottom: 8px;
-      font-weight: 600;
-      color: var(--primary-color);
-    }
-
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-      width: 100%;
-      padding: 12px;
-      border: 1px solid var(--border-color);
-      border-radius: 6px;
-      box-sizing: border-box;
-      font-size: 1rem;
-    }
-
-    .btn-submit {
-      width: 100%;
-      background-color: var(--accent-color);
-      color: #fff;
-      border: none;
-      padding: 14px;
-      font-size: 1.1rem;
-      font-weight: 600;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-
-    .faq-section {
-      padding: 40px 0;
-    }
-
-    .faq-item {
-      margin-bottom: 20px;
-      border-bottom: 1px solid var(--border-color);
-      padding-bottom: 15px;
-    }
-
-    .faq-item h3 {
-      color: var(--primary-color);
-      margin-bottom: 5px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 30px 0;
-      border-top: 1px solid var(--border-color);
-      font-size: 0.9rem;
-    }
-
-    footer a {
-      color: var(--text-color);
-      text-decoration: none;
-      margin: 0 10px;
-    }
-  </style>
-
-  <!-- Structured Data für KI & Suchmaschinen -->
+  <!-- Structured Data / KI- & GEO-Optimierung (Schema.org JSON-LD) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Einkaufshilfe & Großeinkauf Fahrservice Worms",
+    "@type": "LocalBusiness",
+    "name": "Fahrservice Worms - Einkaufshilfe",
     "url": "https://fahrservice-buchen.com/einkaufshilfe.html",
-    "telephone": "+491791676205",
-    "description": "Bequemer Fahr- und Besorgungsdienst in Worms für den Großeinkauf, Besorgungen ohne eigenes Auto oder bei gesundheitlichen Einschränkungen.",
-    "areaServed": {
-      "@type": "AdministrativeArea",
-      "name": "Worms"
+    "logo": "https://fahrservice-buchen.com/logo.png",
+    "description": "Persönlicher Fahrservice und Einkaufshilfe für Senioren und Privatpersonen in Worms.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Worms",
+      "postalCode": "67547",
+      "addressCountry": "DE"
     },
-    "provider": {
-      "@type": "LocalBusiness",
-      "name": "Fahrservice Buchen Worms",
-      "telephone": "+491791676205"
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 49.632,
+      "longitude": 8.359
+    },
+    "areaServed": ["Worms", "Bürstadt", "Osthofen", "Rhein-Neckar-Region"],
+    "priceRange": "€€",
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "opens": "08:00",
+      "closes": "18:00"
     }
   }
   </script>
+
+  <!-- Schema.org FAQ-Structure für Google & KI-Modelle -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Wie funktioniert die Einkaufshilfe in Worms?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Wir holen Sie direkt an Ihrer Haustür ab, fahren Sie zu Ihrem Wunsch-Supermarkt oder Einkaufszentrum in Worms und unterstützen Sie auf Wunsch beim Tragen der Einkäufe."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Können auch Einkäufe für mich erledigt werden?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja, Sie können uns auch Ihre Einkaufsliste mitgeben und wir erledigen den Einkauf und bringen die Waren direkt zu Ihnen nach Hause."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "In welchen Städten steht die Einkaufshilfe zur Verfügung?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Unser Service steht in Worms sowie den umliegenden Gemeinden wie Bürstadt, Osthofen und der näheren Rhein-Neckar-Region zur Verfügung."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    body { font-family: system-ui, -apple-system, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0; }
+    header, main, footer { max-width: 900px; margin: 0 auto; padding: 20px; }
+    header { border-bottom: 2px solid #eee; padding-bottom: 10px; }
+    .nav-link { color: #0056b3; text-decoration: none; font-weight: bold; }
+    .hero { background: #f8f9fa; padding: 30px 20px; border-radius: 8px; margin: 20px 0; }
+    h1 { color: #1a1a1a; margin-top: 0; }
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 30px 0; }
+    .card { background: #fff; border: 1px solid #ddd; padding: 20px; border-radius: 6px; }
+    .cta-box { background: #0056b3; color: white; padding: 30px; text-align: center; border-radius: 8px; margin: 30px 0; }
+    .cta-box a.btn { background: #fff; color: #0056b3; padding: 12px 24px; text-decoration: none; font-weight: bold; border-radius: 4px; inline-block; margin-top: 15px; }
+    .faq-section { margin-top: 40px; border-top: 1px solid #eee; padding-top: 20px; }
+    footer { font-size: 0.9em; text-align: center; color: #666; border-top: 1px solid #eee; margin-top: 40px; }
+  </style>
 </head>
 <body>
 
   <header>
-    <div class="container">
-      <h1>Einkaufshilfe & Großeinkauf-Service in Worms</h1>
-      <p>Ob ohne eigenes Auto, bei zeitlichen Engpässen oder mit gesundheitlichen Einschränkungen – wir unterstützen Alt & Jung bei Besorgungen.</p>
-    </div>
+    <a href="index.html" class="nav-link">← Zurück zur Hauptseite</a>
   </header>
 
-  <div class="cta-bar">
-    <div class="container">
-      <span>Großeinkauf oder Besorgungsfahrt planen?</span>
-      <a href="tel:+491791676205" class="btn-phone">Jetzt Anrufen: 0179 1676205</a>
-    </div>
-  </div>
+  <main>
+    <section class="hero">
+      <h1>Einkaufshilfe Worms – Entspannt & Begleitet Einkaufen</h1>
+      <p>Ihr persönlicher Fahr- und Einkaufsservice in Worms. Wir unterstützen Sie bei Besorgungen des täglichen Bedarfs, Wochenmärkten oder Besuchen im Einkaufszentrum.</p>
+    </section>
 
-  <main class="container">
-    <section class="services-grid">
-      <div class="service-card">
-        <h3>Großeinkauf ohne eigenes Auto</h3>
-        <p>Sie haben kein Auto zur Verfügung? Wir fahren Sie zum Supermarkt, Fachmarkt oder Getränkemarkt Ihrer Wahl und transportieren auch schwere Kisten und große Einkäufe bequem zu Ihnen nach Hause.</p>
-      </div>
-      <div class="service-card">
-        <h3>Begleitung bei Einschränkungen</h3>
-        <p>Egal ob nach Verletzungen, bei Gehbehinderungen oder im Alter – unsere verlässlichen Partner-Fahrer stehen Ihnen beim Ein- und Ausladen sowie beim Tragen der Taschen zur Seite.</p>
-      </div>
-      <div class="service-card">
-        <h3>Besorgungsdienst & Erledigungen</h3>
-        <p>Wenig Zeit oder Sie möchten bei schlechtem Wetter lieber im Trockenen bleiben? Wir übernehmen den Einkauf nach Liste, holen Rezepte oder Medikamente ab und bringen alles direkt an Ihre Tür.</p>
+    <section>
+      <h2>Unser Service für Ihren Alltags-Einkauf</h2>
+      <div class="services-grid">
+        <div class="card">
+          <h3>Fahrt & Begleitung</h3>
+          <p>Wir fahren Sie entspannt zu Ihrem Lieblingsgeschäft, warten vor Ort oder begleiten Sie auf Wunsch direkt beim Einkaufen.</p>
+        </div>
+        <div class="card">
+          <h3>Tragehilfe & Haustürservice</h3>
+          <p>Kein schweres Schleppen mehr: Wir helfen Ihnen beim Ein- und Ausladen und tragen Ihre Einkaufstaschen bis in die Wohnung.</p>
+        </div>
+        <div class="card">
+          <h3>Erledigungsservice</h3>
+          <p>Sie möchten oder können nicht selbst mitfahren? Geben Sie uns einfach Ihre Einkaufsliste mit und wir erledigen den Rest für Sie.</p>
+        </div>
       </div>
     </section>
 
-    <section class="content-section">
-      <h2>Bequem einkaufen ohne Transportstress</h2>
-      <p>
-        Ein großer Wocheneinkauf oder Besorgungen in der Stadt können ohne eigenes Fahrzeug schnell beschwerlich werden. Unser flexibler Fahr- und Besorgungsdienst richtet sich an alle Menschen in Worms und Umgebung: Junge Familien, Beschäftigte ohne Auto, Personen mit temporären Mobilitätseinschränkungen und Senioren. Wir sorgen dafür, dass schwere Kisten und vollgepackte Einkaufstaschen ohne Mühe an Ihr Ziel gelangen.
-      </p>
+    <section class="cta-box">
+      <h2>Jetzt Einkaufshilfe in Worms buchen</h2>
+      <p>Sichern Sie sich Ihren Wunschtermin für Ihren nächsten Einkauf.</p>
+      <a href="anfragen.html" class="btn">Einkaufshilfe jetzt anfragen</a>
     </section>
 
     <section class="faq-section">
-      <h2>Häufige Fragen zur Einkaufshilfe in Worms</h2>
+      <h2>Häufig gestellte Fragen (FAQ)</h2>
       
       <div class="faq-item">
-        <h3>Können auch schwere Gegenstände oder Getränkekisten transportiert werden?</h3>
-        <p>Ja, unsere Fahrzeuge bieten ausreichend Platz für Großeinkäufe, Klappboxen und Getränkekisten. Die Fahrer unterstützen Sie auf Wunsch gerne beim Tragen.</p>
+        <h3>Wie funktioniert die Einkaufshilfe in Worms?</h3>
+        <p>Wir holen Sie direkt an Ihrer Haustür ab, fahren Sie zu Ihrem Wunsch-Supermarkt oder Einkaufszentrum in Worms und unterstützen Sie auf Wunsch beim Tragen der Einkäufe.</p>
       </div>
 
       <div class="faq-item">
-        <h3>Kann ich den Service kurzfristig oder regelmäßig buchen?</h3>
-        <p>Sie können Fahrten sowohl spontan buchen als auch feste, wiederkehrende Termine (z. B. für den wöchentlichen Großeinkauf) vereinbaren.</p>
+        <h3>Können auch Einkäufe für mich erledigt werden?</h3>
+        <p>Ja, Sie können uns auch Ihre Einkaufsliste mitgeben und wir erledigen den Einkauf und bringen die Waren direkt zu Ihnen nach Hause.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>In welchen Städten steht die Einkaufshilfe zur Verfügung?</h3>
+        <p>Unser Service steht in Worms sowie den umliegenden Gemeinden wie Bürstadt, Osthofen und der näheren Rhein-Neckar-Region zur Verfügung.</p>
       </div>
     </section>
   </main>
 
-  <section class="form-section" id="anfrage">
-    <div class="container">
-      <h2 style="text-align: center; margin-bottom: 10px;">Einkaufshilfe anfragen</h2>
-      <p style="text-align: center; margin-bottom: 30px;">Füllen Sie das Formular aus. Wir melden uns umgehend zur Terminabstimmung.</p>
-
-      <form class="booking-form" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
-        <div class="form-group">
-          <label for="name">Name *</label>
-          <input type="text" id="name" name="name" required placeholder="Vor- und Nachname">
-        </div>
-
-        <div class="form-group">
-          <label for="phone">Telefonnummer für Rückfragen *</label>
-          <input type="tel" id="phone" name="phone" required placeholder="+49 179 1676205">
-        </div>
-
-        <div class="form-group">
-          <label for="pickup">Abholadresse (in Worms & Umgebung) *</label>
-          <input type="text" id="pickup" name="pickup" required placeholder="Straße, Hausnummer, PLZ Ort">
-        </div>
-
-        <div class="form-group">
-          <label for="service_type">Art der Unterstützung *</label>
-          <select id="service_type" name="service_type" required>
-            <option value="Großeinkauf mit Auto">Fahrt zum Großeinkauf (Supermarkt/Getränkemarkt)</option>
-            <option value="Begleiteter Einkauf">Einkaufsfahrt mit Begleitung & Tragehilfe</option>
-            <option value="Reiner Besorgungsdienst">Reiner Besorgungsdienst (Einkauf abholen & bringen)</option>
-            <option value="Apotheke / Post">Apotheke- / Postgang</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label for="datetime">Wunschdatum & Uhrzeit *</label>
-          <input type="datetime-local" id="datetime" name="datetime" required>
-        </div>
-
-        <div class="form-group">
-          <label for="notes">Besondere Hinweise (z. B. Getränkekisten, Tragehilfe in Etage)</label>
-          <textarea id="notes" name="notes" rows="3" placeholder="Geben Sie hier eventuelle Besonderheiten an..."></textarea>
-        </div>
-
-        <button type="submit" class="btn-submit">Einkaufshilfe unverbindlich anfragen</button>
-      </form>
-    </div>
-  </section>
-
   <footer>
-    <div class="container">
-      <a href="index.html">Startseite</a> | 
-      <a href="krankenfahrten-worms.html">Krankenfahrten</a> | 
-      <a href="partner.html">Partner werden</a> | 
-      <a href="impressum.html">Impressum</a> | 
-      <a href="datenschutz.html">Datenschutz</a>
-    </div>
+    <p>&copy; Fahrservice Worms – <a href="datenschutz.html">Datenschutz</a> | <a href="anfragen.html">Kontakt & Anfrage</a></p>
   </footer>
 
 </body>
