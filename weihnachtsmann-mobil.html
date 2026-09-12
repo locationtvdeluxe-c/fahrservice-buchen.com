@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
   <!-- SEO & Geo Meta-Tags -->
   <title>Weihnachtsmann Mobil | Weihnachtsüberraschung & Hausbesuch in Worms</title>
   <meta name="description" content="Der Weihnachtsmann kommt persönlich mit dem Auto zu euch! Ein kurzes Meet & Greet an der Haustür & Geschenkeübergabe. Für Kinder, Rentner & Singles. Jetzt per WhatsApp buchen!">
   <meta name="keywords" content="Weihnachtsmann mobil, Weihnachtsmann Hausbesuch Worms, Weihnachtsmann buchen, Geschenkeübergabe Haustür, Weihnachtsüberraschung Kinder, Weihnachtsüberraschung Senioren">
+  <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://fahrservice-buchen.com/weihnachtsmann-mobil.html">
 
   <!-- Open Graph / Social Media -->
@@ -16,6 +17,10 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://fahrservice-buchen.com/weihnachtsmann-mobil.html">
   <meta property="og:image" content="https://fahrservice-buchen.com/IMG_7978.jpeg">
+  <meta property="og:locale" content="de_DE">
+
+  <!-- UMAMI ANALYTICS -->
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="03fe2c2b-a847-4de7-9cab-bf54cd5da43b"></script>
 
   <!-- Structured Data (Schema.org JSON-LD) -->
   <script type="application/ld+json">
@@ -23,10 +28,11 @@
     "@context": "https://schema.org",
     "@type": "Service",
     "name": "Weihnachtsmann Mobil",
+    "url": "https://fahrservice-buchen.com/weihnachtsmann-mobil.html",
     "image": "https://fahrservice-buchen.com/IMG_7978.jpeg",
     "provider": {
       "@type": "LocalBusiness",
-      "name": "Fahrservice Worms",
+      "name": "Fahrservice Eschenfelder",
       "email": "eschenfelder.office@gmail.com",
       "telephone": "+491791676205",
       "url": "https://fahrservice-buchen.com"
@@ -43,10 +49,62 @@
     }
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Fahrservice",
+        "item": "https://fahrservice-buchen.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Weihnachtsmann Mobil",
+        "item": "https://fahrservice-buchen.com/weihnachtsmann-mobil.html"
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Ab wann ist das Weihnachtsmann Mobil buchbar?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Der Service kann ab Oktober direkt per WhatsApp (+49 179 1676205) oder per E-Mail für die Adventszeit und Feiertage angefragt und gebucht werden."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Für wen eignet sich das Weihnachtsmann Mobil?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Das Weihnachtsmann Mobil besucht jeden: Es ist ideal für Kinder, Familien, Rentner, Senioren sowie Singles oder Freunde."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Wie erfolgt die Geschenkeübergabe?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Das Geschenk wird vorab diskret überreicht oder an der Haustür bereitgestellt, sodass der Weihnachtsmann es persönlich bei der Begrüßung übergeben kann."
+        }
+      }
+    ]
+  }
+  </script>
 
   <style>
     body { font-family: system-ui, -apple-system, sans-serif; line-height: 1.6; color: #222; margin: 0; padding: 0; background-color: #fafafa; }
-    
+
     /* Responsive Navigation */
     header { background: #1a1a1a; color: white; position: sticky; top: 0; z-index: 1000; }
     .nav-container { max-width: 900px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 12px 20px; }
@@ -65,19 +123,25 @@
       .nav-menu li a { padding: 6px 12px; border: none; border-radius: 4px; }
     }
 
-    main, footer { max-width: 900px; margin: 0 auto; padding: 20px; }
-    
+    /* BREADCRUMB */
+    .breadcrumb { max-width: 900px; margin: 12px auto 0; padding: 0 20px; font-size: 13px; color: #6B7280; }
+    .breadcrumb a { color: #6B7280; text-decoration: none; }
+    .breadcrumb a:hover { color: #b30000; }
+    .breadcrumb span { margin: 0 6px; }
+
+    main { max-width: 900px; margin: 0 auto; padding: 20px; }
+
     /* Festive Hero Box mit Bild */
-    .hero-santa { 
-      background: linear-gradient(135deg, #b30000 0%, #7a0000 100%); 
-      color: white; 
-      padding: 30px 20px; 
-      border-radius: 12px; 
-      margin: 20px 0; 
-      text-align: center; 
-      box-shadow: 0 4px 12px rgba(179,0,0,0.15); 
+    .hero-santa {
+      background: linear-gradient(135deg, #b30000 0%, #7a0000 100%);
+      color: white;
+      padding: 30px 20px;
+      border-radius: 12px;
+      margin: 20px 0;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(179,0,0,0.15);
     }
-    
+
     .hero-image-wrapper {
       margin: 15px 0 20px 0;
       overflow: hidden;
@@ -111,10 +175,10 @@
     .cta-box { background: #1a1a1a; color: white; padding: 35px 25px; text-align: center; border-radius: 12px; margin: 35px 0; }
     .cta-box h2 { color: #fff; margin-top: 0; }
     .cta-buttons { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-top: 25px; }
-    
+
     .btn-wa { background: #25d366; color: white; padding: 14px 28px; text-decoration: none; font-weight: bold; border-radius: 8px; display: inline-flex; align-items: center; gap: 8px; font-size: 1.1rem; }
     .btn-wa:hover { background: #1eb857; }
-    
+
     .btn-mail { background: #0056b3; color: white; padding: 14px 28px; text-decoration: none; font-weight: bold; border-radius: 8px; display: inline-flex; align-items: center; gap: 8px; font-size: 1.1rem; }
     .btn-mail:hover { background: #004085; }
 
@@ -122,7 +186,7 @@
     .faq-item { margin-bottom: 20px; }
     .faq-item h3 { margin-bottom: 5px; color: #1a1a1a; }
 
-    footer { font-size: 0.9em; text-align: center; color: #666; border-top: 1px solid #eee; margin-top: 40px; }
+    footer { font-size: 0.9em; text-align: center; color: #666; border-top: 1px solid #eee; margin-top: 40px; max-width: 900px; margin-left: auto; margin-right: auto; padding: 32px 20px; }
   </style>
 </head>
 <body>
@@ -143,11 +207,17 @@
     </div>
   </header>
 
+  <nav class="breadcrumb" aria-label="Brotkrumen-Navigation">
+    <a href="https://fahrservice-buchen.com/">Startseite</a>
+    <span aria-hidden="true">›</span>
+    <span>Weihnachtsmann Mobil</span>
+  </nav>
+
   <main>
     <!-- Hero Banner mit Bild -->
     <section class="hero-santa">
       <span class="badge">🎅 Buchbar ab Oktober</span>
-      
+
       <div class="hero-image-wrapper">
         <img src="IMG_7978.jpeg" alt="Weihnachtsmann Mobil Hausbesuch" class="hero-image">
       </div>
@@ -191,8 +261,8 @@
     <!-- Booking CTA -->
     <section class="cta-box">
       <h2>Jetzt Weihnachtsmann Mobil buchen</h2>
-      <p><strong>Buchbar ab Oktober!</strong> Senden Sie uns Ihre Terminfeinanfrage bevorzugt per WhatsApp mit dem Betreff <strong>„Weihnachtsmann mobil buchen“</strong> oder per E-Mail.</p>
-      
+      <p><strong>Buchbar ab Oktober!</strong> Senden Sie uns Ihre Terminanfrage bevorzugt per WhatsApp mit dem Betreff <strong>„Weihnachtsmann mobil buchen"</strong> oder per E-Mail.</p>
+
       <div class="cta-buttons">
         <a href="https://wa.me/491791676205?text=Weihnachtsmann%20mobil%20buchen" class="btn-wa" target="_blank" rel="noopener">
           💬 Per WhatsApp buchen
@@ -219,13 +289,13 @@
 
       <div class="faq-item">
         <h3>Wie erfolgt die Geschenkeübergabe?</h3>
-        <p>Das Geschenk wird vorab discreet überreicht oder an der Haustür bereitgestellt, sodass der Weihnachtsmann es persönlich bei der Begrüßung übergeben kann.</p>
+        <p>Das Geschenk wird vorab diskret überreicht oder an der Haustür bereitgestellt, sodass der Weihnachtsmann es persönlich bei der Begrüßung übergeben kann.</p>
       </div>
     </section>
   </main>
 
   <footer>
-    <p>&copy; Fahrservice Worms – <a href="datenschutz.html">Datenschutz</a> | <a href="anfragen.html">Kontakt & Anfrage</a></p>
+    <p>&copy; 2026 fahrservice-buchen.com — <a href="impressum.html">Impressum</a> | <a href="datenschutz.html">Datenschutz</a> | <a href="vorsicht-phishing.html">Sicherheit &amp; Echtheit</a></p>
   </footer>
 
   <script>
