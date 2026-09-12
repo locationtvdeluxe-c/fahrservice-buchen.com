@@ -188,23 +188,34 @@
 
     footer { font-size: 0.9em; text-align: center; color: #666; border-top: 1px solid #eee; margin-top: 40px; max-width: 900px; margin-left: auto; margin-right: auto; padding: 32px 20px; }
   </style>
+  <link rel="stylesheet" href="nav.css">
+  <script src="nav.js" defer></script>
 </head>
 <body>
 
-  <header>
-    <div class="nav-container">
-      <a href="index.html" class="brand">Fahrservice Worms</a>
-      <button class="menu-toggle" onclick="toggleMenu()">☰ Menü</button>
-      <nav class="nav-menu" id="navMenu">
-        <ul>
-          <li><a href="index.html">Startseite</a></li>
-          <li><a href="sightseeingtour-worms.html">Sightseeingtour</a></li>
-          <li><a href="weihnachtsmann-mobil.html" class="active">Weihnachtsmann Mobil</a></li>
-          <li><a href="anfragen.html">Anfrage & Buchen</a></li>
-          <li><a href="datenschutz.html">Datenschutz</a></li>
-        </ul>
-      </nav>
+  <header class="snav">
+    <div class="snav-bar">
+      <a href="index.html" class="snav-logo">fahrservice<span>-buchen</span>.com</a>
+      <div class="snav-right">
+        <a href="https://wa.me/491791676205" class="snav-wa" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        <button class="snav-burger" id="snavBurger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="snavOverlay">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
+    <nav class="snav-overlay" id="snavOverlay" aria-label="Hauptnavigation">
+      <p class="snav-section">Wochendienste</p>
+      <a href="krankenfahrten-worms.html" class="snav-item"><span class="snav-icon snav-week">🚑</span><span class="snav-itext"><b>Krankenfahrten</b><small>Arzt, Therapie, Dialyse</small></span></a>
+      <a href="friedhofsmobil.html" class="snav-item"><span class="snav-icon snav-week">🌸</span><span class="snav-itext"><b>Friedhofsmobil</b><small>Begleitung &amp; Transport</small></span></a>
+      <a href="einkaufshilfe.html" class="snav-item"><span class="snav-icon snav-week">🛍️</span><span class="snav-itext"><b>Einkaufshilfe</b><small>Begleitung beim Einkauf</small></span></a>
+      <a href="bringdienst.html" class="snav-item"><span class="snav-icon snav-week">📦</span><span class="snav-itext"><b>Bringdienst</b><small>Lieferung &amp; Hol-Service</small></span></a>
+      <div class="snav-div"></div>
+      <p class="snav-section">Events &amp; Erlebnisse</p>
+      <a href="sightseeingtour-worms.html" class="snav-item"><span class="snav-icon snav-event">🗺️</span><span class="snav-itext"><b>Sightseeingtour</b><small>Nibelungenstadt Worms</small></span></a>
+      <a href="mobile-kaffeebar.html" class="snav-item"><span class="snav-icon snav-event">☕</span><span class="snav-itext"><b>Mobile Kaffeebar</b><small>Kaffee für dein Event</small></span></a>
+      <a href="weihnachtsmann-mobil.html" class="snav-item"><span class="snav-icon snav-event">🎅</span><span class="snav-itext"><b>Weihnachtsmann-Mobil</b><small>Überraschungen ins Haus</small></span></a>
+      <a href="oktoberfest-worms.html" class="snav-item"><span class="snav-icon snav-event">🍺</span><span class="snav-itext"><b>Oktoberfest-Shuttle</b><small>Sicher hin &amp; zurück</small></span></a>
+    </nav>
   </header>
 
   <nav class="breadcrumb" aria-label="Brotkrumen-Navigation">
