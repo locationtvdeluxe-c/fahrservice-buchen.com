@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Friedhofsmobil & Fahrtservice | Fahrservice Buchen</title>
+  <meta name="description" content="Verlässlicher Fahr- & Begleitdienst zu allen Friedhöfen in Worms, Osthofen, Alzey, Bürstadt, Lampertheim & Frankenthal. Bequeme Anfahrt bis zum Friedhofseingang.">
+  <meta name="robots" content="index, follow">
+  
+  <style>
+    :root {
+      --primary-color: #0f172a;
+      --accent-color: #2563eb;
+      --success-color: #16a34a;
+      --text-color: #334155;
+      --bg-light: #f8fafc;
+      --border-color: #e2e8f0;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: var(--text-color);
+      margin: 0;
+      padding: 0;
+      background-color: #fff;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Header & Navigation */
+    header {
+      background-color: var(--primary-color);
+      color: #fff;
+      padding: 40px 0 25px 0;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0 0 10px 0;
+      font-size: 2.2rem;
+      line-height: 1.2;
+    }
+
+    header p {
+      font-size: 1.15rem;
+      max-width: 650px;
+      margin: 0 auto 20px auto;
+      color: #cbd5e1;
+    }
+
+    nav.main-nav {
+      background-color: #1e293b;
+      padding: 10px 0;
+      border-top: 1px solid #334155;
+      border-bottom: 1px solid #334155;
+    }
+
+    nav.main-nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    nav.main-nav a {
+      color: #f1f5f9;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+      padding: 5px 10px;
+      border-radius: 4px;
+      transition: background-color 0.2s;
+    }
+
+    nav.main-nav a:hover,
+    nav.main-nav a.active {
+      background-color: var(--accent-color);
+      color: #fff;
+    }
+
+    /* CTA Bar */
+    .cta-bar {
+      background-color: #e0f2fe;
+      border-bottom: 1px solid #bae6fd;
+      padding: 15px 0;
+      text-align: center;
+    }
+
+    .btn-phone {
+      display: inline-block;
+      background-color: var(--success-color);
+      color: #fff;
+      font-size: 1.2rem;
+      font-weight: bold;
+      padding: 12px 25px;
+      border-radius: 6px;
+      text-decoration: none;
+      margin-left: 10px;
+    }
+
+    /* Raster & Karten */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      margin: 40px 0;
+    }
+
+    .service-card {
+      background: var(--bg-light);
+      padding: 25px;
+      border-radius: 8px;
+      border: 1px solid var(--border-color);
+    }
+
+    .service-card h2, .service-card h3 {
+      margin-top: 0;
+      color: var(--primary-color);
+    }
+
+    .service-card h2 {
+      font-size: 1.3rem;
+      border-bottom: 2px solid var(--accent-color);
+      padding-bottom: 8px;
+      margin-bottom: 15px;
+    }
+
+    .feature-list {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+    }
+
+    .feature-list li {
+      padding: 8px 0;
+      border-bottom: 1px dotted var(--border-color);
+    }
+
+    .feature-list li:last-child {
+      border-bottom: none;
+    }
+
+    .feature-list li strong {
+      color: var(--primary-color);
+    }
+
+    .content-section {
+      padding: 20px 0 40px 0;
+    }
+
+    .region-title {
+      font-size: 1.2rem;
+      color: var(--primary-color);
+      margin-top: 25px;
+      margin-bottom: 10px;
+      border-bottom: 2px solid var(--accent-color);
+      display: inline-block;
+      padding-bottom: 3px;
+    }
+
+    .cemetery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .cemetery-item {
+      background: var(--bg-light);
+      border: 1px solid var(--border-color);
+      padding: 10px 14px;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+
+    /* Info Box */
+    .info-box {
+      background-color: #eef5f0;
+      border: 1px solid #c2e0c9;
+      padding: 25px;
+      border-radius: 8px;
+      margin: 30px 0;
+    }
+
+    .info-box h3 {
+      margin-top: 0;
+      color: var(--accent-color);
+    }
+
+    .info-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .info-list li {
+      margin-bottom: 10px;
+      font-size: 1.05rem;
+    }
+
+    /* Formular */
+    .form-section {
+      padding: 50px 0;
+      background-color: var(--bg-light);
+      border-top: 1px solid var(--border-color);
+    }
+
+    .booking-form {
+      max-width: 600px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      border: 1px solid var(--border-color);
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: var(--primary-color);
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      box-sizing: border-box;
+      font-size: 1rem;
+    }
+
+    .btn-submit {
+      width: 100%;
+      background-color: var(--accent-color);
+      color: #fff;
+      border: none;
+      padding: 14px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .faq-section {
+      padding: 30px 0;
+    }
+
+    .faq-item {
+      margin-bottom: 20px;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 15px;
+    }
+
+    .faq-item h3 {
+      color: var(--primary-color);
+      margin-bottom: 5px;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 30px 0;
+      border-top: 1px solid var(--border-color);
+      font-size: 0.9rem;
+      background-color: #fff;
+    }
+
+    footer a {
+      color: var(--text-color);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+  </style>
+
+  <!-- Structured Data für KI & Suchmaschinen -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Friedhofsmobil Worms & Region",
+    "url": "https://fahrservice-buchen.com/friedhofsmobil.html",
+    "telephone": "+491791676205",
+    "description": "Fahr- und Begleitdienst zu Friedhöfen in Worms, Osthofen, Alzey, Bürstadt, Lampertheim, Lorsch, Bensheim & Frankenthal. Pünktliche Anfahrt direkt bis zum Friedhofseingang.",
+    "areaServed": [
+      "Worms", "Osthofen", "Alzey", "Bürstadt", "Lampertheim", "Lorsch", "Bensheim", "Frankenthal"
+    ],
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Fahrservice Buchen Worms",
+      "telephone": "+491791676205"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <h1>Friedhofsmobil Worms & Region</h1>
+      <p>Ihr verlässlicher Fahrservice direkt bis zum Friedhofseingang. Tägliche Fahrten von Zuhause oder aus dem Pflegeheim zwischen 09:30 und 17:00 Uhr.</p>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="main-nav">
+    <div class="container">
+      <ul>
+        <li><a href="index.html">Startseite</a></li>
+        <li><a href="friedhofsmobil.html" class="active">Friedhofsmobil</a></li>
+        <li><a href="krankenfahrten-worms.html">Krankenfahrten</a></li>
+        <li><a href="einkaufshilfe.html">Einkaufshilfe</a></li>
+        <li><a href="bringdienst-krankenhaus.html">Bringdienst</a></li>
+        <li><a href="partner.html">Partner werden</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Telefon CTA Bar -->
+  <div class="cta-bar">
+    <div class="container">
+      <span>Möchten Sie eine Fahrt zum Friedhof buchen?</span>
+      <a href="tel:+491791676205" class="btn-phone">Jetzt Anrufen: 0179 1676205</a>
+    </div>
+  </div>
+
+  <main class="container">
+
+    <!-- Haupt-Einleitung -->
+    <section class="service-card" style="margin-top: 30px;">
+      <h2>Bequemer Fahrservice direkt bis zum Friedhofseingang</h2>
+      <p>Der Besuch von Gräbern, Trauerfeiern oder Gedenkstätten erfordert oft Energie und eine gute Planung. Unser Friedhofsmobil holt Sie pünktlich an Ihrer Haustür oder Ihrer Pflegeeinrichtung ab und bringt Sie auf direktem Weg zum Haupteingang oder dem nächstgelegenen Parkplatz des jeweiligen Friedhofs. Nach Ihrem Besuch erwarten wir Sie zur vereinbarten Zeit am Treffpunkt und fahren Sie entspannt wieder nach Hause.</p>
+    </section>
+
+    <!-- Raster: Service-Karten -->
+    <div class="services-grid">
+
+      <div class="service-card">
+        <h2>Ihr Begleiter für Senioren & Gehbehinderte</h2>
+        <p>Ein Friedhofsbesuch sollte nicht an fehlenden Transportmöglichkeiten scheitern. Wir unterstützen Sie von Anfang an:</p>
+        <ul class="feature-list">
+          <li><strong>Tür-zu-Tür-Service:</strong> Abholung direkt an der Wohnungstür oder am Altenheim.</li>
+          <li><strong>Platz für Hilfsmittel:</strong> Rollatoren, Gehhilfen und Grabschmuck verladen wir kostenlos und sicher im Kofferraum.</li>
+          <li><strong>Ausstiegs-Hilfe:</strong> Wir helfen Ihnen achtsam beim Ein- und Aussteigen am Friedhofseingang.</li>
+          <li><strong>Flexible Rückfahrt:</strong> Sie bestimmen das Tempo – wir vereinbaren eine feste Abholzeit oder warten auf Ihren Anruf.</li>
+        </ul>
+      </div>
+
+      <div class="service-card">
+        <h2>Fahrtservice zu Trauerfeiern & Beerdigungen</h2>
+        <p>In schweren Stunden zählt Zuverlässigkeit. Wir bringen Angehörige, Freunde und Wegbegleiter pünktlich und stressfrei zur Trauerhalle oder Kapelle am Friedhofseingang.</p>
+        <p>Sie müssen sich weder um die Parkplatzsuche noch um Fahrpläne kümmern – wir sorgen für eine ruhige, sichere Anreise, damit Sie sich ganz dem Abschiednehmen widmen können.</p>
+      </div>
+
+    </div>
+
+    <!-- Fahrten aus Altenheimen -->
+    <section class="service-card">
+      <h2>Fahrten für Bewohner von Seniorenresidenzen & Altenheimen</h2>
+      <p>Viele Bewohner von Seniorenheimen möchten regelmäßig das Grab ihres Partners oder von Verwandten besuchen. Unser Fahrservice bietet Heimleitungen und Angehörigen eine komfortable Lösung: Wir holen die Fahrgäste direkt in der Einrichtung ab, fahren sie sicher zum Friedhofseingang und bringen sie nach dem Besuch wohlbehalten wieder zurück.</p>
+    </section>
+
+    <!-- Übersichtskasten -->
+    <div class="info-box">
+      <h3>Auf einen Blick: Ihr Friedhofsmobil</h3>
+      <ul class="info-list">
+        <li>🚕 <strong>Sichere An- & Abreise:</strong> Direkt bis zum Friedhofseingang oder Parkplatz.</li>
+        <li>🚪 <strong>Haustür-Abholung:</strong> Von Zuhause oder aus dem Seniorenheim.</li>
+        <li>👨‍🦽 <strong>Rollator-Mitnahme:</strong> Viel Platz für Gehhilfen, Blumen & Gestecke.</li>
+        <li>⏱️ <strong>Zeiten:</strong> Tägliche Fahrten von 09:30 bis 17:00 Uhr in der gesamten Region.</li>
+      </ul>
+    </div>
+
+    <!-- Abgedecktes Gebiet -->
+    <section class="content-section">
+      <h2>Abgedecktes Einzugsgebiet & Friedhöfe</h2>
+      <p>Unser Friedhofsmobil bedient alle Friedhöfe in Worms, Osthofen, Alzey & Rheinhessen, im Hessischen Ried, an der Bergstraße sowie im Raum Frankenthal:</p>
+
+      <div class="region-title">📍 Worms & Stadtteile</div>
+      <div class="cemetery-grid">
+        <div class="cemetery-item">Hauptfriedhof Hochheimer Höhe</div>
+        <div class="cemetery-item">Friedhof Pfeddersheim</div>
+        <div class="cemetery-item">Friedhof Horchheim</div>
+        <div class="cemetery-item">Friedhof Rheindürkheim</div>
+        <div class="cemetery-item">Friedhof Abenheim</div>
+        <div class="cemetery-item">Friedhof Wiesoppenheim</div>
+        <div class="cemetery-item">Friedhof Weinsheim</div>
+        <div class="cemetery-item">Friedhof Heppenheim (Worms)</div>
+        <div class="cemetery-item">Jüdischer Friedhof Heiliger Sand</div>
+      </div>
+
+      <div class="region-title">📍 Osthofen, Alzey & Rheinhessen</div>
+      <div class="cemetery-grid">
+        <div class="cemetery-item">Ruhehain Osthofen</div>
+        <div class="cemetery-item">Friedhof Osthofen (Bergkirche)</div>
+        <div class="cemetery-item">Jüdischer Friedhof Osthofen</div>
+        <div class="cemetery-item">Friedhof Alzey</div>
+        <div class="cemetery-item">Beth ha Kwaroth (Haus der Ewigkeit)</div>
+        <div class="cemetery-item">Friedhof Westhofen</div>
+        <div class="cemetery-item">Friedhof Gundheim</div>
+        <div class="cemetery-item">Friedhof Mörstadt</div>
+        <div class="cemetery-item">Friedhof Offstein / Hohen-Sülzen</div>
+      </div>
+
+      <div class="region-title">📍 Bürstadt, Lampertheim & Hessisches Ried</div>
+      <div class="cemetery-grid">
+        <div class="cemetery-item">Friedhof Bürstadt</div>
+        <div class="cemetery-item">Friedhof Bobstadt</div>
+        <div class="cemetery-item">Friedhof Riedrode</div>
+        <div class="cemetery-item">Lampertheim Friedhof</div>
+        <div class="cemetery-item">Waldfriedhof Lampertheim</div>
+        <div class="cemetery-item">Friedhof Hüttenfeld</div>
+        <div class="cemetery-item">Friedhof Nord / Einhausen</div>
+        <div class="cemetery-item">Friedhof Lorsch</div>
+      </div>
+
+      <div class="region-title">📍 Bergstraße & Frankenthal</div>
+      <div class="cemetery-grid">
+        <div class="cemetery-item">Friedhof Bensheim-Mitte</div>
+        <div class="cemetery-item">Waldfriedhof Bensheim</div>
+        <div class="cemetery-item">Alter Friedhof Heppenheim</div>
+        <div class="cemetery-item">Hauptfriedhof Frankenthal</div>
+        <div class="cemetery-item">Friedhof Bobenheim-Roxheim</div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section">
+      <h2>Häufige Fragen zum Friedhofsmobil</h2>
+      
+      <div class="faq-item">
+        <h3>Wann fährt das Friedhofsmobil?</h3>
+        <p>Fahrten können täglich in der Zeit zwischen 09:30 Uhr und 17:00 Uhr gebucht werden.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Wie erfolgt die Rückfahrt vom Friedhof?</h3>
+        <p>Wir richten uns ganz nach Ihnen: Entweder vereinbaren wir eine feste Zeit für die Rückfahrt oder Sie rufen uns an, sobald Sie bereit für die Heimfahrt sind.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Können Gehhilfen oder Blumen transportiert werden?</h3>
+        <p>Ja, in unseren Fahrzeugen ist reichlich Platz für Rollatoren, Gehhilfen sowie Blumensträuße und Grabschmuck.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Buchungsformular -->
+  <section class="form-section" id="anfrage">
+    <div class="container">
+      <h2 style="text-align: center; margin-bottom: 10px;">Fahrt mit dem Friedhofsmobil anfragen</h2>
+      <p style="text-align: center; margin-bottom: 30px;">Füllen Sie das Formular aus. Wir melden uns umgehend zur Terminbestätigung.</p>
+
+      <form class="booking-form" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+        <div class="form-group">
+          <label for="name">Name *</label>
+          <input type="text" id="name" name="name" required placeholder="Vor- und Nachname">
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Telefonnummer für Rückfragen *</label>
+          <input type="tel" id="phone" name="phone" required placeholder="+49 179 1676205">
+        </div>
+
+        <div class="form-group">
+          <label for="pickup">Abholadresse Zuhause / Altenheim *</label>
+          <input type="text" id="pickup" name="pickup" required placeholder="Straße, Hausnummer, PLZ Ort">
+        </div>
+
+        <div class="form-group">
+          <label for="cemetery">Ziel-Friedhof & Ort *</label>
+          <input type="text" id="cemetery" name="cemetery" required placeholder="z. B. Hauptfriedhof Hochheimer Höhe, Ruhehain Osthofen, etc.">
+        </div>
+
+        <div class="form-group">
+          <label for="datetime">Wunschdatum & Hinzeit (zw. 9:30 - 17:00 Uhr) *</label>
+          <input type="datetime-local" id="datetime" name="datetime" required>
+        </div>
+
+        <div class="form-group">
+          <label for="return_time">Gewünschte Rückfahrzeit (optional)</label>
+          <input type="time" id="return_time" name="return_time">
+        </div>
+
+        <div class="form-group">
+          <label for="notes">Besondere Hinweise (z. B. Rollator, Hilfe beim Einsteigen)</label>
+          <textarea id="notes" name="notes" rows="3" placeholder="Geben Sie hier eventuelle Hilfsmittel oder Wünsche an..."></textarea>
+        </div>
+
+        <button type="submit" class="btn-submit">Friedhofsfahrt unverbindlich anfragen</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <a href="index.html">Startseite</a> | 
+      <a href="friedhofsmobil.html">Friedhofsmobil</a> | 
+      <a href="krankenfahrten-worms.html">Krankenfahrten</a> | 
+      <a href="einkaufshilfe.html">Einkaufshilfe</a> | 
+      <a href="bringdienst-krankenhaus.html">Bringdienst</a> | 
+      <a href="partner.html">Partner werden</a> | 
+      <a href="impressum.html">Impressum</a> | 
+      <a href="datenschutz.html">Datenschutz</a>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fahrservice & Transfer in Worms buchen | fahrservice-buchen.com</title>
+  <meta name="description" content="Ihr zuverlässiger Fahrservice & Flughafentransfer in Worms und Umgebung. Transparenten Richtpreis berechnen und Fahrt direkt unverbindlich anfragen.">
+  <link href="https://fonts.bunny.net/css?family=inter:400,500,600,700|dm-mono:400" rel="stylesheet">
+  
+  <!-- UMAMI ANALYTICS -->
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="03fe2c2b-a847-4de7-9cab-bf54cd5da43b"></script>
+
+  <style>
+    :root {
+      --primary: #2563EB;
+      --primary-dark: #1D4ED8;
+      --primary-light: #DBEAFE;
+      --dark: #111827;
+      --gray-900: #1F2937;
+      --gray-700: #374151;
+      --gray-500: #6B7280;
+      --gray-300: #D1D5DB;
+      --gray-100: #F3F4F6;
+      --white: #FFFFFF;
+    }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--gray-900);
+      background: var(--white);
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* NAV */
+    .nav { border-bottom: 1px solid var(--gray-100); padding: 16px 0; background: var(--white); }
+    .nav-inner { max-width: 900px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; }
+    .nav-logo { font-weight: 700; font-size: 18px; color: var(--dark); }
+    .nav-logo span { color: var(--primary); }
+
+    /* MAIN CONTAINER */
+    .container { max-width: 800px; margin: 40px auto 80px; padding: 0 24px; }
+    .header-box { text-align: center; margin-bottom: 32px; }
+    .header-box h1 { font-size: clamp(1.8rem, 4vw, 2.4rem); color: var(--dark); margin-bottom: 8px; }
+    .header-box p { color: var(--gray-500); font-size: 16px; }
+
+    /* FORM CARD */
+    .form-card {
+      background: var(--white);
+      border: 1px solid var(--gray-300);
+      border-radius: 16px;
+      padding: 32px;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+    }
+
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .form-group { margin-bottom: 20px; }
+    .form-group.full { grid-column: 1 / -1; }
+    
+    label { display: block; font-weight: 600; font-size: 14px; margin-bottom: 6px; color: var(--dark); }
+    input[type="text"], input[type="email"], input[type="tel"], input[type="datetime-local"], select, textarea {
+      width: 100%;
+      padding: 12px 14px;
+      border-radius: 8px;
+      border: 1px solid var(--gray-300);
+      font-size: 15px;
+      font-family: inherit;
+    }
+    input:focus, select:focus, textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px var(--primary-light);
+    }
+
+    /* RECHNER BOX */
+    .calculator-box {
+      background: var(--gray-100);
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 24px;
+      border: 1px solid var(--gray-300);
+    }
+    .calculator-intro {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .slider-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+    .km-display { font-family: 'DM Mono', monospace; font-weight: 700; color: var(--primary); font-size: 18px; }
+    
+    input[type=range] {
+      width: 100%;
+      height: 8px;
+      border-radius: 5px;
+      background: var(--gray-300);
+      outline: none;
+      margin: 12px 0;
+      cursor: pointer;
+    }
+
+    /* TARIF BREAKDOWN */
+    .tarif-breakdown {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px dashed var(--gray-300);
+      text-align: center;
+    }
+    .tarif-item {
+      background: var(--white);
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid var(--gray-300);
+    }
+    .tarif-item .label { font-size: 11px; text-transform: uppercase; color: var(--gray-500); font-weight: 600; display: block; }
+    .tarif-item .val { font-size: 14px; font-weight: 700; color: var(--dark); font-family: 'DM Mono', monospace; }
+
+    .price-box {
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid var(--gray-300);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .price-label { font-size: 14px; font-weight: 600; color: var(--gray-700); }
+    .price-amount { font-size: 28px; font-weight: 700; color: var(--primary); font-family: 'DM Mono', monospace; }
+
+    /* BUTTON */
+    .btn-submit {
+      width: 100%;
+      background: var(--primary);
+      color: white;
+      font-weight: 700;
+      font-size: 16px;
+      padding: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background .2s;
+    }
+    .btn-submit:hover { background: var(--primary-dark); }
+
+    /* FOOTER */
+    .footer { border-top: 1px solid var(--gray-100); padding: 32px 0; text-align: center; font-size: 14px; color: var(--gray-500); }
+
+    @media(max-width: 600px) {
+      .form-grid { grid-template-columns: 1fr; }
+      .tarif-breakdown { grid-template-columns: 1fr; }
+      .form-card { padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <div class="nav-logo"><a href="index.html" style="color:inherit; text-decoration:none;">fahrservice<span>-buchen</span>.com</a></div>
+      <a href="index.html">← Zurück zur Startseite</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="header-box">
+      <h1>Fahrservice &amp; Transfer Worms</h1>
+      <p>Ihre komfortable Beförderung in Worms, der Nibelungenstadt und Region. Jetzt Entfernung schätzen, Richtpreis sehen und unverbindlich anfragen.</p>
+    </div>
+
+    <div class="form-card">
+      <form action="https://formspree.io/f/mzepjpny" method="POST" data-umami-event="Fahrten_Anfrage_Worms">
+        
+        <!-- Standortspezifischer Hinweis für Formspree -->
+        <input type="hidden" name="Standort_Quellseite" value="Worms Landingpage">
+
+        <!-- DYNAMISCHER PREIS-RECHNER -->
+        <div class="calculator-box">
+          <div class="calculator-intro">Unsere faire und transparente Preisberechnung für Deine Fahrt</div>
+
+          <div class="slider-header">
+            <label for="kmRange" style="margin:0;">Geschätzte Entfernung (km):</label>
+            <span class="km-display" id="kmValue">25 km</span>
+          </div>
+          
+          <input type="range" id="kmRange" min="2" max="200" value="25" step="1">
+          <input type="hidden" id="kmInputHidden" name="Geschätzte_Kilometer" value="25 km">
+
+          <!-- PARAMETER AUFSCHLÜSSELUNG -->
+          <div class="tarif-breakdown">
+            <div class="tarif-item">
+              <span class="label">Grundgebühr</span>
+              <span class="val" id="grundgebuehrCalc">3,90 €</span>
+            </div>
+            <div class="tarif-item">
+              <span class="label">Kilometerpreis</span>
+              <span class="val" id="kmPriceCalc">52,50 € (2,10 €/km)</span>
+            </div>
+            <div class="tarif-item">
+              <span class="label">Großraum-Zuschlag</span>
+              <span class="val" id="grossraumCalc">0,00 €</span>
+            </div>
+          </div>
+
+          <div class="price-box">
+            <span class="price-label">Geschätzter Richtpreis (inkl. MwSt.):</span>
+            <span class="price-amount" id="priceDisplay">ca. 56,40 €</span>
+          </div>
+          <input type="hidden" id="priceInputHidden" name="Geschätzter_Richtpreis" value="ca. 56,40 €">
+        </div>
+
+        <!-- STRECKEN-DETAILS -->
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="abholort">Abholort (Start) *</label>
+            <input type="text" id="abholort" name="Abholort" placeholder="z. B. Worms Hauptbahnhof / Pfeddersheim" required>
+          </div>
+          <div class="form-group">
+            <label for="zielort">Zielort (Ziel) *</label>
+            <input type="text" id="zielort" name="Zielort" placeholder="z. B. Frankfurt Flughafen Terminal 1" required>
+          </div>
+        </div>
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="fahrtdatum">Datum &amp; Uhrzeit *</label>
+            <input type="datetime-local" id="fahrtdatum" name="Fahrtdatum" required>
+          </div>
+          <div class="form-group">
+            <label for="personen">Anzahl der Personen *</label>
+            <select id="personen" name="Anzahl_Personen" required onchange="updateCalculator()">
+              <option value="1 Person">1 Person</option>
+              <option value="2 Personen">2 Personen</option>
+              <option value="3 Personen">3 Personen</option>
+              <option value="4 Personen">4 Personen</option>
+              <option value="5-8 Personen (Großraum)">5 - 8 Personen (+ 10 € Großraum-Zuschlag)</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- KONTAKTDATEN DES ANMELDERS -->
+        <div style="margin-top: 20px; border-top: 1px solid var(--gray-100); padding-top: 20px;">
+          <h3 style="font-size: 16px; margin-bottom: 16px; color: var(--dark);">Angaben zum Anmelder</h3>
+          
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="vorname">Vorname *</label>
+              <input type="text" id="vorname" name="Vorname" required>
+            </div>
+            <div class="form-group">
+              <label for="nachname">Nachname *</label>
+              <input type="text" id="nachname" name="Nachname" required>
+            </div>
+          </div>
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="email">E-Mail-Adresse *</label>
+              <input type="email" id="email" name="E-Mail" required>
+            </div>
+            <div class="form-group">
+              <label for="telefon">Telefonnummer *</label>
+              <input type="tel" id="telefon" name="Telefon" required>
+            </div>
+          </div>
+
+          <div class="form-group full">
+            <label for="hinweise">Besondere Wünsche / Anmerkungen (optional)</label>
+            <textarea id="hinweise" name="Anmerkungen" rows="3" placeholder="z. B. Kindersitz benötigt, Flughafentransfer mit viel Gepäck..."></textarea>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-submit">Fahrt für Worms anfragen</button>
+      </form>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 fahrservice-buchen.com — <a href="impressum.html">Impressum</a> | <a href="datenschutz.html">Datenschutz</a></p>
+  </footer>
+
+  <!-- CALCULATOR SCRIPT & UMAMI TRACKING -->
+  <script>
+    const kmRange = document.getElementById('kmRange');
+    const kmValue = document.getElementById('kmValue');
+    const priceDisplay = document.getElementById('priceDisplay');
+    const grundgebuehrCalc = document.getElementById('grundgebuehrCalc');
+    const kmPriceCalc = document.getElementById('kmPriceCalc');
+    const grossraumCalc = document.getElementById('grossraumCalc');
+    const personenSelect = document.getElementById('personen');
+    const kmInputHidden = document.getElementById('kmInputHidden');
+    const priceInputHidden = document.getElementById('priceInputHidden');
+
+    // Tarif-Parameter
+    const GRUNDGEBUEHR = 3.90;
+    const PREIS_PRO_KM = 2.10;
+    const GROSSRAUM_ZUSCHLAG = 10.00;
+
+    function updateCalculator() {
+      const km = parseInt(kmRange.value);
+      const isGrossraum = personenSelect.value.includes('5-8');
+
+      const kmCosts = km * PREIS_PRO_KM;
+      const grossraumZuschlag = isGrossraum ? GROSSRAUM_ZUSCHLAG : 0.00;
+      
+      const totalCalculated = GRUNDGEBUEHR + kmCosts + grossraumZuschlag;
+      const formattedTotal = "ca. " + totalCalculated.toFixed(2).replace('.', ',') + " €";
+      
+      kmValue.textContent = km + " km";
+      grundgebuehrCalc.textContent = GRUNDGEBUEHR.toFixed(2).replace('.', ',') + " €";
+      kmPriceCalc.textContent = kmCosts.toFixed(2).replace('.', ',') + " € (" + PREIS_PRO_KM.toFixed(2).replace('.', ',') + " €/km)";
+      grossraumCalc.textContent = grossraumZuschlag.toFixed(2).replace('.', ',') + " €";
+      priceDisplay.textContent = formattedTotal;
+      
+      kmInputHidden.value = km + " km";
+      priceInputHidden.value = formattedTotal;
+    }
+
+    kmRange.addEventListener('input', updateCalculator);
+    
+    // Umami Event: Spezifisch für Worms
+    kmRange.addEventListener('change', () => {
+      if (window.umami) {
+        umami.track('Rechner_Interaktion_Worms', { km: kmRange.value + ' km' });
+      }
+    });
+
+    updateCalculator();
+  </script>
+
+</body>
+</html>
