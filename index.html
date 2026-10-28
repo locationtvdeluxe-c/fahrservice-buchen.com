@@ -254,10 +254,10 @@
       <h2 id="form-heading" class="form-card-title">Unverbindliche Fahrtenanfrage</h2>
       <p class="form-card-subtitle">Egal ob Einzelfahrt, Taxiservice, Kleinbus für Gruppen oder Flughafentransfer – fragen Sie jetzt direkt Ihre Wunschfahrt an.</p>
       
-      <form action="https://formsubmit.co/3679fcc6e64c5c078a8ebc2782195500" method="POST" data-umami-event="Fahrten_Anfrage_Startseite">
-        <input type="hidden" name="_subject" value="Neue Fahrtenanfrage von fahrservice-buchen.com (Startseite)">
-        <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_captcha" value="false">
+      <form action="https://api.web3forms.com/submit" method="POST" data-umami-event="Fahrten_Anfrage_Startseite">
+        <input type="hidden" name="access_key" value="e36b2315-3269-4245-b23e-9b567b33b059">
+        <input type="hidden" name="subject" value="Neue Fahrtenanfrage von fahrservice-buchen.com (Startseite)">
+        <input type="hidden" name="from_name" value="fahrservice-buchen.com">
         <input type="hidden" name="Standort_Quellseite" value="Startseite index.html">
 
         <!-- FAHRTDETAILS -->
@@ -306,7 +306,7 @@
           <div class="form-grid">
             <div class="form-group">
               <label for="email">E-Mail-Adresse *</label>
-              <input type="email" id="email" name="E-Mail" autocomplete="email" required>
+              <input type="email" id="email" name="email" autocomplete="email" required>
             </div>
             <div class="form-group">
               <label for="telefon">Telefonnummer *</label>
