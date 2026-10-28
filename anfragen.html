@@ -179,15 +179,15 @@
     <nav class="snav-overlay" id="snavOverlay" aria-label="Hauptnavigation">
       <p class="snav-section">Wochendienste</p>
       <a href="krankenfahrten-worms.html" class="snav-item"><span class="snav-icon snav-week">🚑</span><span class="snav-itext"><b>Krankenfahrten</b><small>Arzt, Therapie, Dialyse</small></span></a>
-      <a href="friedhofsmobil.html" class="snav-item"><span class="snav-icon snav-week">🌸</span><span class="snav-itext"><b>Friedhofsmobil</b><small>Begleitung &amp; Transport</small></span></a>
+      <a href="friedhofsmobil.html" class="snav-item"><span class="snav-icon snav-week">🌸</span><span class="snav-itext"><b>Friedhofsmobil</b><small>Begleitung & Transport</small></span></a>
       <a href="einkaufshilfe.html" class="snav-item"><span class="snav-icon snav-week">🛍️</span><span class="snav-itext"><b>Einkaufshilfe</b><small>Begleitung beim Einkauf</small></span></a>
-      <a href="bringdienst.html" class="snav-item"><span class="snav-icon snav-week">📦</span><span class="snav-itext"><b>Bringdienst</b><small>Lieferung &amp; Hol-Service</small></span></a>
+      <a href="bringdienst.html" class="snav-item"><span class="snav-icon snav-week">📦</span><span class="snav-itext"><b>Bringdienst</b><small>Lieferung & Hol-Service</small></span></a>
       <div class="snav-div"></div>
-      <p class="snav-section">Events &amp; Erlebnisse</p>
+      <p class="snav-section">Events & Erlebnisse</p>
       <a href="sightseeingtour-worms.html" class="snav-item"><span class="snav-icon snav-event">🗺️</span><span class="snav-itext"><b>Sightseeingtour</b><small>Nibelungenstadt Worms</small></span></a>
       <a href="mobile-kaffeebar.html" class="snav-item"><span class="snav-icon snav-event">☕</span><span class="snav-itext"><b>Mobile Kaffeebar</b><small>Kaffee für dein Event</small></span></a>
       <a href="weihnachtsmann-mobil.html" class="snav-item"><span class="snav-icon snav-event">🎅</span><span class="snav-itext"><b>Weihnachtsmann-Mobil</b><small>Überraschungen ins Haus</small></span></a>
-      <a href="oktoberfest-worms.html" class="snav-item"><span class="snav-icon snav-event">🍺</span><span class="snav-itext"><b>Oktoberfest-Shuttle</b><small>Sicher hin &amp; zurück</small></span></a>
+      <a href="oktoberfest-worms.html" class="snav-item"><span class="snav-icon snav-event">🍺</span><span class="snav-itext"><b>Oktoberfest-Shuttle</b><small>Sicher hin & zurück</small></span></a>
     </nav>
   </header>
 
@@ -198,7 +198,10 @@
     </div>
 
     <div class="form-card">
-      <form action="https://formspree.io/f/mzepjpny" method="POST" data-umami-event="Fahrt_Anfrage_Absendung">
+      <form action="https://formsubmit.co/eschenfelder.office@gmail.com" method="POST" data-umami-event="Fahrt_Anfrage_Absendung">
+        <input type="hidden" name="_subject" value="Neue Fahrtenanfrage von fahrservice-buchen.com (Anfrage-Seite)">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
         
         <!-- DYNAMISCHER PREIS-RECHNER -->
         <div class="calculator-box">
@@ -249,7 +252,7 @@
 
         <div class="form-grid">
           <div class="form-group">
-            <label for="fahrtdatum">Datum &amp; Uhrzeit *</label>
+            <label for="fahrtdatum">Datum & Uhrzeit *</label>
             <input type="datetime-local" id="fahrtdatum" name="Fahrtdatum" required>
           </div>
           <div class="form-group">
@@ -302,7 +305,7 @@
   </main>
 
   <footer class="footer">
-    <p>&copy; 2026 fahrservice-buchen.com — <a href="impressum.html">Impressum</a> | <a href="datenschutz.html">Datenschutz</a> | <a href="vorsicht-phishing.html">Sicherheit &amp; Echtheit</a></p>
+    <p>&copy; 2026 fahrservice-buchen.com — <a href="impressum.html">Impressum</a> | <a href="datenschutz.html">Datenschutz</a> | <a href="vorsicht-phishing.html">Sicherheit & Echtheit</a></p>
   </footer>
 
   <!-- CALCULATOR SCRIPT & UMAMI TRACKING -->
@@ -339,7 +342,7 @@
       grossraumCalc.textContent = grossraumZuschlag.toFixed(2).replace('.', ',') + " €";
       priceDisplay.textContent = formattedTotal;
       
-      // Versteckte Formspree-Felder aktualisieren
+      // Versteckte Felder aktualisieren
       kmInputHidden.value = km + " km";
       priceInputHidden.value = formattedTotal;
     }
