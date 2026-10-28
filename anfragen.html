@@ -198,10 +198,10 @@
     </div>
 
     <div class="form-card">
-      <form action="https://formsubmit.co/3679fcc6e64c5c078a8ebc2782195500" method="POST" data-umami-event="Fahrt_Anfrage_Absendung">
-        <input type="hidden" name="_subject" value="Neue Fahrtenanfrage von fahrservice-buchen.com (Anfrage-Seite)">
-        <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_captcha" value="false">
+      <form action="https://api.web3forms.com/submit" method="POST" data-umami-event="Fahrt_Anfrage_Absendung">
+        <input type="hidden" name="access_key" value="e36b2315-3269-4245-b23e-9b567b33b059">
+        <input type="hidden" name="subject" value="Neue Fahrtenanfrage von fahrservice-buchen.com (Anfrage-Seite)">
+        <input type="hidden" name="from_name" value="fahrservice-buchen.com">
         
         <!-- DYNAMISCHER PREIS-RECHNER -->
         <div class="calculator-box">
@@ -285,7 +285,7 @@
           <div class="form-grid">
             <div class="form-group">
               <label for="email">E-Mail-Adresse *</label>
-              <input type="email" id="email" name="E-Mail" required>
+              <input type="email" id="email" name="email" required>
             </div>
             <div class="form-group">
               <label for="telefon">Telefonnummer *</label>
